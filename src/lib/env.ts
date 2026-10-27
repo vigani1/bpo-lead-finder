@@ -15,7 +15,7 @@ const envSchema = z.object({
   DATABASE_URL: z.preprocess((value) => (typeof value === "string" && value.trim() === "" ? undefined : value), z.url().optional()),
   DATABASE_DIR: z.string().default(".data/pglite"),
   IP_HASH_SALT: z.string().default("local-dev-salt"),
-  CONTACT_URL: z.url().default("https://github.com/call-center-lead-finder"),
+  CONTACT_URL: z.url().default("https://github.com/vigani1/bpo-lead-finder"),
 });
 
 export type Env = z.infer<typeof envSchema>;
