@@ -1,6 +1,7 @@
 import { CAMPAIGNS, type CampaignId } from "@/config/campaigns";
 import { countryLabel } from "@/config/countries";
 import { MARKETS, type MarketFilter } from "@/config/markets";
+import type { CountrySignal } from "@/lib/db/schema";
 
 export function campaignLabel(id: string): string {
   return id in CAMPAIGNS ? CAMPAIGNS[id as CampaignId].label : id;
@@ -38,3 +39,17 @@ export function formatDuration(ms: number | undefined): string {
   if (!ms) return "0 s";
   return ms < 1000 ? `${ms} ms` : `${(ms / 1000).toFixed(1)} s`;
 }
+
+/** Looks up a label for a value read from the database (typed as string); unknown values show as-is. */
+export function labelFor<K extends string>(labels: Record<K, string>, key: string): string {
+  return (labels as Record<string, string>)[key] ?? key;
+}
+
+/** Kinds of location signal, in plain words. */
+export const SIGNAL_TYPE_LABELS: Record<CountrySignal["type"], string> = {
+  phone: "phone prefix",
+  city: "city",
+  tld: "domain ending",
+  job_board: "local job board",
+  ai: "text mentions",
+};

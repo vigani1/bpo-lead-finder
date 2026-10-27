@@ -38,8 +38,8 @@ const EXPERIENCE_REQUIREMENT = new RegExp(
 /**
  * Does this quote really show the campaign? It must name it, without a
  * negation in front ("we don't do Medicare") and without an excluded context
- * ("Medicare biller", "medical billing"). Used by the keyword rules and when
- * claims are verified.
+ * ("Medicare biller", "medical billing"). Used when claims are verified, and
+ * again when scoring, so evidence saved under older rules is judged the same way.
  */
 export function campaignQuoteVerdict(campaign: CampaignId, quote: string, inJobAd = false): QuoteVerdict {
   const match = matchCampaign(campaign, quote);
