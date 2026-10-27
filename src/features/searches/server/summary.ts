@@ -6,11 +6,15 @@ import { getDb } from "@/lib/db/client";
 import { searches, type Search } from "@/lib/db/schema";
 import type { SearchSummary } from "../types";
 
+/** How long a search may stay queued or running before it counts as cut off (a stopped function, a restart). */
+export function staleSearchMs(): number {
+  return (process.env.VERCEL ? LIMITS.staleSearchMinutes.hosted : LIMITS.staleSearchMinutes.local) * 60_000;
+}
+
 export function toSummary(search: Search, now: Date): SearchSummary {
   // A search stuck in "running" (e.g. the server restarted) is shown as timed out.
   const stale =
-    (search.status === "running" || search.status === "queued") &&
-    now.getTime() - (search.startedAt ?? search.createdAt).getTime() > LIMITS.staleSearchMinutes * 60_000;
+    (search.status === "running" || search.status === "queued") && now.getTime() - (search.startedAt ?? search.createdAt).getTime() > staleSearchMs();
   return {
     id: search.id,
     ...filtersOf(search),

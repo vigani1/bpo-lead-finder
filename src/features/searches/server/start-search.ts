@@ -1,11 +1,12 @@
 import "server-only";
-import { and, desc, eq, gte, inArray } from "drizzle-orm";
+import { and, desc, eq, gte, inArray, isNull, or } from "drizzle-orm";
 import { LIMITS } from "@/config/limits";
 import { isCountryId } from "@/lib/all-countries";
 import { AppError } from "@/lib/api/errors";
 import { getDb } from "@/lib/db/client";
 import { searches, type SearchProgress } from "@/lib/db/schema";
 import type { StartSearchInput } from "../schemas";
+import { staleSearchMs } from "./summary";
 import { countRecentSearches } from "./usage";
 
 const emptyProgress = (): SearchProgress => ({
@@ -28,6 +29,8 @@ export async function startSearch(input: Required<StartSearchInput>, ipHash: str
   const db = await getDb();
 
   if (!input.refresh) {
+    // A search still queued or running is reused only while it can still finish; one that was cut off isn't.
+    const liveSince = new Date(Date.now() - staleSearchMs());
     const [recent] = await db
       .select({ id: searches.id, status: searches.status, progress: searches.progress })
       .from(searches)
@@ -37,8 +40,14 @@ export async function startSearch(input: Required<StartSearchInput>, ipHash: str
           eq(searches.market, input.market),
           eq(searches.campaign, input.campaign),
           eq(searches.depth, input.depth),
-          inArray(searches.status, ["queued", "running", "done"]),
           gte(searches.createdAt, new Date(Date.now() - LIMITS.reuseSearchHours * 3_600_000)),
+          or(
+            eq(searches.status, "done"),
+            and(
+              inArray(searches.status, ["queued", "running"]),
+              or(gte(searches.startedAt, liveSince), and(isNull(searches.startedAt), gte(searches.createdAt, liveSince))),
+            ),
+          ),
         ),
       )
       .orderBy(desc(searches.createdAt))

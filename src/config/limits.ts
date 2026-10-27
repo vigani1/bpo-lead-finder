@@ -42,8 +42,11 @@ export const LIMITS = {
   searchesPerHour: 10,
   /** Across all visitors. */
   searchesPerDay: 100,
-  /** A search still "running" after this long is shown as timed out (free AI tiers can take 10+ minutes). */
-  staleSearchMinutes: 30,
+  /**
+   * A search still queued or running after this long was cut off: it's shown as timed out and never
+   * reused. Hosted on Vercel, a function stops after 5 minutes; locally, free AI tiers can take 10+ minutes.
+   */
+  staleSearchMinutes: { hosted: 6, local: 30 },
   concurrency: { search: 3, fetch: 6, classify: 8 },
   fetch: {
     timeoutMs: 8_000,

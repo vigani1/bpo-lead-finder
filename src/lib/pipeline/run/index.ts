@@ -1,7 +1,7 @@
 import "server-only";
-import { eq } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 import { DEPTH_PRESETS } from "@/config/limits";
-import { getDb } from "@/lib/db/client";
+import { getDb, type Db } from "@/lib/db/client";
 import { searches } from "@/lib/db/schema";
 import { logger } from "@/lib/logger";
 import { buildQueries, employerLookupQuery } from "../build-queries";
@@ -18,18 +18,20 @@ import { addKnownCenters } from "./results";
  * known centers → search → triage → (classify snippets ∥ fetch sites) → classify sites → employer lookups
  */
 export async function runSearch(searchId: string): Promise<void> {
-  const db = await getDb();
-  const [search] = await db.select().from(searches).where(eq(searches.id, searchId)).limit(1);
-  if (!search || search.status !== "queued") return;
-
+  let db: Db | undefined;
   let ctx: RunContext | undefined;
   try {
+    db = await getDb();
+    const [search] = await db.select().from(searches).where(eq(searches.id, searchId)).limit(1);
+    if (!search || search.status !== "queued") return;
     ctx = createRunContext(db, search);
     await db.update(searches).set({ status: "running", startedAt: new Date(), progress: ctx.progress }).where(eq(searches.id, searchId));
     await runStages(ctx);
   } catch (error) {
     // Details go to the server log; users see a plain message (database errors can contain SQL).
     logger.error("search failed", { searchId, message: error instanceof Error ? error.message : String(error) });
+    // Without a database the search can't be marked; it shows as timed out once the stale window passes.
+    if (!db) return;
     const sourceDown = ctx?.progress.sourceErrors.find((e) => e.source !== "classifier");
     await db
       .update(searches)
@@ -39,7 +41,9 @@ export async function runSearch(searchId: string): Promise<void> {
         finishedAt: new Date(),
         ...(ctx ? { progress: ctx.progress } : {}),
       })
-      .where(eq(searches.id, searchId));
+      // Never overwrite a search that finished (or failed) on its own.
+      .where(and(eq(searches.id, searchId), inArray(searches.status, ["queued", "running"])))
+      .catch((markError: unknown) => logger.error("could not mark search failed", { searchId, message: String(markError) }));
   }
 }
 

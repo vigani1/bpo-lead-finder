@@ -8,7 +8,7 @@ The database is Postgres either way: Neon when `DATABASE_URL` is set (the deploy
 
 ## Consequences
 
-- On Vercel a function stops after its `maxDuration`, 5 minutes on the free plan. A search still running then is cut off; one shown as running for over 30 minutes is reported as timed out. What it saved before that stays valid.
+- On Vercel a function stops after its `maxDuration`, 5 minutes on the free plan. A search still running then is cut off. A search still queued or running after 6 minutes on Vercel (30 locally, where free AI tiers can be slow) is reported as timed out and never reused. What it saved before that stays valid.
 - Results appear live and survive a refresh, because they are saved as they are found.
 - Reuse keeps repeated searches free, and the rate limits are counted from the same searches table, with no extra service.
 - If searches outgrow the 5-minute limit, the fix is a real background job (a queue and a worker), not a change to the pipeline.
