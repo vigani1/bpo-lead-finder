@@ -2,18 +2,36 @@
 
 import { ArrowLeftIcon, RefreshCwIcon } from "lucide-react";
 import Link from "next/link";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useMemo } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { DEPTH_PRESETS } from "@/config/limits";
 import { coverageFor } from "@/features/meta/coverage";
-import { useSearchView, useStartSearch } from "@/features/searches/hooks";
+import { toSearchParams, useSearchView, useStartSearch } from "@/features/searches/hooks";
+import { pickResultsQueryInput, type ResultsQueryInput } from "@/features/searches/schemas";
 import { friendlyErrorMessage } from "@/lib/api-client";
 import { describeSearch, relativeTime } from "@/lib/format";
+import { ResultsFilters } from "./results-filters";
+import { ResultsTable } from "./results-table";
+import { RuledOutPanel } from "./ruled-out-panel";
 import { SearchProgressBar, SearchStats } from "./search-progress";
 
 export function SearchView({ id }: { id: string }) {
-  const { data, error } = useSearchView(id);
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useSearchParams();
+  const query = useMemo(() => pickResultsQueryInput(Object.fromEntries(params)), [params]);
+  const { data, error, isFetching } = useSearchView(id, query);
   const refresh = useStartSearch();
+
+  const setQuery = useCallback(
+    (next: Partial<ResultsQueryInput>) => {
+      const merged = toSearchParams({ ...query, ...next });
+      router.replace(`${pathname}${merged.size ? `?${merged}` : ""}`, { scroll: false });
+    },
+    [pathname, query, router],
+  );
 
   if (!data) {
     return (
@@ -24,7 +42,7 @@ export function SearchView({ id }: { id: string }) {
     );
   }
 
-  const { search } = data;
+  const { search, results, totalResults, ruledOut } = data;
   const running = search.status === "queued" || search.status === "running";
   const coverage = coverageFor(search.country, search.campaign);
 
@@ -73,6 +91,12 @@ export function SearchView({ id }: { id: string }) {
           </AlertDescription>
         </Alert>
       )}
+
+      <ResultsFilters query={query} onChange={setQuery} shown={results.length} total={totalResults} busy={isFetching && !running} />
+
+      <ResultsTable rows={results} searchId={id} campaign={search.campaign} running={running} totalResults={totalResults} query={query} />
+
+      <RuledOutPanel groups={ruledOut} />
 
       {!running && <SearchStats search={search} />}
     </div>

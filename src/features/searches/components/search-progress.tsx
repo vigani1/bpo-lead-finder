@@ -1,6 +1,7 @@
 import { CheckIcon, LoaderCircleIcon } from "lucide-react";
 import { SOURCE_POLICIES, type SourceId } from "@/config/sources";
 import type { SearchSummary } from "@/features/searches/types";
+import { estimateCostUsd } from "@/lib/costs";
 import { formatDuration } from "@/lib/format";
 import { SEARCH_STAGES } from "@/lib/pipeline/stages";
 import { cn } from "@/lib/utils";
@@ -47,8 +48,9 @@ export function SearchProgressBar({ search }: { search: SearchSummary }) {
 }
 
 export function SearchStats({ search }: { search: SearchSummary }) {
-  const { counts, timingsMs, classifier, searchProvider } = search.progress;
+  const { counts, timingsMs, costs, classifier, searchProvider } = search.progress;
   const sourceStats = Object.entries(search.progress.sourceStats ?? {});
+  const cost = estimateCostUsd(costs);
   return (
     <footer className="space-y-1 border-t pt-4 text-xs leading-relaxed text-muted-foreground tabular-nums">
       <p>
@@ -66,7 +68,7 @@ export function SearchStats({ search }: { search: SearchSummary }) {
       )}
       <p>
         Time: search {formatDuration(timingsMs.searching)}, websites {formatDuration(timingsMs.fetching)}, checking{" "}
-        {formatDuration(timingsMs.classifying)}.
+        {formatDuration(timingsMs.classifying)}. Estimated cost ${cost.toFixed(3)} ({costs.aiCalls} AI calls).
       </p>
     </footer>
   );

@@ -247,6 +247,13 @@ export function scoreCenter(center: ScoredCenter, allEvidence: ScoredEvidence[],
   return { score, label, lines, independentSourceTypes: sourceTypes.size, redFlags: redFlags.map((f) => f.value) };
 }
 
+/** Proof from a job ad or the company's own website, not just a mention elsewhere ("Campaign confirmed"). */
+export function hasDirectCampaignProof(evidence: ScoredEvidence[], campaign: CampaignId): boolean {
+  return evidence.some((e) => (e.kind === "hiring" || e.kind === "campaign") && e.value === campaign && isDirectProof(campaignProof(e, evidence, campaign)));
+}
+
+const isDirectProof = (proof: CampaignProof | null) => proof === "job_ad" || proof === "own_site";
+
 /** Whether any evidence counts as proof of the campaign (else the center isn't a result). */
 export function hasCampaignEvidence(evidence: ScoredEvidence[], campaign: CampaignId): boolean {
   return evidence.some((e) => (e.kind === "hiring" || e.kind === "campaign") && e.value === campaign && campaignProof(e, evidence, campaign) !== null);

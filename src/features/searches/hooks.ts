@@ -4,16 +4,16 @@ import { queryOptions, useMutation, useQuery, useQueryClient } from "@tanstack/r
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { apiFetch, friendlyErrorMessage } from "@/lib/api-client";
-import { searchKeys } from "./keys";
-import type { StartSearchInput } from "./schemas";
+import { searchKeys, toSearchParams } from "./keys";
+import type { ResultsQueryInput, StartSearchInput } from "./schemas";
 import type { SearchView } from "./types";
 
-export { searchKeys };
+export { searchKeys, toSearchParams };
 
-export function searchViewOptions(id: string) {
+export function searchViewOptions(id: string, query: ResultsQueryInput) {
   return queryOptions({
-    queryKey: searchKeys.view(id),
-    queryFn: () => apiFetch<SearchView>(`/api/searches/${id}`),
+    queryKey: searchKeys.view(id, query),
+    queryFn: () => apiFetch<SearchView>(`/api/searches/${id}?${toSearchParams(query)}`),
     // Poll while the search runs; stop as soon as it's done or failed.
     refetchInterval: (q) => {
       const status = q.state.data?.search.status;
@@ -23,8 +23,8 @@ export function searchViewOptions(id: string) {
   });
 }
 
-export function useSearchView(id: string) {
-  return useQuery(searchViewOptions(id));
+export function useSearchView(id: string, query: ResultsQueryInput) {
+  return useQuery({ ...searchViewOptions(id, query), placeholderData: (previous) => previous });
 }
 
 export interface Usage {
