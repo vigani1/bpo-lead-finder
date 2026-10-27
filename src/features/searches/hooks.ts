@@ -48,7 +48,7 @@ export function useStartSearch() {
     onSuccess: ({ searchId, reused }) => {
       // A new search counts against the hourly limit shown on the form.
       if (!reused) void queryClient.invalidateQueries({ queryKey: searchKeys.usage });
-      if (reused) toast("Showing a search from the last 24 hours", { description: "Use Refresh on the results page to search live again." });
+      if (reused) toast("Showing a search from the last 24 hours", { description: "Use “Search again live” on the results page to run it fresh." });
       router.push(`/searches/${searchId}`);
     },
     onError: (error) => toast.error(friendlyErrorMessage(error)),
