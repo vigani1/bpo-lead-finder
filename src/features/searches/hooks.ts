@@ -32,6 +32,7 @@ export interface Usage {
   limitPerHour: number;
   usedToday: number;
   limitPerDay: number;
+  searchProvider: string;
 }
 
 export function useUsage() {
