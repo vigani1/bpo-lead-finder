@@ -5,14 +5,17 @@ import { hasCampaignEvidence, scoreCenter } from "@/lib/scoring/score";
 import { inferCountry } from "../country";
 import type { RunContext } from "./context";
 
-/** Re-scores a center for this search and records it as a result (or not). */
+/** Re-scores a center for this search and records it as a result, or removes it when it no longer qualifies. */
 export async function upsertResult(ctx: RunContext, centerId: string, fromEarlierSearch: boolean): Promise<boolean> {
   const [center] = await ctx.db.select().from(centers).where(eq(centers.id, centerId)).limit(1);
   if (!center) return false;
   const rows = await ctx.db.select().from(evidence).where(eq(evidence.centerId, centerId));
-  if (!hasCampaignEvidence(rows, ctx.filters.campaign)) return false;
   const confirmedElsewhere = ctx.filters.country !== "any" && center.country && center.country !== ctx.filters.country && inferCountry(center.countrySignals).confirmed;
-  if (confirmedElsewhere) return false;
+  if (!hasCampaignEvidence(rows, ctx.filters.campaign) || confirmedElsewhere) {
+    // Later evidence can disqualify a center that was already a result, e.g. by placing it in another country.
+    await ctx.db.delete(searchResults).where(and(eq(searchResults.searchId, ctx.search.id), eq(searchResults.centerId, centerId)));
+    return false;
+  }
 
   const result = scoreCenter(center, rows, { ...ctx.filters, maxEvidenceAgeDays: null, now: new Date() });
   const reasons = result.lines.filter((l) => l.points !== 0).map(({ signal, label, points, evidenceIds }) => ({ signal, label, points, evidenceIds }));
