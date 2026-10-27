@@ -1,4 +1,5 @@
 import { CAMPAIGNS, type CampaignId } from "@/config/campaigns";
+import { RED_FLAG_KEYWORDS } from "@/config/signals";
 import { matchCampaign } from "@/lib/campaign-match";
 import { findPhrase, foldAccents } from "@/lib/text";
 
@@ -37,7 +38,8 @@ const EXPERIENCE_REQUIREMENT = new RegExp(
 /**
  * Does this quote really show the campaign? It must name it, without a
  * negation in front ("we don't do Medicare") and without an excluded context
- * ("Medicare biller", "medical billing").
+ * ("Medicare biller", "medical billing"). Used by the keyword rules and when
+ * claims are verified.
  */
 export function campaignQuoteVerdict(campaign: CampaignId, quote: string, inJobAd = false): QuoteVerdict {
   const match = matchCampaign(campaign, quote);
@@ -48,3 +50,15 @@ export function campaignQuoteVerdict(campaign: CampaignId, quote: string, inJobA
   return negatedBefore(folded, match.index) ? "negated_or_excluded" : "ok";
 }
 
+/**
+ * A red flag counts only if it's one of our categories, one of its keywords appears, and it isn't
+ * negated ("100% exclusive, never resold"). Categories the AI makes up ("age requirement") don't count.
+ */
+export function redFlagQuoteVerdict(value: string, quote: string): QuoteVerdict {
+  const keywords = RED_FLAG_KEYWORDS.find((r) => r.value === value)?.keywords;
+  if (!keywords) return "keyword_missing";
+  const folded = foldAccents(quote);
+  const positions = keywords.map((k) => findPhrase(folded, k)).filter((i) => i !== -1);
+  if (positions.length === 0) return "keyword_missing";
+  return positions.every((i) => negatedBefore(folded, i)) ? "negated_or_excluded" : "ok";
+}
