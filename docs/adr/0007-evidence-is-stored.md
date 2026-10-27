@@ -13,5 +13,5 @@ Technically the tool could search, show the results, and discard them, which wou
 
 ## Consequences
 
-- Adding an evidence source means first checking that its terms allow storing results. Of the options checked on 2026-10-27, only Mojeek's Business plan does.
+- Adding an evidence source means first checking that its terms allow storing results. Of the options checked on 2026-10-27, only Mojeek's Business plan grants it outright; Perplexity's terms set no limit, but it is being sued over where its results come from.
 - Transient-only providers can still widen website discovery, as Exa does, at no risk to the terms.

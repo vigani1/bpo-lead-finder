@@ -34,7 +34,7 @@ What the prototype doesn't do yet, and what I'd build next. Grouped by how soon 
 
 ## Later
 
-- **A third search index, if one is needed:** Mojeek's Business plan (£3 per 1,000) is the only checked option whose terms allow storing results indefinitely; see `docs/sources.md`.
+- **A third search index, if one is needed:** Mojeek's Business plan (£3 per 1,000) is the only checked option whose terms explicitly allow storing results indefinitely (Perplexity sets no limit but carries a provenance lawsuit); see `docs/sources.md`.
 - **More sources, with permission:** data feeds from job boards (Rozee, Mustakbil, Computrabajo), official LinkedIn or Meta API access if the company has it, a search API plan that allows storing results.
 - **Registry checks:** PSEB (Pakistan), PEZA (Philippines), and license checks for the US agents centers transfer calls to.
 - **Learned weights:** adjust scoring points from reviewer votes once there are enough of them.
