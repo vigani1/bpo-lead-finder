@@ -13,24 +13,24 @@ export function ContactList({ center }: { center: CenterView["center"] }) {
       <ul className="space-y-1.5 text-sm">
         {center.phones.map((p) => (
           <li key={p} className="flex items-center gap-2">
-            <PhoneIcon className="size-4 text-muted-foreground" />
-            <a href={`tel:${p}`} className="hover:underline tabular-nums">
+            <PhoneIcon className="size-4 shrink-0 text-muted-foreground" />
+            <a href={`tel:${p}`} className="min-w-0 break-all hover:underline tabular-nums">
               {p}
             </a>
           </li>
         ))}
         {center.emails.map((e) => (
           <li key={e} className="flex items-center gap-2">
-            <MailIcon className="size-4 text-muted-foreground" />
-            <a href={`mailto:${e}`} className="hover:underline">
+            <MailIcon className="size-4 shrink-0 text-muted-foreground" />
+            <a href={`mailto:${e}`} className="min-w-0 break-all hover:underline">
               {e}
             </a>
           </li>
         ))}
         {center.websiteUrl ? (
           <li className="flex items-center gap-2">
-            <GlobeIcon className="size-4 text-muted-foreground" />
-            <a href={center.websiteUrl} target="_blank" rel="noreferrer" className="hover:underline">
+            <GlobeIcon className="size-4 shrink-0 text-muted-foreground" />
+            <a href={center.websiteUrl} target="_blank" rel="noreferrer" className="min-w-0 break-all hover:underline">
               {center.domain}
             </a>
             {center.websiteStatus === "js_only" ? <span className="text-muted-foreground">(partly readable)</span> : null}
@@ -38,8 +38,8 @@ export function ContactList({ center }: { center: CenterView["center"] }) {
         ) : null}
         {center.socialLinks.map((s) => (
           <li key={s.url} className="flex items-center gap-2">
-            <ExternalLinkIcon className="size-4 text-muted-foreground" />
-            <a href={s.url} target="_blank" rel="noreferrer" className="hover:underline">
+            <ExternalLinkIcon className="size-4 shrink-0 text-muted-foreground" />
+            <a href={s.url} target="_blank" rel="noreferrer" className="min-w-0 break-all hover:underline">
               {s.platform}
             </a>
           </li>
