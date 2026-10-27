@@ -63,7 +63,7 @@ Everything is saved as it's found, so results appear live and survive a refresh.
 
 ## Sources and platform terms
 
-Why these sources, and every alternative that was checked and left out (with links and dates): [docs/sources.md](docs/sources.md).
+Why these sources, and every alternative that was checked and left out (with links and dates): [docs/sources.md](docs/sources.md). Why evidence has to come from a source that allows storing it: [ADR 0007](docs/adr/0007-evidence-is-stored.md).
 
 | Source | How it's used | Why |
 |---|---|---|

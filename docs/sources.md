@@ -14,7 +14,7 @@ Two search indexes are enough for this tool: more indexes mostly return the same
 
 ## Checked and not used
 
-"Store" means keeping results as evidence after the search, which this tool needs for job-ad and social snippets. A source that may not be stored can still help find company websites, as Exa does.
+"Store" means keeping results as evidence after the search, which this tool needs for job-ad and social snippets: why it stores them, rather than searching live and keeping nothing, is ADR 0007 (`docs/adr/0007-evidence-is-stored.md`). A source that may not be stored can still help find company websites, as Exa does.
 
 ### Search APIs
 
