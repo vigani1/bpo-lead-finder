@@ -93,8 +93,9 @@ export function triage(hits: SearchHit[], filters: SearchFilters): TriageResult 
     }
 
     // Transient sources (e.g. Exa) may only point us at company websites, which we then read
-    // ourselves. Their snippets and titles are never stored.
-    const storedName = hit.storable ? hit.title : null;
+    // ourselves. Their snippets and titles are never stored. Storable titles can end up in the
+    // ruled-out list, so personal numbers and names are removed from them first.
+    const storedName = hit.storable ? stripPersonalData(hit.title) : null;
     // allowPrivateDomains: "futurelinkers.blogspot.com" is its own site, not "blogspot.com".
     const registeredDomain = getDomain(url.hostname, { allowPrivateDomains: true });
     if (registeredDomain && BLOCKED_DOMAINS.includes(registeredDomain)) {
@@ -130,7 +131,7 @@ export function triage(hits: SearchHit[], filters: SearchFilters): TriageResult 
       continue;
     }
     if (!matchCampaign(filters.campaign, text)) {
-      result.ruledOut.push({ url: key, name: hit.title, reason: "no_campaign_mention", detail: mapping.kind });
+      result.ruledOut.push({ url: key, name: storedName, reason: "no_campaign_mention", detail: mapping.kind });
       continue;
     }
 
