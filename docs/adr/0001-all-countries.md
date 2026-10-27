@@ -6,8 +6,6 @@ So every country libphonenumber knows is selectable. The six tuned countries kee
 
 A center's location comes from several signals: phone prefix, domain ending, city, the job board's country and the page text. US and Canadian (+1) numbers never count as a location, because offshore centers often show a virtual +1 number so American clients can call them.
 
-The +1 rule and the search form's "not tested yet" hint are applied in the commits that build location detection and the search form.
-
 ## Consequences
 
 - Searches in untuned countries are thinner. Tuning one more country means adding an entry to `src/config/countries.ts`; nothing else changes.
