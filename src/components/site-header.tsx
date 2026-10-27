@@ -5,7 +5,7 @@ export function SiteHeader() {
   return (
     <header className="bg-band text-band-foreground">
       <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2.5 font-semibold whitespace-nowrap">
+        <Link href="/" translate="no" className="flex items-center gap-2.5 font-semibold whitespace-nowrap">
           <span aria-hidden className="size-2.5 rounded-full bg-lamp shadow-lamp" />
           Call Center Lead Finder
         </Link>

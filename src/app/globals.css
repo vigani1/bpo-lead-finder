@@ -164,6 +164,7 @@
   }
   html {
     @apply font-sans;
+    touch-action: manipulation;
   }
 }
 @layer components {

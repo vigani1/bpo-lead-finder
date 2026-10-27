@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo, Source_Serif_4 } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { Providers } from "./providers";
@@ -11,6 +11,14 @@ const evidence = Source_Serif_4({ variable: "--font-evidence", subsets: ["latin"
 export const metadata: Metadata = {
   title: { default: "Call Center Lead Finder", template: "%s | Call Center Lead Finder" },
   description: "Find offshore call centers running US insurance campaigns, with the evidence behind every match.",
+};
+
+/** The browser chrome matches the page band: daylight or night navy. */
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#d5e3ec" },
+    { media: "(prefers-color-scheme: dark)", color: "#13294a" },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
