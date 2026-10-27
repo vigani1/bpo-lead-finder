@@ -14,6 +14,7 @@ import type { FilterOptions } from "@/features/meta/filter-options";
 import { useStartSearch, useUsage } from "@/features/searches/hooks";
 import { cn } from "@/lib/utils";
 import { PageBand } from "@/components/page-band";
+import { ShiftBoard } from "./shift-board";
 
 /** A label above its control; `labelId` names the control for screen readers. */
 function Field({ label, labelId, htmlFor, children, className }: { label: string; labelId: string; htmlFor?: string; children: ReactNode; className?: string }) {
@@ -99,7 +100,7 @@ const COVERAGE_TONE: Record<string, string> = {
   none: "bg-destructive",
 };
 
-/** The home page hero and search panel. `intro` is the headline shown above the panel. */
+/** The home page hero and search panel. `intro` is the headline shown above the clocks. */
 export function SearchForm({ options, intro }: { options: FilterOptions; intro: ReactNode }) {
   const [campaign, setCampaign] = useState<CampaignId>("final_expense");
   const [country, setCountry] = useState<CountryFilter>("pk");
@@ -112,13 +113,18 @@ export function SearchForm({ options, intro }: { options: FilterOptions; intro: 
 
   return (
     <form action={() => start.mutate({ campaign, country, market, depth })}>
-      <PageBand className="pt-12 pb-32 sm:pt-16">{intro}</PageBand>
+      <PageBand className="space-y-10 pt-12 pb-32 sm:pt-16">
+        {intro}
+        <div className="space-y-3">
+          <span id={`${id}-country`} className="block text-sm font-medium text-band-muted">
+            Where the call floor is
+          </span>
+          <ShiftBoard options={options.countries} value={country} onChange={setCountry} labelledBy={`${id}-country`} />
+        </div>
+      </PageBand>
 
       <div className="relative -mt-20 overflow-hidden rounded-xl border bg-card shadow-xl shadow-foreground/10">
-        <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[16rem_minmax(0,1fr)_16rem]">
-          <Field label="Where the call floor is" labelId={`${id}-country-label`} htmlFor={`${id}-country`}>
-            <FieldSelect id={`${id}-country`} value={country} onChange={setCountry} options={options.countries} />
-          </Field>
+        <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[minmax(0,1fr)_16rem]">
           <Field label="Campaign" labelId={`${id}-campaign`}>
             <Segmented
               labelledBy={`${id}-campaign`}
