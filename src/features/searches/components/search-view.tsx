@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeftIcon, RefreshCwIcon } from "lucide-react";
+import { ArrowLeftIcon, DownloadIcon, RefreshCwIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useMemo } from "react";
@@ -45,6 +45,7 @@ export function SearchView({ id }: { id: string }) {
   const { search, results, totalResults, ruledOut } = data;
   const running = search.status === "queued" || search.status === "running";
   const coverage = coverageFor(search.country, search.campaign);
+  const exportHref = `/api/searches/${id}/export?${toSearchParams(query)}`;
 
   return (
     <div className="space-y-8 pt-8">
@@ -60,13 +61,20 @@ export function SearchView({ id }: { id: string }) {
               {coverage.coverage && coverage.coverage !== "strong" && coverage.hint}
             </p>
           </div>
-          <Button
-            variant="outline"
-            disabled={running || refresh.isPending}
-            onClick={() => refresh.mutate({ campaign: search.campaign, country: search.country, market: search.market, depth: search.depth, refresh: true })}
-          >
-            <RefreshCwIcon className={refresh.isPending ? "animate-spin" : undefined} /> Search again live
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              disabled={running || refresh.isPending}
+              onClick={() => refresh.mutate({ campaign: search.campaign, country: search.country, market: search.market, depth: search.depth, refresh: true })}
+            >
+              <RefreshCwIcon className={refresh.isPending ? "animate-spin" : undefined} /> Search again live
+            </Button>
+            <Button variant="outline" asChild>
+              <a href={exportHref} download>
+                <DownloadIcon /> Export CSV
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
 
