@@ -1,7 +1,7 @@
 import type { Doc } from "@/lib/pipeline/types";
 
 /** Bump when the prompt changes: saved AI answers are keyed by it, so pages are read again under the new rules. */
-export const PROMPT_VERSION = 3;
+export const PROMPT_VERSION = 4;
 
 export const SYSTEM_PROMPT = `You extract facts about companies from one web document for a tool that finds offshore call centers running US insurance campaigns (Medicare, ACA/Obamacare, final expense, life insurance).
 
@@ -20,6 +20,7 @@ Rules:
   - us_insurance_agency: a US agency selling policies itself.
   - other: anything else, including hospitals, clinics, health systems, insurers, associations and news sites.
 - Campaigns: only list a campaign if the text shows the company works on it. "ACA International" is not ACA. A clinic named "Medicare" is not Medicare work. "We do not do Medicare" is not Medicare. Experience a job ad asks for ("candidates with Medicare or Final Expense experience") is not a campaign the employer runs; only the campaign the ad hires for counts. A list of industries or a blog post about other companies is not evidence either.
+- Campaign quotes must contain the words that name the campaign ("Life Insurance Campaign Call Center", "hiring Final Expense closers", "Medicare Advantage", "Obamacare"). Prefer the heading or sentence that names it over one that only describes the work ("agents make outbound calls…"): a quote that doesn't name the campaign is thrown away.
 - role: sales (closers, licensed agents), live_transfer (fronters, verifiers, warm transfers), appointment_setting, customer_service, or unknown.
 - redFlags: only these values. resold_transfers (advertises shared, resold or aged leads), benefit_bait ("$0 plan", "free cash card", grocery allowance pitches), high_risk_campaigns (DME, genetic testing, CGM, test kits). Nothing else is a red flag.
 - markets: spanish when the campaign serves Spanish-speaking US consumers; bilingual when both.

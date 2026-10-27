@@ -187,11 +187,15 @@ red flag; a center not shown to be in the requested country is Low.
 Caveats: 48 labels by one person is a small sample (±10 points or so), and the held-out set is
 thin because those markets have little public data. The Fit / Not a fit buttons collect more labels.
 
-**With the AI model** (`pnpm eval:live`, 2026-10-27): re-running the 9 labelled searches with
-DeepSeek V4.1 Flash, High was 11 of 12 real fits (92%) among the labelled centers it found again, and
-every real fit ranked above every wrong one. Only 18 labelled centers came back, because search
-results drift between runs; about 30 new centers still need labels. The run is saved in
-`eval-dumps/live-results.json`: `EVAL_SNAPSHOT=eval-dumps/live-results.json pnpm eval:scores`.
+**With the AI model** (`pnpm eval:live`, 2026-10-27, prompt v4): re-running the 9 labelled searches
+with DeepSeek V4.1 Flash, High was 10 of 12 real fits (83%; the other 2 partial fits) among the 21
+labelled centers it found again, and a real fit outranked a wrong one 91% of the time. Prompt v3 had
+11 of 12 and 100% on 18 centers; v4 asks the model to quote the words that name each campaign,
+which cut rejected quotes from 40 to 28, found 56 centers instead of 52, and recovered real fits
+v3 lost (Lead Heroes twice, Reliant BPO). The dip comes from run-to-run variation (the model didn't
+repeat a location mention for two centers) and different search results, not from the new rule.
+With about 20 labelled centers per run, one center moves these numbers by 5–8 points. The run is
+saved in `eval-dumps/live-results.json`: `EVAL_SNAPSHOT=eval-dumps/live-results.json pnpm eval:scores`.
 
 ## Accessibility
 
