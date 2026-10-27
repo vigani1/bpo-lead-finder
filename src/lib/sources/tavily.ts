@@ -2,6 +2,7 @@ import "server-only";
 import { tavily, TavilyKeylessLimitError, type TavilyClient } from "@tavily/core";
 import { UNIT_COSTS_USD } from "@/config/limits";
 import { env } from "@/lib/env";
+import { logger } from "@/lib/logger";
 import { SourceLimitError, type SearchSource } from "./types";
 
 let client: TavilyClient | undefined;
@@ -60,3 +61,22 @@ export const tavilySource: SearchSource = {
     }
   },
 };
+
+/**
+ * Renders a JavaScript-only company page through Tavily Extract. Only used for
+ * a center's own website after robots.txt allowed it, never for platforms
+ * whose terms forbid automated access. Needs an API key.
+ */
+export async function renderPageText(url: string): Promise<{ text: string; credits: number } | null> {
+  if (!env().TAVILY_API_KEY) return null;
+  try {
+    // "basic" can't render these sites (tested on guardianbpo.com, everest-sol.com); "advanced" can.
+    const response = await getClient().extract([url], { extractDepth: "advanced", format: "text", includeUsage: true, timeout: 30 });
+    const text = response.results[0]?.rawContent?.trim();
+    if (!text) logger.warn("render fallback returned nothing", { url, failed: response.failedResults[0]?.error });
+    return text ? { text, credits: response.usage?.credits ?? 2 } : null;
+  } catch (error) {
+    logger.warn("render fallback failed", { url, error: String(error) });
+    return null;
+  }
+}

@@ -7,11 +7,12 @@ import { buildQueries } from "../build-queries";
 import { discover } from "../discover";
 import { triage } from "../triage";
 import { addRuledOut, createRunContext, saveProgress, timed, type RunContext } from "./context";
+import { fetchSites } from "./fetch-sites";
 
 /**
  * Runs one search end to end. Called from `after()`, so it never blocks the request.
  *
- * search → triage
+ * search → triage → fetch sites
  */
 export async function runSearch(searchId: string): Promise<void> {
   const db = await getDb();
@@ -50,6 +51,9 @@ async function runStages(ctx: RunContext) {
   await saveProgress(ctx, "triaging");
   const triaged = triage(hits, ctx.filters);
   await addRuledOut(ctx, triaged.ruledOut);
+
+  await saveProgress(ctx, "fetching");
+  await timed(ctx, "fetching", () => fetchSites(ctx, triaged.siteCandidates));
 
   ctx.progress.stage = "done";
   await ctx.db.update(searches).set({ status: "done", finishedAt: new Date(), progress: ctx.progress }).where(eq(searches.id, ctx.search.id));
