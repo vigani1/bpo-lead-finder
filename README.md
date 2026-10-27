@@ -148,6 +148,51 @@ The pages call the server functions directly; the same data is also available as
 | `pnpm db:generate` | New migration after a schema change |
 | `pnpm db:migrate` | Applies the migrations to the hosted database (`DATABASE_URL_UNPOOLED`); runs on every Vercel deploy |
 
+## What live testing showed (2026-10-26)
+
+- **Pakistan** has the most public data: a quick final-expense search finds 7 to 8 named centers (e.g. Reliant BPO, Falco Connect BPO, Sybrid, Touchstone Communications).
+- **Most evidence is job ads**, and many centers have no website. Job ads count as the strongest proof that a campaign is active.
+- **Listing pages bundle several employers**; Tavily separates their excerpts with `[...]`, and each excerpt is read on its own.
+- **Tavily returns nothing** when a country boost is combined with a domain filter, so job-board queries don't use the boost.
+- **Colombia, Spanish, ACA** works but is thin (2 centers on a thorough search); the Dominican Republic and India have little public data. The app says so up front.
+- **Adding Exa** (a second, independent index) took a quick final-expense search from 7 to 10–12 centers; most of Exa's results were pages Tavily hadn't returned (16 of 20 on a quick search, 46 of 65 on a thorough one).
+- **Without an AI key**, the keyword rules miss employers that aren't named in a recognisable way (they're ruled out as "employer not named", never guessed).
+
+## How accurate the confidence labels are (2026-10-26)
+
+Every result from 9 live searches was labelled by hand from its evidence (`eval/labels.json`):
+fit, partial (plausible but weakly shown) or not a fit. `pnpm eval:scores` re-scores a frozen
+snapshot of them (`eval-dumps/eval-snapshot.json`) with the current code and compares. 48 of the 50
+labels are scored: one center isn't in the snapshot, and one ("Home Based Call Center") is now
+refused as a placeholder name. 39 were used while changing the scoring; 9 come from four later
+searches it wasn't tuned on.
+
+| | High | Medium | Low |
+|---|---|---|---|
+| Real fits | 21 | 6 | 0 |
+| Partial | 1 | 6 | 4 |
+| Not a fit | 0 | 0 | 10 |
+
+- **High was right 21 of 22 times** (95%); the miss is a staffing agency posting a real FE job.
+- **Low holds no real fits**; Medium is the "check it yourself" band, about half real fits.
+- A real fit outranks a wrong one 99% of the time (100% on the held-out searches).
+- Before these changes only 1 result was High, Medium was 69% right, and fits outranked wrong ones 73% of the time.
+
+What changed: only the strongest proof of the campaign counts (a job ad naming the employer, the
+company's own service page, or a mere mention), so one good source can reach High; job-listing
+page titles, "Top 20" blog posts and dated blog posts count less or not at all; healthcare admin
+jobs and "candidates with Medicare experience" aren't campaign proof; "never resold" isn't a
+red flag; a center not shown to be in the requested country is Low.
+
+Caveats: 48 labels by one person is a small sample (±10 points or so), and the held-out set is
+thin because those markets have little public data. The Fit / Not a fit buttons collect more labels.
+
+**With the AI model** (`pnpm eval:live`, 2026-10-27): re-running the 9 labelled searches with
+DeepSeek V4.1 Flash, High was 11 of 12 real fits (92%) among the labelled centers it found again, and
+every real fit ranked above every wrong one. Only 18 labelled centers came back, because search
+results drift between runs; about 30 new centers still need labels. The run is saved in
+`eval-dumps/live-results.json`: `EVAL_SNAPSHOT=eval-dumps/live-results.json pnpm eval:scores`.
+
 ## Accessibility
 
 - Confidence is a word plus a three-bar meter, never colour alone.
