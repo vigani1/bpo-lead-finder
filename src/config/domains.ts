@@ -1,6 +1,7 @@
 /**
  * What we know about domains that show up in search results, and what we're
- * allowed to do with them. Checked against robots.txt and terms on 2026-10-26.
+ * allowed to do with them. Checked against robots.txt and terms on 2026-10-26
+ * (see docs/adr/0002-sources-and-platform-terms.md).
  *
  * - `snippet_only`: use the search result (title, URL, snippet) and link to it; never fetch.
  * - `skip`: drop the result entirely (only the URL is kept, in the ruled-out list).

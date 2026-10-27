@@ -9,6 +9,8 @@ const optionalString = z.preprocess(
 
 const envSchema = z.object({
   TAVILY_API_KEY: optionalString,
+  /** Optional second search index; used for discovery only (results are not stored). */
+  EXA_API_KEY: optionalString,
   /** `tavily` (default; keyless if no key) or `fixture` (offline sample data). */
   SEARCH_PROVIDER: z.enum(["tavily", "fixture"]).default("tavily"),
   /** Hosted Postgres (Neon) connection string. Unset = PGlite in DATABASE_DIR. */
