@@ -6,13 +6,14 @@ import { logger } from "@/lib/logger";
 import { buildQueries } from "../build-queries";
 import { discover } from "../discover";
 import { triage } from "../triage";
+import { classifyDocs } from "./classify-docs";
 import { addRuledOut, createRunContext, saveProgress, timed, type RunContext } from "./context";
 import { fetchSites } from "./fetch-sites";
 
 /**
  * Runs one search end to end. Called from `after()`, so it never blocks the request.
  *
- * search → triage → fetch sites
+ * search → triage → (classify snippets ∥ fetch sites) → classify sites
  */
 export async function runSearch(searchId: string): Promise<void> {
   const db = await getDb();
@@ -52,8 +53,13 @@ async function runStages(ctx: RunContext) {
   const triaged = triage(hits, ctx.filters);
   await addRuledOut(ctx, triaged.ruledOut);
 
+  await saveProgress(ctx, "classifying");
+  // Snippets (job ads, social pages) are ready now; classify them while sites download.
+  const snippetWork = classifyDocs(ctx, triaged.snippetDocs.map((doc) => ({ doc })));
   await saveProgress(ctx, "fetching");
-  await timed(ctx, "fetching", () => fetchSites(ctx, triaged.siteCandidates));
+  const sites = await timed(ctx, "fetching", () => fetchSites(ctx, triaged.siteCandidates));
+  await saveProgress(ctx, "classifying");
+  await Promise.all([snippetWork, classifyDocs(ctx, sites)]);
 
   ctx.progress.stage = "done";
   await ctx.db.update(searches).set({ status: "done", finishedAt: new Date(), progress: ctx.progress }).where(eq(searches.id, ctx.search.id));

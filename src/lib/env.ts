@@ -38,6 +38,8 @@ const envSchema = z.object({
   /** Hosted Postgres (Neon) pooled connection string, for the app. Unset = PGlite in DATABASE_DIR. */
   DATABASE_URL: z.preprocess((value) => (typeof value === "string" && value.trim() === "" ? undefined : value), z.url().optional()),
   DATABASE_DIR: z.string().default(".data/pglite"),
+  /** Dev only: write every classified document + its classification to this folder (for evaluation). */
+  EVAL_DUMP_DIR: optionalString,
   IP_HASH_SALT: z.string().default("local-dev-salt"),
   CONTACT_URL: z.url().default("https://github.com/vigani1/bpo-lead-finder"),
 });

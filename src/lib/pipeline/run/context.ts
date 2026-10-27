@@ -15,6 +15,7 @@ export interface RunContext {
   filters: SearchFilters;
   /** Saved to the searches row as the search runs; the results page polls it. */
   progress: SearchProgress;
+  classifications: number;
   urlsBySource: UrlsBySource;
 }
 
@@ -24,6 +25,7 @@ export function createRunContext(db: Db, search: Search): RunContext {
     search,
     filters: filtersOf(search),
     progress: { ...search.progress, sourceStats: search.progress.sourceStats ?? {}, classifier: getClassifier().label, searchProvider: describeSources() },
+    classifications: 0,
     urlsBySource: new Map(),
   };
 }
