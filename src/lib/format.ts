@@ -1,5 +1,5 @@
 import { CAMPAIGNS, type CampaignId } from "@/config/campaigns";
-import { countryLabel } from "@/config/countries";
+import { countryInSentence, countryLabel } from "@/config/countries";
 import { MARKETS, type MarketFilter } from "@/config/markets";
 import type { CountrySignal, EvidenceSource } from "@/lib/db/schema";
 import type { RuledOutReason } from "@/lib/pipeline/triage";
@@ -15,11 +15,19 @@ export function marketLabel(id: MarketFilter | string): string {
   return id === "any" ? "any" : id in MARKETS ? MARKETS[id as keyof typeof MARKETS].label : id;
 }
 
-/** "Final expense call centers in Pakistan, Spanish (US Hispanic) market" */
-export function describeSearch(s: { campaign: string; country: string; market: string }): string {
-  const where = s.country === "any" ? "anywhere" : `in ${countryLabel(s.country)}`;
+/** A campaign's name inside a sentence: "final expense", but "Medicare". */
+export function campaignInSentence(id: string): string {
+  return id in CAMPAIGNS ? CAMPAIGNS[id as CampaignId].inSentence : id;
+}
+
+/**
+ * "Final expense call centers in Pakistan, Spanish (US Hispanic) market";
+ * mid-sentence: "final expense call centers in the Philippines".
+ */
+export function describeSearch(s: { campaign: string; country: string; market: string }, { midSentence = false } = {}): string {
+  const where = s.country === "any" ? "anywhere" : `in ${countryInSentence(s.country)}`;
   const market = s.market === "any" ? "" : `, ${marketLabel(s.market)} market`;
-  return `${campaignLabel(s.campaign)} call centers ${where}${market}`;
+  return `${midSentence ? campaignInSentence(s.campaign) : campaignLabel(s.campaign)} call centers ${where}${market}`;
 }
 
 /** "Karachi, Pakistan", "Pakistan", or "" when nothing is known. */

@@ -4,6 +4,8 @@ export type CampaignId = (typeof CAMPAIGN_IDS)[number];
 export interface CampaignConfig {
   id: CampaignId;
   label: string;
+  /** The label inside a sentence: proper names stay capitalised ("Works on Medicare", "Works on final expense"). */
+  inSentence: string;
   /** Phrases that prove the campaign when found in text (lowercase, matched on word boundaries). */
   keywords: string[];
   /** Phrases that look like a match but are not this campaign. */
@@ -16,6 +18,7 @@ export const CAMPAIGNS: Record<CampaignId, CampaignConfig> = {
   medicare: {
     id: "medicare",
     label: "Medicare",
+    inSentence: "Medicare",
     keywords: ["medicare", "medicare advantage", "medicare supplement", "medigap", "part d"],
     // Healthcare admin jobs and provider work mention Medicare but aren't insurance campaigns.
     negativeKeywords: [
@@ -41,6 +44,7 @@ export const CAMPAIGNS: Record<CampaignId, CampaignConfig> = {
   aca: {
     id: "aca",
     label: "ACA (Obamacare)",
+    inSentence: "ACA (Obamacare)",
     // Never bare "ACA": it matches ACA International (debt collectors) and accounting bodies.
     keywords: [
       "obamacare",
@@ -61,6 +65,7 @@ export const CAMPAIGNS: Record<CampaignId, CampaignConfig> = {
   final_expense: {
     id: "final_expense",
     label: "Final expense",
+    inSentence: "final expense",
     keywords: [
       "final expense",
       "burial insurance",
@@ -80,6 +85,7 @@ export const CAMPAIGNS: Record<CampaignId, CampaignConfig> = {
   life: {
     id: "life",
     label: "Life insurance",
+    inSentence: "life insurance",
     keywords: ["life insurance", "term life", "whole life", "indexed universal life", "seguro de vida", "seguros de vida"],
     // Domestic insurers that dominate "life insurance" results in Pakistan and India.
     negativeKeywords: [

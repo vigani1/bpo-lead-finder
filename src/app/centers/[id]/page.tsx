@@ -17,8 +17,6 @@ import { idParamSchema, resultsQuerySchema } from "@/features/searches/schemas";
 
 export const metadata: Metadata = { title: "Center" };
 
-const lowerFirst = (text: string) => text.charAt(0).toLowerCase() + text.slice(1);
-
 export default function CenterPage({ params, searchParams }: PageProps<"/centers/[id]">) {
   return (
     <Suspense fallback={<CenterSkeleton />}>
@@ -57,7 +55,7 @@ async function CenterDetails({ params, searchParams }: Pick<PageProps<"/centers/
           href={scoring ? `/searches/${scoring.searchId}` : "/"}
           className="inline-flex items-center gap-1 text-sm text-band-muted hover:text-band-foreground"
         >
-          <ArrowLeftIcon className="size-4" /> {scoring ? `Back to ${lowerFirst(describeSearch(scoring))}` : "New search"}
+          <ArrowLeftIcon className="size-4" /> {scoring ? `Back to ${describeSearch(scoring, { midSentence: true })}` : "New search"}
         </Link>
         <div className="space-y-3">
           <h1 className="display text-4xl text-balance sm:text-6xl">{center.name}</h1>

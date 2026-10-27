@@ -142,6 +142,9 @@ export const COVERAGE_HINTS: Record<Coverage, string> = {
 
 export const UNTESTED_HINT = "Not tested yet: results depend on how much public data this country has.";
 
+/** Countries whose English name takes "the" in a sentence: "in the Philippines". */
+const NAMES_WITH_THE = new Set(["ae", "ax", "bs", "cc", "cf", "ck", "do", "fk", "fo", "gb", "gm", "im", "km", "ky", "mh", "mp", "mv", "nl", "ph", "sb", "sc", "tc", "us", "vg", "vi"]);
+
 export function tunedCountry(id: string | null | undefined): CountryConfig | undefined {
   return id && id in TUNED_COUNTRIES ? TUNED_COUNTRIES[id as TunedCountryId] : undefined;
 }
@@ -158,4 +161,10 @@ export function countryLabel(id: string | null | undefined): string {
   } catch {
     return id.toUpperCase();
   }
+}
+
+/** A country's name inside a sentence: "the Philippines", "Pakistan". */
+export function countryInSentence(id: string | null | undefined): string {
+  const label = countryLabel(id);
+  return id && NAMES_WITH_THE.has(id) ? `the ${label}` : label;
 }

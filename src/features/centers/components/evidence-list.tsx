@@ -2,22 +2,22 @@ import { HighlightedQuote } from "@/components/highlighted-quote";
 import { describeClassifier } from "@/lib/ai/classifier-id";
 import { redFlagQuoteVerdict } from "@/lib/claim-checks";
 import { ROLE_LABELS, type CampaignId, type CampaignRole } from "@/config/campaigns";
-import { countryLabel } from "@/config/countries";
+import { countryInSentence } from "@/config/countries";
 import { MARKETS, type MarketId } from "@/config/markets";
 import type { EvidenceView } from "@/features/centers/types";
-import { campaignLabel, docKindLabel, labelFor, MERGE_LABELS, relativeTime, SOURCE_LABELS } from "@/lib/format";
+import { campaignInSentence, docKindLabel, labelFor, MERGE_LABELS, relativeTime, SOURCE_LABELS } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 function heading(e: EvidenceView): string {
   switch (e.kind) {
     case "hiring":
-      return `Hiring for ${campaignLabel(e.value).toLowerCase()}`;
+      return `Hiring for ${campaignInSentence(e.value)}`;
     case "campaign":
-      return `Works on ${campaignLabel(e.value).toLowerCase()}`;
+      return `Works on ${campaignInSentence(e.value)}`;
     case "market":
       return `Serves the ${MARKETS[e.value as MarketId]?.label ?? e.value} market`;
     case "country":
-      return `Located in ${countryLabel(e.value)}`;
+      return `Located in ${countryInSentence(e.value)}`;
     case "compliance":
       return "Compliance language";
     case "red_flag":

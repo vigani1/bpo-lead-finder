@@ -1,7 +1,7 @@
 import "server-only";
 import { eq } from "drizzle-orm";
 import { BLOCKED_COMPANY_NAMES } from "@/config/blocked-domains";
-import { countryLabel } from "@/config/countries";
+import { countryInSentence } from "@/config/countries";
 import { HIDDEN_EMPLOYER_PATTERNS } from "@/config/signals";
 import { isPlaceholderName } from "@/lib/ai/rules/company-name";
 import { CENTER_ENTITY_TYPES, ENTITY_LABELS, type Classification, type EntityType } from "@/lib/ai/schema";
@@ -83,7 +83,7 @@ export async function persistDoc(ctx: RunContext, doc: Doc, classification: Clas
       const elsewhere = ctx.filters.country !== "any" && center?.country && center.country !== ctx.filters.country;
       await addRuledOut(ctx, [
         elsewhere
-          ? { url: doc.url, name, reason: "wrong_country", detail: `Located in ${countryLabel(center?.country)}` }
+          ? { url: doc.url, name, reason: "wrong_country", detail: `Located in ${countryInSentence(center?.country)}` }
           : { url: doc.url, name, reason: "campaign_not_evidenced", detail: `Evidence for ${campaigns}, not ${ctx.filters.campaign}` },
       ]);
     }
