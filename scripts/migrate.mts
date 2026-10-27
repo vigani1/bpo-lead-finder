@@ -11,7 +11,7 @@ import { migrate } from "drizzle-orm/node-postgres/migrator";
 import { Client } from "pg";
 import { withVerifiedSsl } from "../src/lib/db/connection-string";
 
-const connectionString = process.env.DATABASE_URL_UNPOOLED ?? process.env.DATABASE_URL;
+const connectionString = process.env.DATABASE_URL_UNPOOLED || process.env.DATABASE_URL;
 if (!connectionString) throw new Error("Set DATABASE_URL_UNPOOLED (or DATABASE_URL) to the hosted database.");
 
 const client = new Client({ connectionString: withVerifiedSsl(connectionString) });
