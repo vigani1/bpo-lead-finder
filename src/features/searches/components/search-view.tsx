@@ -1,0 +1,80 @@
+"use client";
+
+import { ArrowLeftIcon, RefreshCwIcon } from "lucide-react";
+import Link from "next/link";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import { DEPTH_PRESETS } from "@/config/limits";
+import { coverageFor } from "@/features/meta/coverage";
+import { useSearchView, useStartSearch } from "@/features/searches/hooks";
+import { friendlyErrorMessage } from "@/lib/api-client";
+import { describeSearch, relativeTime } from "@/lib/format";
+import { SearchProgressBar, SearchStats } from "./search-progress";
+
+export function SearchView({ id }: { id: string }) {
+  const { data, error } = useSearchView(id);
+  const refresh = useStartSearch();
+
+  if (!data) {
+    return (
+      <Alert variant="destructive" className="mt-10">
+        <AlertTitle>Couldn&apos;t load this search</AlertTitle>
+        <AlertDescription>{friendlyErrorMessage(error)}</AlertDescription>
+      </Alert>
+    );
+  }
+
+  const { search } = data;
+  const running = search.status === "queued" || search.status === "running";
+  const coverage = coverageFor(search.country, search.campaign);
+
+  return (
+    <div className="space-y-8 pt-8">
+      <div className="space-y-5">
+        <Link href="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeftIcon className="size-4" /> New search
+        </Link>
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <div className="space-y-3">
+            <h1 className="text-4xl font-bold text-balance sm:text-5xl">{describeSearch(search)}</h1>
+            <p className="text-sm text-muted-foreground">
+              {DEPTH_PRESETS[search.depth].label} search started {relativeTime(search.createdAt)}.{" "}
+              {coverage.coverage && coverage.coverage !== "strong" && coverage.hint}
+            </p>
+          </div>
+          <Button
+            variant="outline"
+            disabled={running || refresh.isPending}
+            onClick={() => refresh.mutate({ campaign: search.campaign, country: search.country, market: search.market, depth: search.depth, refresh: true })}
+          >
+            <RefreshCwIcon className={refresh.isPending ? "animate-spin" : undefined} /> Search again live
+          </Button>
+        </div>
+      </div>
+
+      {running && <SearchProgressBar search={search} />}
+
+      {search.status === "failed" && (
+        <Alert variant="destructive">
+          <AlertTitle>The search stopped</AlertTitle>
+          <AlertDescription>{search.error ?? "Something went wrong while searching."} Saved results below are still valid.</AlertDescription>
+        </Alert>
+      )}
+
+      {search.progress.sourceErrors.length > 0 && search.status !== "failed" && (
+        <Alert>
+          <AlertTitle>Some lookups didn&apos;t work</AlertTitle>
+          <AlertDescription>
+            <ul className="list-disc pl-4">
+              {[...new Set(search.progress.sourceErrors.map((e) => e.message))].slice(0, 4).map((message) => (
+                <li key={message}>{message}</li>
+              ))}
+            </ul>
+          </AlertDescription>
+        </Alert>
+      )}
+
+      {!running && <SearchStats search={search} />}
+    </div>
+  );
+}

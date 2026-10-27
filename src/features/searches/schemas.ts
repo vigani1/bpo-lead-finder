@@ -14,3 +14,5 @@ export const startSearchSchema = z.object({
   refresh: z.boolean().default(false),
 });
 export type StartSearchInput = z.input<typeof startSearchSchema>;
+
+export const idParamSchema = z.object({ id: z.uuid() });

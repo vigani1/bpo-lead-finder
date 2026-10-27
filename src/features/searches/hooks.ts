@@ -1,13 +1,31 @@
 "use client";
 
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { queryOptions, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { apiFetch, friendlyErrorMessage } from "@/lib/api-client";
 import { searchKeys } from "./keys";
 import type { StartSearchInput } from "./schemas";
+import type { SearchView } from "./types";
 
 export { searchKeys };
+
+export function searchViewOptions(id: string) {
+  return queryOptions({
+    queryKey: searchKeys.view(id),
+    queryFn: () => apiFetch<SearchView>(`/api/searches/${id}`),
+    // Poll while the search runs; stop as soon as it's done or failed.
+    refetchInterval: (q) => {
+      const status = q.state.data?.search.status;
+      return status === "queued" || status === "running" ? 2_000 : false;
+    },
+    staleTime: 5_000,
+  });
+}
+
+export function useSearchView(id: string) {
+  return useQuery(searchViewOptions(id));
+}
 
 export interface Usage {
   usedThisHour: number;
