@@ -42,3 +42,8 @@ export function normalizeCompanyName(name: string): string {
   for (const word of FILLER) n = n.replaceAll(` ${word} `, " ");
   return n.replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
 }
+
+/** Short or generic names ("Prime", "Guardian") need a stricter match. */
+export function nameMatchThreshold(normalized: string): number {
+  return normalized.replace(/\s/g, "").length <= 7 ? 0.8 : 0.6;
+}

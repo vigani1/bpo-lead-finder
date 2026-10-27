@@ -19,7 +19,15 @@ import * as schema from "./schema";
  * compiled to WASM, stored on disk), so the app runs with no setup. Both use the
  * same schema and migrations, and the code only sees the shared Postgres type.
  */
-export type Db = PgDatabase<PgQueryResultHKT, typeof schema>;
+export type Db = PgDatabase<RowsResultHKT, typeof schema>;
+
+/** Raw SQL (`db.execute`) returns its rows in `rows` with both drivers: node-postgres and PGlite. */
+interface RowsResult<Row> {
+  rows: Row[];
+}
+interface RowsResultHKT extends PgQueryResultHKT {
+  readonly type: RowsResult<this["row"]>;
+}
 
 interface DbState {
   db: Db;
