@@ -1,5 +1,6 @@
 import "server-only";
 import { eq } from "drizzle-orm";
+import { getClassifier } from "@/lib/ai";
 import type { Db } from "@/lib/db/client";
 import { ruledOut, searches, type Search, type SearchProgress } from "@/lib/db/schema";
 import { describeSources } from "@/lib/sources";
@@ -22,7 +23,7 @@ export function createRunContext(db: Db, search: Search): RunContext {
     db,
     search,
     filters: filtersOf(search),
-    progress: { ...search.progress, sourceStats: search.progress.sourceStats ?? {}, searchProvider: describeSources() },
+    progress: { ...search.progress, sourceStats: search.progress.sourceStats ?? {}, classifier: getClassifier().label, searchProvider: describeSources() },
     urlsBySource: new Map(),
   };
 }

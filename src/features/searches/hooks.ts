@@ -33,6 +33,7 @@ export interface Usage {
   usedToday: number;
   limitPerDay: number;
   searchProvider: string;
+  classifier: string;
 }
 
 export function useUsage() {
