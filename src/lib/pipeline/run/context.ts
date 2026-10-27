@@ -15,6 +15,10 @@ export interface RunContext {
   filters: SearchFilters;
   /** Saved to the searches row as the search runs; the results page polls it. */
   progress: SearchProgress;
+  /** Job-ad employers without a known website, for the optional lookup step. */
+  employersWithoutSite: { name: string; city: string | null; centerId: string }[];
+  /** Serializes database writes for resolution (avoids duplicate centers). */
+  writeQueue: Promise<unknown>;
   classifications: number;
   urlsBySource: UrlsBySource;
 }
@@ -25,6 +29,8 @@ export function createRunContext(db: Db, search: Search): RunContext {
     search,
     filters: filtersOf(search),
     progress: { ...search.progress, sourceStats: search.progress.sourceStats ?? {}, classifier: getClassifier().label, searchProvider: describeSources() },
+    employersWithoutSite: [],
+    writeQueue: Promise.resolve(),
     classifications: 0,
     urlsBySource: new Map(),
   };

@@ -1,19 +1,21 @@
 import "server-only";
 import { eq } from "drizzle-orm";
+import { DEPTH_PRESETS } from "@/config/limits";
 import { getDb } from "@/lib/db/client";
 import { searches } from "@/lib/db/schema";
 import { logger } from "@/lib/logger";
-import { buildQueries } from "../build-queries";
+import { buildQueries, employerLookupQuery } from "../build-queries";
 import { discover } from "../discover";
 import { triage } from "../triage";
 import { classifyDocs } from "./classify-docs";
 import { addRuledOut, createRunContext, saveProgress, timed, type RunContext } from "./context";
 import { fetchSites } from "./fetch-sites";
+import { addKnownCenters } from "./results";
 
 /**
  * Runs one search end to end. Called from `after()`, so it never blocks the request.
  *
- * search → triage → (classify snippets ∥ fetch sites) → classify sites
+ * known centers → search → triage → (classify snippets ∥ fetch sites) → classify sites → employer lookups
  */
 export async function runSearch(searchId: string): Promise<void> {
   const db = await getDb();
@@ -43,6 +45,8 @@ export async function runSearch(searchId: string): Promise<void> {
 
 /** The search itself, stage by stage. Any error ends up in runSearch's catch. */
 async function runStages(ctx: RunContext) {
+  await addKnownCenters(ctx);
+
   await saveProgress(ctx, "searching");
   const hits = await timed(ctx, "searching", () => discover(buildQueries(ctx.filters), ctx.filters, ctx.progress, ctx.urlsBySource));
   if (hits.length === 0 && ctx.progress.sourceErrors.length > 0) {
@@ -61,6 +65,22 @@ async function runStages(ctx: RunContext) {
   await saveProgress(ctx, "classifying");
   await Promise.all([snippetWork, classifyDocs(ctx, sites)]);
 
+  await lookUpEmployers(ctx);
+
+  await ctx.writeQueue;
   ctx.progress.stage = "done";
   await ctx.db.update(searches).set({ status: "done", finishedAt: new Date(), progress: ctx.progress }).where(eq(searches.id, ctx.search.id));
+}
+
+/** Employers known only from job ads: search for their websites and read those too. */
+async function lookUpEmployers(ctx: RunContext) {
+  const lookups = ctx.employersWithoutSite.slice(0, DEPTH_PRESETS[ctx.filters.depth].employerLookups);
+  if (lookups.length === 0) return;
+
+  await saveProgress(ctx, "searching");
+  const queries = lookups.map((e) => employerLookupQuery(e.name, e.city, ctx.filters));
+  const hits = await timed(ctx, "searching", () => discover(queries, ctx.filters, ctx.progress, ctx.urlsBySource));
+  await saveProgress(ctx, "fetching");
+  const sites = await timed(ctx, "fetching", () => fetchSites(ctx, triage(hits, ctx.filters).siteCandidates));
+  await classifyDocs(ctx, sites);
 }

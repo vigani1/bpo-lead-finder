@@ -13,3 +13,4 @@ Claude (Claude Code) wrote most of the code and the commit messages; every step 
 - It parsed Groq's rate-limit hint "try again in 7m12s" as 12 seconds. The pattern now reads the minutes too.
 - It read "experience in final expense" in job ads as the employer running final-expense campaigns, and telling it not to in the prompt didn't stop it. The rule became code: an experience requirement in a job ad isn't campaign proof.
 - It accepted empty quotes as verified: an empty string is "found" in every page, so an empty answer passed as evidence. Quotes under 4 characters now prove nothing.
+- When the model returned the same fact twice, one insert tried to write the same evidence row twice, Postgres rejected the whole insert, and the center lost all its evidence from that page. Repeats are now dropped before the insert.
