@@ -4,6 +4,7 @@ import { BLOCKED_COMPANY_NAMES } from "@/config/blocked-domains";
 import { countryInSentence } from "@/config/countries";
 import { HIDDEN_EMPLOYER_PATTERNS } from "@/config/signals";
 import { isPlaceholderName } from "@/lib/ai/rules/company-name";
+import { looksLikeCampaignBuyer } from "@/lib/ai/rules/entity-type";
 import { CENTER_ENTITY_TYPES, ENTITY_LABELS, type Classification, type EntityType } from "@/lib/ai/schema";
 import { centers } from "@/lib/db/schema";
 import { socialPlatform } from "@/lib/page-kinds";
@@ -55,7 +56,7 @@ export async function persistDoc(ctx: RunContext, doc: Doc, classification: Clas
   const verification = verifyClaims(doc, classification);
   ctx.progress.counts.claimsDropped += verification.dropped.length;
   const name = classification.companyName?.trim() ?? "";
-  const entityType = classification.entityType as EntityType;
+  const entityType: EntityType = looksLikeCampaignBuyer(doc.text) ? "campaign_buyer" : (classification.entityType as EntityType);
 
   if (!CENTER_ENTITY_TYPES.includes(entityType)) {
     await addRuledOut(ctx, [{ url: doc.url, name: name || doc.title, reason: "not_a_center", detail: ENTITY_LABELS[entityType] }]);

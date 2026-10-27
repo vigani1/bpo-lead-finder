@@ -15,6 +15,7 @@ export const ENTITY_TYPES = [
   "lead_marketplace",
   "job_board",
   "directory",
+  "campaign_buyer",
   "other",
 ] as const;
 export type EntityType = (typeof ENTITY_TYPES)[number];
@@ -32,6 +33,7 @@ export const ENTITY_LABELS: Record<EntityType, string> = {
   lead_marketplace: "Lead marketplace",
   job_board: "Job board",
   directory: "Directory / listicle",
+  campaign_buyer: "Campaign buyer or broker",
   other: "Other",
 };
 

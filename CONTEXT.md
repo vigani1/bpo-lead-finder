@@ -56,7 +56,11 @@ A company that runs calls for clients: one record per company, whatever the numb
 _Avoid_: Lead, company, vendor, BPO (except in copy)
 
 **Entity type**:
-What kind of organisation a page is about: a call center, a freelancer, a staffing agency, a US insurance agency, a lead marketplace or something else. Only call centers become results.
+What kind of organisation a page is about: a call center, a freelancer, a staffing agency, a US insurance agency, a lead marketplace, a campaign buyer or something else. Only call centers become results.
+
+**Campaign buyer**:
+A company on the other side of the deal: it buys leads or calls from call centers, or hands campaigns to them. It is ruled out, never a result.
+_Avoid_: Lead buyer, broker (as separate terms)
 
 **Evidence**:
 One fact about a center, backed by a quote from a page and the page's URL.

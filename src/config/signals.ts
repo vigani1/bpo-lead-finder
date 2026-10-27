@@ -37,6 +37,24 @@ export const ENTITY_HINTS = {
   staffing_agency: ["staffing", "recruitment agency", "recruiting agency", "manpower", "placement agency", "our client is", "on behalf of our client"],
   us_insurance_agency: ["licensed in all", "licensed in 50 states", "independent insurance agency", "get a quote", "insurance agency"],
   lead_marketplace: ["buy leads", "lead marketplace", "pay per call network", "ping post"],
+  campaign_buyer: [
+    "looking for call centers",
+    "looking for call centres",
+    "call centers interested in",
+    "calling all bpos",
+    "if your team delivers",
+    "campaigns available for",
+    "campaign provider",
+    "we provide campaigns",
+    "bpo partners wanted",
+    "looking for bpo partners",
+    "connects call centers",
+    "empowering call centers",
+    "projects for call centers",
+    "call center projects",
+    "bpo projects",
+    "without upfront fees",
+  ],
 } as const;
 
 /** Employer names that mean "not named". */

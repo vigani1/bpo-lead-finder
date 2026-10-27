@@ -1,7 +1,7 @@
 import type { Doc } from "@/lib/pipeline/types";
 
 /** Bump when the prompt changes: saved AI answers are keyed by it, so pages are read again under the new rules. */
-export const PROMPT_VERSION = 4;
+export const PROMPT_VERSION = 5;
 
 export const SYSTEM_PROMPT = `You extract facts about companies from one web document for a tool that finds offshore call centers running US insurance campaigns (Medicare, ACA/Obamacare, final expense, life insurance).
 
@@ -18,6 +18,7 @@ Rules:
   - individual_freelancer: one person offering services ("I will…", hourly rates, own PC).
   - lead_reseller: sells leads/transfers made by others.
   - us_insurance_agency: a US agency selling policies itself.
+  - campaign_buyer: buys leads or calls from call centers, or offers campaigns to them ("we're looking for call centers interested in…", "if your team delivers quality leads…", "campaigns available for BPOs"). It is on the other side of the deal, not a call center.
   - other: anything else, including hospitals, clinics, health systems, insurers, associations and news sites.
 - Campaigns: only list a campaign if the text shows the company works on it. "ACA International" is not ACA. A clinic named "Medicare" is not Medicare work. "We do not do Medicare" is not Medicare. Experience a job ad asks for ("candidates with Medicare or Final Expense experience") is not a campaign the employer runs; only the campaign the ad hires for counts. A list of industries or a blog post about other companies is not evidence either.
 - Campaign quotes must contain the words that name the campaign ("Life Insurance Campaign Call Center", "hiring Final Expense closers", "Medicare Advantage", "Obamacare"). Prefer the heading or sentence that names it over one that only describes the work ("agents make outbound calls…"): a quote that doesn't name the campaign is thrown away.

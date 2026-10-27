@@ -1,6 +1,6 @@
 import { ENTITY_HINTS } from "@/config/signals";
 import type { Doc } from "@/lib/pipeline/types";
-import { findPhrase } from "@/lib/text";
+import { findPhrase, foldAccents } from "@/lib/text";
 import type { EntityType } from "../schema";
 import { firstMatch, quoteAt } from "./matching";
 
@@ -32,4 +32,15 @@ export function guessEntityType(doc: Doc, folded: string): { type: EntityType; q
   if (center.phrases.length > 0) return { type: "call_center", quote: quoteAt(doc.text, folded, center.phrases[0]!) };
   // A job ad naming an insurance campaign is almost always posted by a center.
   return doc.kind === "job_ad" ? { type: "call_center", quote: null } : { type: "other", quote: null };
+}
+
+/**
+ * Companies on the other side of the deal (they buy leads from call centers or
+ * hand them campaigns) describe themselves much like centers do, and the model
+ * sometimes calls them one. Two or more distinct buyer phrases on the page
+ * ("connects call centers…", "BPO projects", "campaign provider") overrule it.
+ */
+export function looksLikeCampaignBuyer(text: string): boolean {
+  const folded = foldAccents(text);
+  return ENTITY_HINTS.campaign_buyer.filter((h) => findPhrase(folded, h) !== -1).length >= 2;
 }
