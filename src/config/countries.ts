@@ -1,7 +1,8 @@
 import type { CampaignId } from "./campaigns";
 
 /**
- * Countries with hand-tuned search settings, from the feasibility check.
+ * Countries with hand-tuned search settings, from the feasibility check. Every
+ * other country works too, with settings derived automatically (all-countries.ts).
  * This file stays free of large libraries so the browser can import it.
  */
 export const TUNED_COUNTRY_IDS = ["pk", "ph", "in", "co", "mx", "do"] as const;
