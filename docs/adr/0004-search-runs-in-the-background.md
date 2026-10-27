@@ -4,7 +4,7 @@ A search takes from under a minute to several minutes: dozens of search queries,
 
 So `POST /api/searches` saves the search and returns at once, and the pipeline runs in Next.js `after()` in the same function. Every stage saves its progress and its findings to the database as it goes, and the results page polls the search every 2 seconds until it is done or failed. An identical search (same country, market, campaign and depth) from the last 24 hours is reused instead of run again, unless the user asks for a live run.
 
-The database is Postgres either way: Neon when `DATABASE_URL` is set (the deployed demo), otherwise PGlite on disk, so a fresh clone runs with no setup. PGlite runs Postgres inside the Node process, allows only one process on its data folder, and was corrupted once in testing when the server was killed mid-write, so it is for local use only.
+The database is Postgres either way: Neon when `DATABASE_URL` is set (the deployed demo), otherwise PGlite on disk, so a fresh clone runs with no setup. On Neon the app connects with node-postgres over the pooled URL, with Vercel's `attachDatabasePool` closing idle connections, as Neon recommends for Vercel; migrations run once at deploy time (`pnpm db:migrate` in `vercel-build`) over the direct URL, because schema changes don't belong on the pooler and many instances starting at once shouldn't all migrate. PGlite migrates itself when the app opens it. PGlite runs Postgres inside the Node process, allows only one process on its data folder, and was corrupted once in testing when the server was killed mid-write, so it is for local use only.
 
 ## Consequences
 

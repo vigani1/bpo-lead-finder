@@ -48,3 +48,4 @@ next-env.d.ts
 /eval-dumps/*
 !/eval-dumps/eval-snapshot.json
 !/eval-dumps/live-results.json
+.neon

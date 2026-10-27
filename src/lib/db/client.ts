@@ -3,20 +3,21 @@ import { mkdirSync } from "node:fs";
 import path from "node:path";
 import { PGlite } from "@electric-sql/pglite";
 import { pg_trgm } from "@electric-sql/pglite/contrib/pg_trgm";
-import { Pool } from "@neondatabase/serverless";
-import { drizzle as drizzleNeon } from "drizzle-orm/neon-serverless";
-import { migrate as migrateNeon } from "drizzle-orm/neon-serverless/migrator";
+import { attachDatabasePool } from "@vercel/functions";
+import { drizzle as drizzlePostgres } from "drizzle-orm/node-postgres";
 import type { PgDatabase, PgQueryResultHKT } from "drizzle-orm/pg-core";
 import { drizzle as drizzlePglite } from "drizzle-orm/pglite";
 import { migrate as migratePglite } from "drizzle-orm/pglite/migrator";
+import { Pool } from "pg";
 import { env } from "@/lib/env";
+import { withVerifiedSsl } from "./connection-string";
 import * as schema from "./schema";
 
 /**
- * The database. With `DATABASE_URL` set, a hosted Postgres (Neon) through its
- * serverless driver; otherwise PGlite (Postgres compiled to WASM, stored on
- * disk), so the app runs with no setup. Both get the same schema, migrations
- * and pg_trgm extension, and the code only sees the shared Postgres type.
+ * The database. With `DATABASE_URL` set, a hosted Postgres (Neon) through
+ * node-postgres over Neon's pooled connection; otherwise PGlite (Postgres
+ * compiled to WASM, stored on disk), so the app runs with no setup. Both use the
+ * same schema and migrations, and the code only sees the shared Postgres type.
  */
 export type Db = PgDatabase<PgQueryResultHKT, typeof schema>;
 
@@ -30,14 +31,17 @@ const globalForDb = globalThis as unknown as { __leadFinderDb?: DbState };
 
 const migrationsFolder = () => path.resolve(/*turbopackIgnore: true*/ process.cwd(), "drizzle");
 
+/**
+ * Hosted Postgres. Migrations (and pg_trgm) are applied at deploy time by
+ * `pnpm db:migrate` over the direct connection, not here: many serverless
+ * instances starting at once shouldn't all migrate, and Neon's pooler doesn't
+ * suit schema changes.
+ */
 function createPostgresDb(connectionString: string): DbState {
-  const client = new Pool({ connectionString });
-  const db = drizzleNeon({ client, schema });
-  const ready = (async () => {
-    await client.query("CREATE EXTENSION IF NOT EXISTS pg_trgm;");
-    await migrateNeon(db, { migrationsFolder: migrationsFolder() });
-  })();
-  return { db, ready };
+  const pool = new Pool({ connectionString: withVerifiedSsl(connectionString) });
+  // On Vercel (Fluid compute), closes idle connections before a function instance is suspended.
+  attachDatabasePool(pool);
+  return { db: drizzlePostgres({ client: pool, schema }), ready: Promise.resolve() };
 }
 
 function createPgliteDb(databaseDir: string): DbState {

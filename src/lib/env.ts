@@ -13,7 +13,7 @@ const envSchema = z.object({
   EXA_API_KEY: optionalString,
   /** `tavily` (default; keyless if no key) or `fixture` (offline sample data). */
   SEARCH_PROVIDER: z.enum(["tavily", "fixture"]).default("tavily"),
-  /** Hosted Postgres (Neon) connection string. Unset = PGlite in DATABASE_DIR. */
+  /** Hosted Postgres (Neon) pooled connection string, for the app. Unset = PGlite in DATABASE_DIR. */
   DATABASE_URL: z.preprocess((value) => (typeof value === "string" && value.trim() === "" ? undefined : value), z.url().optional()),
   DATABASE_DIR: z.string().default(".data/pglite"),
   IP_HASH_SALT: z.string().default("local-dev-salt"),
