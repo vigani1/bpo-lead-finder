@@ -11,6 +11,8 @@ const envSchema = z.object({
   TAVILY_API_KEY: optionalString,
   /** `tavily` (default; keyless if no key) or `fixture` (offline sample data). */
   SEARCH_PROVIDER: z.enum(["tavily", "fixture"]).default("tavily"),
+  /** Hosted Postgres (Neon) connection string. Unset = PGlite in DATABASE_DIR. */
+  DATABASE_URL: optionalString,
   DATABASE_DIR: z.string().default(".data/pglite"),
   IP_HASH_SALT: z.string().default("local-dev-salt"),
   CONTACT_URL: z.url().default("https://github.com/call-center-lead-finder"),
