@@ -101,7 +101,7 @@ export interface FetchSiteOptions {
  * homepage, and a few contact/about/services pages. JavaScript-only pages
  * still yield their title, meta description and JSON-LD.
  */
-export async function fetchSite(db: Db, candidate: SiteCandidate, options: FetchSiteOptions): Promise<FetchedSite> {
+export async function fetchSite(db: Db, candidate: Pick<SiteCandidate, "url" | "registeredDomain">, options: FetchSiteOptions): Promise<FetchedSite> {
   const { pagesPerSite } = options;
   const origin = new URL(candidate.url).origin;
   const homepage = `${origin}/`;

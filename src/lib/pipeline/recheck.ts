@@ -77,7 +77,7 @@ export async function recheckCenter(centerId: string): Promise<RecheckResult> {
     checked = "website";
     const site = await fetchSite(
       db,
-      { url: center.websiteUrl, registeredDomain: center.domain, storableTitle: center.name, fromStorableSource: true },
+      { url: center.websiteUrl, registeredDomain: center.domain },
       { pagesPerSite: 4, render: getPageRenderer(), fresh: true },
     );
     websiteStatus = site.websiteStatus;

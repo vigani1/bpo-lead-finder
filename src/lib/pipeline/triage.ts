@@ -26,6 +26,7 @@ export type RuledOutReason =
   | "wrong_country"
   | "campaign_not_evidenced"
   | "site_unreachable"
+  | "site_limit"
   | "transient_source";
 
 export interface SiteCandidate {
@@ -35,6 +36,10 @@ export interface SiteCandidate {
   storableTitle: string | null;
   /** False when only a transient source (Exa) returned this site: its URL is kept only once our own fetch confirms the site. */
   fromStorableSource: boolean;
+  /** The result's title or snippet names the searched campaign (read these first). */
+  namesCampaign: boolean;
+  /** How many results pointed to this site. */
+  hits: number;
 }
 
 export interface TriageResult {
@@ -116,13 +121,28 @@ export function triage(hits: SearchHit[], filters: SearchFilters): TriageResult 
 
     if (!mapping) {
       // Unknown domain: probably a company's own website. Fetch it if it looks insurance-related.
-      if (!registeredDomain || seenSites.has(registeredDomain)) continue;
+      if (!registeredDomain) continue;
+      const known = result.siteCandidates.find((c) => c.registeredDomain === registeredDomain);
+      if (known) {
+        known.hits++;
+        known.namesCampaign ||= !!matchCampaign(filters.campaign, text);
+        known.fromStorableSource ||= hit.storable;
+        continue;
+      }
+      if (seenSites.has(registeredDomain)) continue;
       if (!mentions(text, ANY_INSURANCE)) {
         result.ruledOut.push({ url: key, name: storedName, reason: "no_campaign_mention" });
         continue;
       }
       seenSites.add(registeredDomain);
-      result.siteCandidates.push({ url: key, registeredDomain, storableTitle: storedName, fromStorableSource: hit.storable });
+      result.siteCandidates.push({
+        url: key,
+        registeredDomain,
+        storableTitle: storedName,
+        fromStorableSource: hit.storable,
+        namesCampaign: !!matchCampaign(filters.campaign, text),
+        hits: 1,
+      });
       continue;
     }
 

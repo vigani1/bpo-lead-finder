@@ -80,6 +80,7 @@ export const RULED_OUT_LABELS: Record<RuledOutReason, string> = {
   wrong_country: "Located in another country",
   campaign_not_evidenced: "Campaign not evidenced",
   site_unreachable: "Website unreachable or blocked",
+  site_limit: "Not read (site limit for this depth)",
   transient_source: "Link-only pages from a discovery-only source",
 };
 

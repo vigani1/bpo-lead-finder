@@ -14,8 +14,16 @@ export async function fetchSites(ctx: RunContext, candidates: SiteCandidate[]): 
   const render = getPageRenderer();
   const out: { doc: Doc; site: FetchedSite }[] = [];
   const unreachable: RuledOutItem[] = [];
+  // Best first: sites whose result names the campaign, then sites more results pointed to.
+  const ranked = [...candidates].sort((a, b) => Number(b.namesCampaign) - Number(a.namesCampaign) || b.hits - a.hits);
+  const toRead = ranked.slice(0, preset.maxSitesToFetch);
+  // Over the limit: listed, not silently dropped (only when the source lets us keep the URL).
+  const notRead: RuledOutItem[] = ranked
+    .slice(preset.maxSitesToFetch)
+    .filter((c) => c.fromStorableSource)
+    .map((c) => ({ url: c.url, name: c.storableTitle, reason: "site_limit" }));
   await Promise.all(
-    candidates.slice(0, preset.maxSitesToFetch).map((candidate) =>
+    toRead.map((candidate) =>
       limit(async () => {
         const site = await fetchSite(ctx.db, candidate, { pagesPerSite: preset.pagesPerSite, render });
         ctx.progress.counts.fetchedPages += site.pagesFetched;
@@ -28,6 +36,6 @@ export async function fetchSites(ctx: RunContext, candidates: SiteCandidate[]): 
       }),
     ),
   );
-  await addRuledOut(ctx, unreachable);
+  await addRuledOut(ctx, [...unreachable, ...notRead]);
   return out;
 }
