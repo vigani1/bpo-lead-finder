@@ -40,4 +40,5 @@ export interface CenterView {
   evidence: EvidenceView[];
   /** Score against the search the user came from, if any. */
   scoring: (ScoreResult & { campaign: CampaignId; country: CountryFilter; market: MarketFilter; searchId: string }) | null;
+  feedback: { fit: number; notFit: number };
 }

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { connection } from "next/server";
 import { Suspense } from "react";
 import { ContactList } from "@/features/centers/components/contact-list";
+import { FeedbackButtons } from "@/features/centers/components/feedback-buttons";
 import { RecheckButton } from "@/features/centers/components/recheck-button";
 import { EvidenceList } from "@/features/centers/components/evidence-list";
 import { ScoreBreakdown } from "@/features/centers/components/score-breakdown";
@@ -45,7 +46,7 @@ async function CenterDetails({ params, searchParams }: Pick<PageProps<"/centers/
     if (error instanceof AppError && error.code === "NOT_FOUND") notFound();
     throw error;
   }
-  const { center, evidence, scoring } = view;
+  const { center, evidence, scoring, feedback } = view;
   const now = new Date();
   const countrySignalKinds = [...new Set(center.countrySignals.filter((s) => s.country === center.country).map((s) => labelFor(SIGNAL_TYPE_LABELS, s.type)))];
 
@@ -98,6 +99,8 @@ async function CenterDetails({ params, searchParams }: Pick<PageProps<"/centers/
               <RecheckButton centerId={center.id} hasWebsite={!!center.websiteUrl} />
             </div>
           </section>
+
+          <FeedbackButtons centerId={center.id} searchId={scoring?.searchId} initial={feedback} />
         </aside>
       </div>
     </div>

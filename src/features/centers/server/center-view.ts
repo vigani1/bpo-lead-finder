@@ -3,7 +3,7 @@ import { filtersOf } from "@/lib/pipeline/types";
 import { desc, eq } from "drizzle-orm";
 import { notFound } from "@/lib/api/errors";
 import { getDb } from "@/lib/db/client";
-import { centers, evidence, searches } from "@/lib/db/schema";
+import { centers, evidence, feedback, searches } from "@/lib/db/schema";
 import { inferCountry } from "@/lib/pipeline/country";
 import { scoreCenter } from "@/lib/scoring/score";
 import { normalizeForMatch } from "@/lib/text";
@@ -21,11 +21,12 @@ function dedupeEvidence<T extends { kind: string; value: string; quote: string; 
 
 export async function getCenterView(centerId: string, options: { searchId?: string; maxAge?: number | null }): Promise<CenterView> {
   const db = await getDb();
-  // Three independent reads: run them together instead of one after another.
-  const [[center], rows, [search]] = await Promise.all([
+  // Four independent reads: run them together instead of one after another.
+  const [[center], rows, [search], votes] = await Promise.all([
     db.select().from(centers).where(eq(centers.id, centerId)).limit(1),
     db.select().from(evidence).where(eq(evidence.centerId, centerId)).orderBy(desc(evidence.seenAt)),
     options.searchId ? db.select().from(searches).where(eq(searches.id, options.searchId)).limit(1) : Promise.resolve([]),
+    db.select({ verdict: feedback.verdict }).from(feedback).where(eq(feedback.centerId, centerId)),
   ]);
   if (!center) throw notFound("Center");
 
@@ -75,5 +76,6 @@ export async function getCenterView(centerId: string, options: { searchId?: stri
       seenAt: e.seenAt.toISOString(),
     })),
     scoring,
+    feedback: { fit: votes.filter((v) => v.verdict === "fit").length, notFit: votes.filter((v) => v.verdict === "not_fit").length },
   };
 }
