@@ -137,3 +137,17 @@
     @apply font-sans;
   }
 }
+@layer components {
+  /* Evidence excerpt: the words that made it count are marked like a highlighter. */
+  .evidence-quote {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .evidence-quote mark {
+    background: color-mix(in oklab, var(--highlight) 45%, transparent);
+    color: inherit;
+    border-radius: 2px;
+    padding: 0 0.1em;
+    box-decoration-break: clone;
+  }
+}

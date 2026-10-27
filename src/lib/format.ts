@@ -3,6 +3,9 @@ import { countryLabel } from "@/config/countries";
 import { MARKETS, type MarketFilter } from "@/config/markets";
 import type { CountrySignal, EvidenceSource } from "@/lib/db/schema";
 import type { RuledOutReason } from "@/lib/pipeline/triage";
+import type { DocKind } from "@/lib/pipeline/types";
+import { SOURCE_FOR_DOC_KIND } from "@/lib/pipeline/types";
+import type { MergeRule } from "@/lib/resolve/resolve-center";
 
 export function campaignLabel(id: string): string {
   return id in CAMPAIGNS ? CAMPAIGNS[id as CampaignId].label : id;
@@ -71,6 +74,19 @@ export const SOURCE_LABELS: Record<EvidenceSource, string> = {
   vendor_marketplace: "Freelance gig",
   directory: "Directory",
   search_result: "Search result",
+};
+
+/** "Listed on Job ad": the source a page of this kind counts as. */
+export function docKindLabel(kind: string): string {
+  return kind in SOURCE_FOR_DOC_KIND ? SOURCE_LABELS[SOURCE_FOR_DOC_KIND[kind as DocKind]] : kind;
+}
+
+/** How a piece of evidence was matched to its center. */
+export const MERGE_LABELS: Record<MergeRule, string> = {
+  new: "first record",
+  domain: "matched by website",
+  phone: "matched by phone",
+  name_city: "matched by name and city",
 };
 
 /** Kinds of location signal, in plain words. */
