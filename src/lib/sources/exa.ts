@@ -27,6 +27,7 @@ export const exaSource: SearchSource = {
     try {
       const response = await getClient().search(query.text, {
         type: "auto",
+        ...(query.family === "company_profile" ? { category: "company" as const } : {}),
         contents: { highlights: true },
         numResults: query.maxResults,
         ...(query.includeDomains?.length ? { includeDomains: query.includeDomains } : {}),

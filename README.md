@@ -187,16 +187,14 @@ red flag; a center not shown to be in the requested country is Low.
 Caveats: 48 labels by one person is a small sample (±10 points or so), and the held-out set is
 thin because those markets have little public data. The Fit / Not a fit buttons collect more labels.
 
-**With the AI model** (`pnpm eval:live`, 2026-10-27, prompt v5): re-running the 9 labelled searches
-with DeepSeek V4.1 Flash, High was 14 of 15 real fits (93%; the other a partial fit) and Medium 5 of 5
-among the 22 labelled centers it found again, and a real fit outranked a wrong one 98% of the time.
-Three changes since the first AI run (prompt v3: High 11 of 12, 52 centers, 40 rejected quotes): the
-model is asked to quote the words that name each campaign, the code finds that quote itself on pages
-dedicated to the campaign, and campaign buyers are ruled out. Together they found 60 centers with 22
-rejected quotes, recovered real fits the first run lost (Futures BPO, Sales Zone BPO, Lead Heroes,
-Reliant BPO) and removed a lead buyer graded High. Search results and the model vary between runs,
-so with about 20 labelled centers one center moves these numbers by 5–8 points. The run is saved in
-`eval-dumps/live-results.json`: `EVAL_SNAPSHOT=eval-dumps/live-results.json pnpm eval:scores`.
+**With the AI model** (`pnpm eval:live`, 2026-10-27): re-running the 9 labelled searches with
+DeepSeek V4.1 Flash, every labelled center graded High (9 of 9) or Medium (6 of 6) was a real fit,
+and a real fit outranked a wrong one 94% of the time (19 labelled centers came back). Earlier runs:
+High 11 of 12 (first AI run), 14 of 15 (after the quote and campaign-buyer fixes). Two runs of the
+same searches share only about half their centers: each quick search samples ~60 results, so the
+pool is bigger than any one run shows (two runs together found about 89 different centers). In the
+app, later searches start with the centers earlier ones found, so the list grows with use. The run
+is saved in `eval-dumps/live-results.json`: `EVAL_SNAPSHOT=eval-dumps/live-results.json pnpm eval:scores`.
 
 ## Accessibility
 

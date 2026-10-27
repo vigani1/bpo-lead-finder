@@ -30,6 +30,7 @@ export function buildQueries(filters: SearchFilters): DiscoveryQuery[] {
 
   const byFamily: Record<QueryFamily, DiscoveryQuery[]> = {
     company: [],
+    company_profile: [],
     hiring: [],
     vendor: [],
     social: [],
@@ -77,6 +78,12 @@ export function buildQueries(filters: SearchFilters): DiscoveryQuery[] {
       queries.push(next);
     }
   }
+  // One plain-sentence query for Exa's company search, which finds company sites the keyword queries miss.
+  queries.push({
+    family: "company_profile",
+    text: `${country ? `call center companies in ${cities[0] ?? place}` : "offshore call center companies"} that run ${enTerm} campaigns for US clients`,
+    maxResults: preset.resultsPerQuery,
+  });
   return queries;
 }
 

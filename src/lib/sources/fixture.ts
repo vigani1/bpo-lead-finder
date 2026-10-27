@@ -44,7 +44,8 @@ export const fixtureSource: SearchSource = {
       (h) =>
         (filters.country === "any" || h.countries.includes(filters.country)) &&
         h.campaigns.includes(filters.campaign) &&
-        (query.family === "employer_lookup" ? false : h.families.includes(query.family)),
+        // Recorded results have no employer lookups or company-profile searches.
+        (query.family === "employer_lookup" || query.family === "company_profile" ? false : h.families.includes(query.family)),
     );
     return {
       credits: 0,
