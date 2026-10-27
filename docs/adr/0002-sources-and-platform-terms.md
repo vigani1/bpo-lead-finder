@@ -9,7 +9,7 @@ Most of the evidence about offshore call centers sits on platforms that forbid a
 - **LinkedIn** is a link at most. Its User Agreement (§8.2) also covers information obtained through third parties such as search tools, so not even its snippets are used.
 - **Company websites** are fetched and read, with robots.txt respected and a User-Agent that says who we are. A site whose robots.txt Content Signal says `ai-input=no` is read by the keyword rules, never sent to the AI.
 
-Brave, Google Custom Search, Bing and OpenStreetMap were considered and not used: storage terms, closed or retired APIs, or too little data.
+Brave, Google Custom Search, Bing and OpenStreetMap were considered and not used: storage terms, closed or retired APIs, or too little data. The details, with sources and dates, are in `docs/sources.md`.
 
 ## Consequences
 

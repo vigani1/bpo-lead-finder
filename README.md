@@ -63,6 +63,8 @@ Everything is saved as it's found, so results appear live and survive a refresh.
 
 ## Sources and platform terms
 
+Why these sources, and every alternative that was checked and left out (with links and dates): [docs/sources.md](docs/sources.md).
+
 | Source | How it's used | Why |
 |---|---|---|
 | Tavily search API | Discovery (all query kinds); results stored as evidence | Licensed API; its terms allow storing results for internal use |
