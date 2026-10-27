@@ -1,8 +1,9 @@
-import type { CampaignRole } from "@/config/campaigns";
+import { CAMPAIGNS, type CampaignId, type CampaignRole } from "@/config/campaigns";
 import { MARKETS, type MarketId } from "@/config/markets";
 import type { Classification } from "@/lib/ai/schema";
+import { matchCampaign } from "@/lib/campaign-match";
 import { campaignQuoteVerdict, redFlagQuoteVerdict } from "@/lib/claim-checks";
-import { findPhrase, foldAccents, normalizeForMatch } from "@/lib/text";
+import { findPhrase, foldAccents, normalizeForMatch, sentenceAround } from "@/lib/text";
 import type { Doc } from "./types";
 
 export interface VerifiedClaim {
@@ -53,10 +54,43 @@ function supportsMarket(market: MarketId, quote: string): boolean {
  * must really be in the document, and campaign, market and red-flag quotes must
  * contain a matching keyword without a negation in front of it.
  */
+/**
+ * The model named a campaign but quoted a sentence that doesn't ("agents make
+ * outbound calls…"). On a website page that is about that campaign, because its
+ * address names it (/life-insurance-campaign-call-center/), the page's own
+ * sentence that names the campaign is used instead, if it passes the same
+ * checks. Only the address decides, so a menu or an "industries we serve" list
+ * on some other page can't turn into proof.
+ */
+function campaignSentenceOnPage(doc: Doc, url: string, campaign: CampaignId): string | null {
+  if (doc.kind !== "website") return null;
+  let path: string;
+  try {
+    path = decodeURIComponent(new URL(url).pathname).replace(/[-_/]+/g, " ");
+  } catch {
+    return null;
+  }
+  if (!matchCampaign(campaign, path)) return null;
+  const text = doc.pages?.find((p) => p.url === url)?.text ?? doc.text;
+  const folded = foldAccents(text);
+  for (const keyword of CAMPAIGNS[campaign].keywords) {
+    for (let from = 0, i = findPhrase(folded, keyword); i !== -1; i = findPhrase(folded.slice(from), keyword)) {
+      const sentence = sentenceAround(text, from + i);
+      if (sentence.length >= 20 && campaignQuoteVerdict(campaign, sentence) === "ok" && locate(doc, sentence)) return sentence;
+      from += i + keyword.length;
+    }
+  }
+  return null;
+}
+
 export function verifyClaims(doc: Doc, classification: Classification): VerificationResult {
   const result: VerificationResult = { claims: [], checked: 0, dropped: [] };
 
-  const keep = (claim: Omit<VerifiedClaim, "matchType" | "url">, check?: () => "ok" | VerificationResult["dropped"][number]["reason"]) => {
+  const keep = (
+    claim: Omit<VerifiedClaim, "matchType" | "url">,
+    check?: () => "ok" | VerificationResult["dropped"][number]["reason"],
+    rescue?: (url: string) => string | null,
+  ) => {
     result.checked++;
     if (claim.quote.length > MAX_QUOTE_CHARS) {
       result.dropped.push({ quote: claim.quote, reason: "too_long" });
@@ -68,6 +102,11 @@ export function verifyClaims(doc: Doc, classification: Classification): Verifica
       return;
     }
     const verdict = check?.() ?? "ok";
+    const rescued = verdict === "keyword_missing" ? rescue?.(where.url) : null;
+    if (rescued) {
+      result.claims.push({ ...claim, quote: rescued, ...locate(doc, rescued)! });
+      return;
+    }
     if (verdict !== "ok") {
       result.dropped.push({ quote: claim.quote, reason: verdict });
       return;
@@ -78,7 +117,11 @@ export function verifyClaims(doc: Doc, classification: Classification): Verifica
   for (const c of classification.campaigns) {
     if (c.campaign === "other") continue;
     const campaign = c.campaign;
-    keep({ kind: "campaign", value: campaign, role: c.role, quote: c.quote }, () => campaignQuoteVerdict(campaign, c.quote, doc.kind === "job_ad"));
+    keep(
+      { kind: "campaign", value: campaign, role: c.role, quote: c.quote },
+      () => campaignQuoteVerdict(campaign, c.quote, doc.kind === "job_ad"),
+      (url) => campaignSentenceOnPage(doc, url, campaign),
+    );
   }
   for (const m of classification.markets) {
     if (m.market === "english") continue;
