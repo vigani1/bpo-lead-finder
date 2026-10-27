@@ -61,7 +61,7 @@ function isPrivateAddress(ip: string): boolean {
 /**
  * SSRF guard: only http(s), and the host must not resolve to a private or
  * internal address. (DNS can change between this check and the request; for a
- * prototype that's an accepted gap.)
+ * prototype that's an accepted gap, listed in ROADMAP.md.)
  */
 async function assertPublicUrl(url: URL): Promise<void> {
   if (url.protocol !== "http:" && url.protocol !== "https:") {

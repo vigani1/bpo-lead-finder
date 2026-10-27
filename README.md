@@ -201,3 +201,11 @@ results drift between runs; about 30 new centers still need labels. The run is s
 - Filters are labelled form controls and explain themselves in tooltips; the scoring tables have column headers for screen readers.
 - Reduced-motion settings stop animations, including the loading spinners.
 - [React Doctor](https://github.com/millionco/react-doctor) scores the code 100/100.
+
+## Known limits
+
+The full list, with what I'd build next, is in [ROADMAP.md](ROADMAP.md). The main ones:
+
+- PGlite, the no-setup local database, is single-process and fragile: killing the server mid-write corrupted it once during testing (restored from a backup). Anything shared runs on Neon (`DATABASE_URL`); schema and queries are the same.
+- DNS can change between the SSRF check and the request (accepted for a prototype).
+- Confidence labels are a reading aid, not a measured probability; the "Fit / Not a fit" votes are the start of measuring it.
