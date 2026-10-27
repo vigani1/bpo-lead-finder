@@ -18,8 +18,15 @@ export interface VerifiedClaim {
 export interface VerificationResult {
   claims: VerifiedClaim[];
   checked: number;
-  dropped: { quote: string; reason: "not_in_document" | "keyword_missing" | "negated_or_excluded" }[];
+  dropped: { quote: string; reason: "not_in_document" | "too_long" | "keyword_missing" | "negated_or_excluded" }[];
 }
+
+/**
+ * A quote is a sentence or two, not a page. Longer ones are dropped: they prove nothing a short one
+ * wouldn't, and a stored quote must fit Postgres's index on evidence (about 2,700 bytes per row).
+ * The limit is checked here, not in the AI's answer schema: strict structured output doesn't support it.
+ */
+const MAX_QUOTE_CHARS = 500;
 
 /**
  * Locates a quote in the document. Exact first, then after normalization
@@ -51,6 +58,10 @@ export function verifyClaims(doc: Doc, classification: Classification): Verifica
 
   const keep = (claim: Omit<VerifiedClaim, "matchType" | "url">, check?: () => "ok" | VerificationResult["dropped"][number]["reason"]) => {
     result.checked++;
+    if (claim.quote.length > MAX_QUOTE_CHARS) {
+      result.dropped.push({ quote: claim.quote, reason: "too_long" });
+      return;
+    }
     const where = locate(doc, claim.quote);
     if (!where) {
       result.dropped.push({ quote: claim.quote, reason: "not_in_document" });

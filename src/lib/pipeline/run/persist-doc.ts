@@ -72,7 +72,7 @@ export async function persistDoc(ctx: RunContext, doc: Doc, classification: Clas
   }
 
   const observation = toObservation(doc, classification, verification, name, site);
-  ctx.writeQueue = ctx.writeQueue.then(async () => {
+  const task = ctx.writeQueue.then(async () => {
     const { centerId, rule } = await resolveCenter(ctx.db, observation);
     await saveEvidence(ctx.db, buildEvidenceRows({ doc, verification, centerId, searchId: ctx.search.id, rule, classifierId }), ctx.search.id);
     const [center] = await ctx.db.select({ country: centers.country, domain: centers.domain }).from(centers).where(eq(centers.id, centerId));
@@ -91,5 +91,7 @@ export async function persistDoc(ctx: RunContext, doc: Doc, classification: Clas
       ctx.employersWithoutSite.push({ name, city: classification.city, centerId });
     }
   });
-  await ctx.writeQueue;
+  // The queue only orders writes: a failed write fails this document (the caller reports it), not every later one.
+  ctx.writeQueue = task.catch(() => undefined);
+  await task;
 }
