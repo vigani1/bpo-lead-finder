@@ -10,6 +10,9 @@
     "typecheck": "next typegen && tsc --noEmit",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx --env-file-if-exists=.env.local scripts/migrate.mts",
+    "export:results": "tsx --tsconfig tsconfig.json scripts/export-results.mts",
+    "eval:scores": "tsx --tsconfig tsconfig.json scripts/eval-scores.mts",
+    "eval:live": "NODE_OPTIONS=\"--conditions=react-server\" tsx --env-file=.env.local --tsconfig tsconfig.json scripts/eval-live.mts",
     "vercel-build": "pnpm db:migrate && next build"
   },
   "dependencies": {

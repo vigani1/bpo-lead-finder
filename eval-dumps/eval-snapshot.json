@@ -1,0 +1,5108 @@
+[
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "a6a01d52-a138-4745-addf-1e32164e4b34",
+  "name": "Reliant BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Karachi",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "pk",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Karachi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 61,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "a6a01d52-a138-4745-addf-1e32164e4b34",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "25+ Final Expense Campaign Jobs, Employment 26 October, 2026|",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.120Z"
+   },
+   {
+    "center_id": "a6a01d52-a138-4745-addf-1e32164e4b34",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "Karachi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.120Z"
+   },
+   {
+    "center_id": "a6a01d52-a138-4745-addf-1e32164e4b34",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "+ Reliant BPO is hiring an experienced Final Expense (FE) Closer for its US-based insurance sales campaign.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.120Z"
+   },
+   {
+    "center_id": "a6a01d52-a138-4745-addf-1e32164e4b34",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "25+ Final Expense Campaign Jobs, Employment 26 October, 2026| Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.120Z"
+   },
+   {
+    "center_id": "a6a01d52-a138-4745-addf-1e32164e4b34",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-work-from-home-final-expense-jobs.html",
+    "quote": "Work from home final expense jobs - Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.132Z"
+   },
+   {
+    "center_id": "a6a01d52-a138-4745-addf-1e32164e4b34",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-work-from-home-final-expense-jobs.html",
+    "quote": "Reliant BPO is hiring an experienced Final Expense (FE) Closer for its US-based insurance sales campaign.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.132Z"
+   },
+   {
+    "center_id": "a6a01d52-a138-4745-addf-1e32164e4b34",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-work-from-home-final-expense-jobs.html",
+    "quote": "Work from home final expense jobs - Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.132Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+  "name": "Falco Connect BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Karachi",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "pk",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Karachi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 61,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-closer-jobs.html",
+    "quote": "25+ Final Expense Closer Jobs, Employment 24 October, 2026",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.110Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-closer-jobs.html",
+    "quote": "Karachi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.110Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-closer-jobs.html",
+    "quote": "Falco Connect BPO |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.110Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-closer-jobs.html",
+    "quote": "25+ Final Expense Closer Jobs, Employment 24 October, 2026",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.110Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-cold-callings-final-expense-jobs.html",
+    "quote": "21 Cold Callings Final Expense Jobs - 23 October, 2026 - Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.117Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-cold-callings-final-expense-jobs.html",
+    "quote": "Karachi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.117Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-cold-callings-final-expense-jobs.html",
+    "quote": "Falco Connect BPO |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.117Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-cold-callings-final-expense-jobs.html",
+    "quote": "21 Cold Callings Final Expense Jobs - 23 October, 2026 - Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.117Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-jobs.html",
+    "quote": "50+ Final Expense Jobs, Employment 22 October, 2026 - Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.129Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-jobs.html",
+    "quote": "Karachi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.129Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-jobs.html",
+    "quote": "Falco Connect BPO |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.129Z"
+   },
+   {
+    "center_id": "92988a88-c530-4d64-a13f-7e8f5615864a",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-jobs.html",
+    "quote": "50+ Final Expense Jobs, Employment 22 October, 2026 - Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.129Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "6b9e485a-9f69-4068-881f-a03bc1b9b780",
+  "name": "JSons Communications",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Islamabad",
+  "domain": "jsonscommunications.com",
+  "phones": [
+   "+923335655756"
+  ],
+  "emails": [
+   "careers@jsonscommunications.com",
+   "5655756careers@jsonscommunications.complot"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Islamabad",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 59,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "6b9e485a-9f69-4068-881f-a03bc1b9b780",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.jsonscommunications.com/services/final-expense",
+    "quote": "Final Expense Live Transfers & Closers |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.430Z"
+   },
+   {
+    "center_id": "6b9e485a-9f69-4068-881f-a03bc1b9b780",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.jsonscommunications.com/services/final-expense",
+    "quote": "Islamabad",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.430Z"
+   },
+   {
+    "center_id": "6b9e485a-9f69-4068-881f-a03bc1b9b780",
+    "kind": "compliance",
+    "value": "dnc",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.jsonscommunications.com/services/final-expense",
+    "quote": "Consent-verified, DNC-scrubbed final expense transfers and dedicated closers for US agencies and IMOs.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.430Z"
+   },
+   {
+    "center_id": "6b9e485a-9f69-4068-881f-a03bc1b9b780",
+    "kind": "us_hours",
+    "value": "us_hours",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.jsonscommunications.com/careers",
+    "quote": "Night shift, Pakistan Town.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.430Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "b6e2b68c-6adc-47e8-945c-d52d391e4d3f",
+  "name": "Eden Technologies",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 56,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "b6e2b68c-6adc-47e8-945c-d52d391e4d3f",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://www.searchopal.com/jobs/verifier-self-closer-final-expense-insurance-office-based-rawalpindi-full-time-2244216591",
+    "quote": "Verifier & Self Closer - Final Expense Insurance jobs in Rawalpindi |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.152Z"
+   },
+   {
+    "center_id": "b6e2b68c-6adc-47e8-945c-d52d391e4d3f",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.searchopal.com/jobs/verifier-self-closer-final-expense-insurance-office-based-rawalpindi-full-time-2244216591",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.152Z"
+   },
+   {
+    "center_id": "b6e2b68c-6adc-47e8-945c-d52d391e4d3f",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.searchopal.com/jobs/verifier-self-closer-final-expense-insurance-office-based-rawalpindi-full-time-2244216591",
+    "quote": "###### Eden Technologies",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.152Z"
+   },
+   {
+    "center_id": "b6e2b68c-6adc-47e8-945c-d52d391e4d3f",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.searchopal.com/jobs/verifier-self-closer-final-expense-insurance-office-based-rawalpindi-full-time-2244216591",
+    "quote": "Verifier & Self Closer - Final Expense Insurance jobs in Rawalpindi | searchopal.com",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.152Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "3b845941-4743-47fd-986b-69cf9cf3b7cf",
+  "name": "Touchstone Communications",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Islamabad",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "pk",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Islamabad",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 56,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "3b845941-4743-47fd-986b-69cf9cf3b7cf",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "25+ Final Expense Campaign Jobs, Employment 26 October, 2026|",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.127Z"
+   },
+   {
+    "center_id": "3b845941-4743-47fd-986b-69cf9cf3b7cf",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "Islamabad",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.127Z"
+   },
+   {
+    "center_id": "3b845941-4743-47fd-986b-69cf9cf3b7cf",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "+ View all Touchstone Communications jobs - Pakistan jobs - Closer jobs in Pakistan",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.127Z"
+   },
+   {
+    "center_id": "3b845941-4743-47fd-986b-69cf9cf3b7cf",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "25+ Final Expense Campaign Jobs, Employment 26 October, 2026| Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.127Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "80e788ff-77ad-4dd7-896c-591374ecac53",
+  "name": "Sybrid Pvt Ltd",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Islamabad",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "pk",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Islamabad",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 56,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "80e788ff-77ad-4dd7-896c-591374ecac53",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "25+ Final Expense Campaign Jobs, Employment 26 October, 2026|",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.123Z"
+   },
+   {
+    "center_id": "80e788ff-77ad-4dd7-896c-591374ecac53",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "Islamabad",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.123Z"
+   },
+   {
+    "center_id": "80e788ff-77ad-4dd7-896c-591374ecac53",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "+ View all Sybrid Pvt Ltd (The Lakson Group of Companies) jobs-jobs.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.123Z"
+   },
+   {
+    "center_id": "80e788ff-77ad-4dd7-896c-591374ecac53",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-campaign-jobs.html",
+    "quote": "25+ Final Expense Campaign Jobs, Employment 26 October, 2026| Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.123Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+  "name": "Sales Zone BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "saleszonebpo.com",
+  "phones": [],
+  "emails": [
+   "hr@saleszonebpo.com"
+  ],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://saleszonebpo.com/",
+    "quote": "Sales Zone BPO is a professional telemarketing and BPO company specializing in Final Expense and Medical Alert campaigns.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.404Z"
+   },
+   {
+    "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://saleszonebpo.com/",
+    "quote": "Final Expense and Life Insurance operations, supporting the customer journey from qualification and verification through pre-closed applica",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.404Z"
+   },
+   {
+    "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://saleszonebpo.com/",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.404Z"
+   },
+   {
+    "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://saleszonebpo.com/",
+    "quote": "Sales Zone BPO | Professional Telemarketing & BPO Services",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.404Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+  "name": "Smart Brains BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "smartbrainsbpo.com",
+  "phones": [
+   "+923348164477"
+  ],
+  "emails": [
+   "8442428info@smartbrainsbpo.com"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Added 3 new services including Medicare support.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "campaign",
+    "value": "aca",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Image 11002 ### ACA Health Insurance Structured customer outreach and enrollment-process support for ACA campaigns.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Image 11305 ### Final Expense Respectful customer engagement and follow-through for final-expense insurance campaigns.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Smart Brains BPO | Intelligence in Motion",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "2b612b49-3d64-4c5e-a0e1-08c97325aedd",
+  "name": "BoostHive",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": null,
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "pk",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 47,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "2b612b49-3d64-4c5e-a0e1-08c97325aedd",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://www.getpakjob.com/jobs/view/final-expense-closer-3",
+    "quote": "Final Expense Closer",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.159Z"
+   },
+   {
+    "center_id": "2b612b49-3d64-4c5e-a0e1-08c97325aedd",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.getpakjob.com/jobs/view/final-expense-closer-3",
+    "quote": "Description: BoostHive is looking for a motivated Final Expense Closer to join our growing sales team.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.159Z"
+   },
+   {
+    "center_id": "2b612b49-3d64-4c5e-a0e1-08c97325aedd",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.getpakjob.com/jobs/view/final-expense-closer-3",
+    "quote": "Final Expense Closer",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.159Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+  "name": "Workaholics",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": null,
+  "domain": "workaholics.com.pk",
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "tld",
+    "value": ".pk",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 47,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://workaholics.com.pk/",
+    "quote": "Medicare / MedicaidCompliant Medicare and Medicaid lead generation targeting eligible US seniors with verified interest.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.393Z"
+   },
+   {
+    "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://workaholics.com.pk/",
+    "quote": "Discuss Your VerticalFinal ExpenseConnecting US families with final expense insurance agents via pre-qualified live transfers and appointment setting.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.393Z"
+   },
+   {
+    "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+    "kind": "compliance",
+    "value": "tcpa",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://workaholics.com.pk/",
+    "quote": "TCPA & ICO Compliance FocusedWe operate within US TCPA and UK ICO guidelines, maintaining DNC scrubbing, call recording,",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.393Z"
+   },
+   {
+    "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://workaholics.com.pk/",
+    "quote": "Workaholics | Lead Generation Services USA & UK | Offshore Call Center Pakistan",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.393Z"
+   }
+  ]
+ },
+ {
+  "search_id": "d298c8e2-68ec-443b-99c7-c6edb94db796",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:06:21.045Z",
+  "center_id": "a0535432-67b6-420e-b678-68bbba899c8c",
+  "name": "Nymblix Pvt Ltd",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": null,
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "pk",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 47,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "a0535432-67b6-420e-b678-68bbba899c8c",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-senior-closer-jobs.html",
+    "quote": "20 Final Expense Senior Closer Jobs - 10 October, 2026 - Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.136Z"
+   },
+   {
+    "center_id": "a0535432-67b6-420e-b678-68bbba899c8c",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-senior-closer-jobs.html",
+    "quote": "Nymblix Pvt Ltd* is looking for experienced, confident, and results-driven Final Expense Closers to join our growing sale",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.136Z"
+   },
+   {
+    "center_id": "a0535432-67b6-420e-b678-68bbba899c8c",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://pk.indeed.com/q-final-expense-senior-closer-jobs.html",
+    "quote": "20 Final Expense Senior Closer Jobs - 10 October, 2026 - Indeed",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:28.136Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+  "name": "Futures BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 81,
+  "label": "high",
+  "evidence": [
+   {
+    "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "social",
+    "source_url": "https://www.facebook.com/Futuresbpooffical/posts/-take-the-next-step-as-a-medicare-closerfutures-bpo-is-looking-for-talented-and-/1415904504007899",
+    "quote": "Futures BPO hiring Medicare closers in Rawalpindi, Pakistan",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.445Z"
+   },
+   {
+    "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "social",
+    "source_url": "https://www.facebook.com/Futuresbpooffical/posts/-take-the-next-step-as-a-medicare-closerfutures-bpo-is-looking-for-talented-and-/1415904504007899",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.445Z"
+   },
+   {
+    "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "social",
+    "source_url": "https://www.facebook.com/Futuresbpooffical/posts/-take-the-next-step-as-a-medicare-closerfutures-bpo-is-looking-for-talented-and-/1415904504007899",
+    "quote": "Futures BPO hiring Medicare closers in Rawalpindi, Pakistan",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.445Z"
+   },
+   {
+    "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+    "kind": "listing",
+    "value": "social",
+    "campaign_role": null,
+    "source": "social",
+    "source_url": "https://www.facebook.com/Futuresbpooffical/posts/-take-the-next-step-as-a-medicare-closerfutures-bpo-is-looking-for-talented-and-/1415904504007899",
+    "quote": "Futures BPO hiring Medicare closers in Rawalpindi, Pakistan",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.445Z"
+   },
+   {
+    "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+    "kind": "us_hours",
+    "value": "us_hours",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://bebee.com/pk/jobs/medicare-closers-futures-bpo-rawalpindi--t7xk-861280935",
+    "quote": "Medicare Closer – Night Shift",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.517Z"
+   },
+   {
+    "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://bebee.com/pk/jobs/medicare-closers-futures-bpo-rawalpindi--t7xk-861280935",
+    "quote": "Futures BPO is looking for experienced and motivated Medicare Closers to join our growing team.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.517Z"
+   },
+   {
+    "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://bebee.com/pk/jobs/medicare-closers-futures-bpo-rawalpindi--t7xk-861280935",
+    "quote": "Medicare Closers - Futures BPO |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.521Z"
+   },
+   {
+    "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://bebee.com/pk/jobs/medicare-closers-futures-bpo-rawalpindi--t7xk-861280935",
+    "quote": "Medicare Closers - Futures BPO |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.522Z"
+   },
+   {
+    "center_id": "2f87b66c-911f-42f9-98e9-a31e68b52ff5",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://bebee.com/pk/jobs/medicare-closers-futures-bpo-rawalpindi--t7xk-861280935",
+    "quote": "Medicare Closers - Futures BPO | BeBee",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.521Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+  "name": "Strive BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Karachi",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "pk",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Karachi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 64,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Experienced%20Sales%20Agent",
+    "quote": "Experienced Medicare Sales Agent · Hiring Now – Experienced Medicare Sales Agents |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.464Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Experienced%20Sales%20Agent",
+    "quote": "Strive BPO · Call Center Sales Closer Agent ( Experienced ) · WE'RE HIRING:",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.464Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Experienced%20Sales%20Agent",
+    "quote": "Experienced Sales Agent jobs in Pakistan - ROZEE.PK",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.464Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Sales%20Specialists%20-%20Night%20Shift?fpn=20",
+    "quote": "ACA & Medicare Campaign Sales Representative – Night Shift.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.470Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Sales%20Specialists%20-%20Night%20Shift?fpn=20",
+    "quote": "Karachi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.470Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "us_hours",
+    "value": "us_hours",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Sales%20Specialists%20-%20Night%20Shift?fpn=20",
+    "quote": "Sales Specialists - Night Shift jobs in Pakistan - Rozee.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.470Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Sales%20Specialists%20-%20Night%20Shift?fpn=20",
+    "quote": "Strive BPO LLP, Rawalpindi, Pakistan.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.470Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Sales%20Specialists%20-%20Night%20Shift?fpn=20",
+    "quote": "Sales Specialists - Night Shift jobs in Pakistan - Rozee.pk",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.470Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/BPO",
+    "quote": "Call Center / BPO · Limited Openings – Experienced Medicare Sales Agents |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.477Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/BPO",
+    "quote": "Strive BPO · Assistant Manager - HR (BPO) · Build Your Career with Strive BPO",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.477Z"
+   },
+   {
+    "center_id": "628cfc94-a6ea-4c8c-9d3e-2da9dcab4160",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/BPO",
+    "quote": "BPO jobs in Pakistan - ROZEE.PK",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.477Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "42017b28-ba66-433c-92d5-2861195ec45c",
+  "name": "Concept BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "pk",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 56,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "42017b28-ba66-433c-92d5-2861195ec45c",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Self-Verifiers",
+    "quote": "Medicare Self Closers.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.458Z"
+   },
+   {
+    "center_id": "42017b28-ba66-433c-92d5-2861195ec45c",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Self-Verifiers",
+    "quote": "Final Expense (self closer).",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.458Z"
+   },
+   {
+    "center_id": "42017b28-ba66-433c-92d5-2861195ec45c",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Self-Verifiers",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.458Z"
+   },
+   {
+    "center_id": "42017b28-ba66-433c-92d5-2861195ec45c",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Self-Verifiers",
+    "quote": "Concept BPO, Rawalpindi, Pakistan.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.458Z"
+   },
+   {
+    "center_id": "42017b28-ba66-433c-92d5-2861195ec45c",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.rozee.pk/job/jsearch/q/Self-Verifiers",
+    "quote": "Self-Verifiers jobs in Pakistan - ROZEE.PK",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.458Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "796ba42f-5c2f-448d-b15a-63a7e9218766",
+  "name": "bluecrossbpo",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Islamabad",
+  "domain": "bluecrossbpo.com",
+  "phones": [
+   "+12078101714",
+   "+13156360993"
+  ],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Islamabad",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 56,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "796ba42f-5c2f-448d-b15a-63a7e9218766",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://bluecrossbpo.com/",
+    "quote": "companies to generate, qualify, and handle leads across Medicare, Auto, and Home Services — turning demand into real conversations.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.242Z"
+   },
+   {
+    "center_id": "796ba42f-5c2f-448d-b15a-63a7e9218766",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://bluecrossbpo.com/",
+    "quote": "Islamabad",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.242Z"
+   },
+   {
+    "center_id": "796ba42f-5c2f-448d-b15a-63a7e9218766",
+    "kind": "compliance",
+    "value": "consent",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://bluecrossbpo.com/",
+    "quote": "Telemarketing Standards Campaigns should be structured around consent-aware outreach, clear disclosures, internal do-not-call handling, and supervisor review.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.242Z"
+   },
+   {
+    "center_id": "796ba42f-5c2f-448d-b15a-63a7e9218766",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://bluecrossbpo.com/",
+    "quote": "bluecrossbpo",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.242Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "dd15feb9-62eb-4705-89c9-3db6b9913ed8",
+  "name": "Mars BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Islamabad",
+  "domain": "marsbpo.co",
+  "phones": [
+   "+923159833759"
+  ],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "tld",
+    "value": ".co",
+    "country": "co"
+   },
+   {
+    "type": "city",
+    "value": "Islamabad",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "dd15feb9-62eb-4705-89c9-3db6b9913ed8",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://marsbpo.co/our-offices/mars-0-2/",
+    "quote": "Medicare Insurance Energy Home Services MVA ACA Why Should You Join Mars BPO?",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.303Z"
+   },
+   {
+    "center_id": "dd15feb9-62eb-4705-89c9-3db6b9913ed8",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://marsbpo.co/our-offices/mars-0-2/",
+    "quote": "Islamabad",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.303Z"
+   },
+   {
+    "center_id": "dd15feb9-62eb-4705-89c9-3db6b9913ed8",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://marsbpo.co/our-offices/mars-0-2/",
+    "quote": "Mars BPO - Pakistan's Leading BPO",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.303Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+  "name": "Smart Brains BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "smartbrainsbpo.com",
+  "phones": [
+   "+923348164477"
+  ],
+  "emails": [
+   "8442428info@smartbrainsbpo.com"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Added 3 new services including Medicare support.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "campaign",
+    "value": "aca",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Image 11002 ### ACA Health Insurance Structured customer outreach and enrollment-process support for ACA campaigns.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Image 11305 ### Final Expense Respectful customer engagement and follow-through for final-expense insurance campaigns.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Smart Brains BPO | Intelligence in Motion",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+  "name": "Prime BPO & Telecommunications",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "primebpo.com",
+  "phones": [
+   "+92518484741",
+   "+923198322197",
+   "+923224233433",
+   "+92518743058",
+   "+61255512345",
+   "+92518733177",
+   "+923305401138"
+  ],
+  "emails": [
+   "hr@primebpo2.com",
+   "info@primebpo3.com",
+   "info@primebpo4.com",
+   "hr@primebpo5.com",
+   "hr@primebpo.com",
+   "hr@primebpo6.com"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+925",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+925",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+925",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "Explore inbound, outbound, B2B, and Medicare campaigns in USA & Pakistan.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   },
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "dule the meetings Medicare Campaign Call Center Specialised calls to educate or enroll the clients in Medicare programs Final Expense Campaign for Call Center Health clients to plan and purchase the insurance for end of life expenses Call Ce",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   },
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "Buisness Development Empower Growth, Drive Innovation, and Strengthen Your Enterprise FEATURED CASE STUDY M Life Insurance Complete Coverage with Life Insurance Policy Blogs Resources Announcements Gallery Event Defaulters Contac",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   },
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   },
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "compliance",
+    "value": "dnc",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "for better performance Not every call ends in a sale scheduled for the follow-ups You should follow the local laws like DNC do not call lists Call Center Campaigns in Pakistan Pakistan has become the power of source call center campaigns bec",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+  "name": "Roots BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "roots-bpo.com",
+  "phones": [
+   "+92515120010"
+  ],
+  "emails": [
+   "info@rootsbpo.com"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+925",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "-Based ClientsSpecialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "aca",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/about-us/",
+    "quote": "d over a decade of industry experience, we specialize in campaigns for Final Expense, Medicare, Auto Insurance, and the Affordable Care Act (ACA).",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "-Based ClientsSpecialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Roots BPO – TeleMarketing",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Specialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Specialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "aca",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Specialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/services/",
+    "quote": "InsuranceFinal Expense, Medicare, and Auto Insurance campaigns with high-converting live transfers to licensed U.S. agents.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "aca",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/services/",
+    "quote": "Affordable Care Act enrollment campaigns helping Americans access the healthcare coverage they need.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Pakistan's premier Call Center & BPO company.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Office S-9, 2nd Floor, Save Mart Plaza, Haidri Chowk Saidpur Road, Rawalpindi",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "entity",
+    "value": "enterprise_bpo",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Pakistan's premier Call Center & BPO company.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "67cd6ae1-c523-4835-ab03-1b17ff30a166",
+  "name": "Horizons BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": null,
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "pk",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 47,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "67cd6ae1-c523-4835-ab03-1b17ff30a166",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://www.getpakjob.com/jobs/view/team-leads-quality-assurance-self-closers",
+    "quote": "Description: Horizons BPO is hiring full-time on-site Team leads, Quality Assurance Manager, Self Closers for our Medicare Campaign.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.461Z"
+   },
+   {
+    "center_id": "67cd6ae1-c523-4835-ab03-1b17ff30a166",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.getpakjob.com/jobs/view/team-leads-quality-assurance-self-closers",
+    "quote": "Description: Horizons BPO is hiring full-time on-site Team leads, Quality Assurance Manager, Self Closers for our Medicare Campaign.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.461Z"
+   },
+   {
+    "center_id": "67cd6ae1-c523-4835-ab03-1b17ff30a166",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.getpakjob.com/jobs/view/team-leads-quality-assurance-self-closers",
+    "quote": "Team Leads / Quality Assurance/ Self Closers - GetPakJob",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:04.461Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+  "name": "Workaholics",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": null,
+  "domain": "workaholics.com.pk",
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "tld",
+    "value": ".pk",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 47,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://workaholics.com.pk/",
+    "quote": "Medicare / MedicaidCompliant Medicare and Medicaid lead generation targeting eligible US seniors with verified interest.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.393Z"
+   },
+   {
+    "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://workaholics.com.pk/",
+    "quote": "Discuss Your VerticalFinal ExpenseConnecting US families with final expense insurance agents via pre-qualified live transfers and appointment setting.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.393Z"
+   },
+   {
+    "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+    "kind": "compliance",
+    "value": "tcpa",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://workaholics.com.pk/",
+    "quote": "TCPA & ICO Compliance FocusedWe operate within US TCPA and UK ICO guidelines, maintaining DNC scrubbing, call recording,",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.393Z"
+   },
+   {
+    "center_id": "2e726814-5be0-451f-b186-f6f9bce2c9c2",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://workaholics.com.pk/",
+    "quote": "Workaholics | Lead Generation Services USA & UK | Offshore Call Center Pakistan",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.393Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "6c864e21-8f50-4a02-ba77-b5e19e0d05fc",
+  "name": "Axxon BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "axxonbpo.com",
+  "phones": [
+   "+923351883332"
+  ],
+  "emails": [
+   "contact@axxonbpo.com",
+   "hr@axxonbpo.com"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 44,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "6c864e21-8f50-4a02-ba77-b5e19e0d05fc",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://axxonbpo.com/",
+    "quote": "Medicare Medicare Campaign Case Studies We’re in the business of helping companies grow.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.297Z"
+   },
+   {
+    "center_id": "6c864e21-8f50-4a02-ba77-b5e19e0d05fc",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://axxonbpo.com/",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.297Z"
+   },
+   {
+    "center_id": "6c864e21-8f50-4a02-ba77-b5e19e0d05fc",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://axxonbpo.com/",
+    "quote": "Axxon BPO – Pakistan's Leading BPO – Helping You Grow",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.297Z"
+   }
+  ]
+ },
+ {
+  "search_id": "ff11a681-1df0-4ddf-8c92-758e7ffa7fd0",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "thorough",
+  "created_at": "2026-10-26T18:06:51.996Z",
+  "center_id": "b2e3b5cc-f17a-4e6a-9412-83122177d96b",
+  "name": "The Dorsum",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Karachi",
+  "domain": "thedorsum.com",
+  "phones": [],
+  "emails": [
+   "info@thedorsum.com"
+  ],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Karachi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 22,
+  "label": "low",
+  "evidence": [
+   {
+    "center_id": "b2e3b5cc-f17a-4e6a-9412-83122177d96b",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://thedorsum.com/bpo-services",
+    "quote": "ng SolutionsCold callingWarm transfersQualified lead generation for healthcare, finance & moreFinal expense insurance & Medicare campaignsMedical Campaign Services (DME & CGM)DME & CGM Campaign ManagementMedical Insurance VerificationPatient",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.390Z"
+   },
+   {
+    "center_id": "b2e3b5cc-f17a-4e6a-9412-83122177d96b",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://thedorsum.com/bpo-services",
+    "quote": "Karachi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.390Z"
+   },
+   {
+    "center_id": "b2e3b5cc-f17a-4e6a-9412-83122177d96b",
+    "kind": "red_flag",
+    "value": "high_risk_campaigns",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://thedorsum.com/bpo-services",
+    "quote": "From call center to DME campaigns, The Dorsum delivers reliable offshore BPO solutions.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.390Z"
+   },
+   {
+    "center_id": "b2e3b5cc-f17a-4e6a-9412-83122177d96b",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://thedorsum.com/",
+    "quote": "The Dorsum | Official Alibaba Global Channel Partner in Pakistan",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.390Z"
+   }
+  ]
+ },
+ {
+  "search_id": "59a5ee97-7b82-45b9-afff-0667b7d8d055",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:13.719Z",
+  "center_id": "a78f0e93-c662-49dd-97c5-ae73cb82e43d",
+  "name": "Loop Contact Solutions",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Manila",
+  "domain": "loopcontactsolutions.com",
+  "phones": [
+   "+18555965902"
+  ],
+  "emails": [
+   "sales@loopcontactsolutions.com"
+  ],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Manila",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 56,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "a78f0e93-c662-49dd-97c5-ae73cb82e43d",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.loopcontactsolutions.com/insurance-bpo",
+    "quote": "We understand medical terminology, ICD-10 codes, CPT codes, Medicare regs, ACA compliance, and state-specific insurance laws.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.378Z"
+   },
+   {
+    "center_id": "a78f0e93-c662-49dd-97c5-ae73cb82e43d",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.loopcontactsolutions.com/insurance-bpo",
+    "quote": "ice of loss (FNOL), benefit inquiries, provider relations, and policyholder support for health insurance, P&C carriers, life insurance companies, and insurance brokers.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.378Z"
+   },
+   {
+    "center_id": "a78f0e93-c662-49dd-97c5-ae73cb82e43d",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.loopcontactsolutions.com/insurance-bpo",
+    "quote": "Manila",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.378Z"
+   },
+   {
+    "center_id": "a78f0e93-c662-49dd-97c5-ae73cb82e43d",
+    "kind": "compliance",
+    "value": "tcpa",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.loopcontactsolutions.com/insurance-bpo",
+    "quote": "We follow all TCPA regs for outbound calling.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.378Z"
+   },
+   {
+    "center_id": "a78f0e93-c662-49dd-97c5-ae73cb82e43d",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.loopcontactsolutions.com/",
+    "quote": "Philippine Call Center Services | Loop Contact Solutions",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.378Z"
+   }
+  ]
+ },
+ {
+  "search_id": "59a5ee97-7b82-45b9-afff-0667b7d8d055",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:13.719Z",
+  "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+  "name": "Fusion CX",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Cebu",
+  "domain": "fusioncx.com",
+  "phones": [
+   "+18552009168"
+  ],
+  "emails": [
+   "contact@fusioncx.com",
+   "200-9168contact@fusioncx.com"
+  ],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Cebu",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   },
+   {
+    "type": "city",
+    "value": "Kolkata",
+    "country": "in"
+   },
+   {
+    "type": "ai",
+    "value": "India",
+    "country": "in"
+   }
+  ],
+  "fit_score": 56,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/locations/philippines",
+    "quote": "Ecommerce EdTech Software & Platforms E-Mobility / EV Utilities Energy Gas Healthcare Healthcare Providers Health Plans Medicare Pharmacies TPAs Home Services Travel & Hospitality Aviation & Airlines Online Travel Agencies Hotels & Accommoda",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.393Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/locations/philippines",
+    "quote": "Multilingual support English, Tagalog, Spanish, Mandarin, Japanese, Korean and more.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.393Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "market",
+    "value": "bilingual",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/locations/philippines",
+    "quote": "IndiaLATAMStrongest forVoice CX, customer service, retentionTech support, back office, analytics, scaleNearshore voice, bilingual EN/ES, peak overflowEnglish qualityNeutral, Western accentStrong, India-accentedBilingual, neutralTime-zone fit",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.393Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/locations/philippines",
+    "quote": "Cebu",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.393Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "compliance",
+    "value": "consent",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/locations/philippines",
+    "quote": "See our Privacy Policy & Consent Policy.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.393Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/",
+    "quote": "Global BPO Company - 24/7 Customer Support - Fusion CX",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:24:33.767Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/",
+    "quote": "Ecommerce EdTech Software & Platforms E-Mobility / EV Utilities Energy Gas Healthcare Healthcare Providers Health Plans Medicare Pharmacies TPAs Home Services Travel & Hospitality Aviation & Airlines Online Travel Agencies Hotels & Accommoda",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:24:33.767Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/",
+    "quote": "From El Salvador, Skycom brings proven nearshore delivery and bilingual English and Spanish support closer to North American brands.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:24:33.767Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "market",
+    "value": "bilingual",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/",
+    "quote": "From El Salvador, Skycom brings proven nearshore delivery and bilingual English and Spanish support closer to North American brands.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:24:33.767Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "country",
+    "value": "in",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/",
+    "quote": "Kolkata",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:24:33.767Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/industries/healthcare/health-plan-services/medicare/",
+    "quote": "Our Medicare call center delivers HIPAA-compliant enrollment support, claims assistance, multilingual member service, and AI-powered care.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:28:03.651Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "country",
+    "value": "United States",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/industries/healthcare/health-plan-services/medicare/",
+    "quote": "Talk to Fusion CX: +1 (855) 200-9168",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:28:03.651Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "compliance",
+    "value": "HIPAA",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/industries/healthcare/health-plan-services/medicare/",
+    "quote": "HIPAA-compliant enrollment support",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:28:03.651Z"
+   },
+   {
+    "center_id": "0640c76a-abeb-4314-9b7c-591f62b2d860",
+    "kind": "entity",
+    "value": "enterprise_bpo",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.fusioncx.com/industries/healthcare/health-plan-services/medicare/",
+    "quote": "Global AI-first BPO and customer experience outsourcing company providing omnichannel support, multilingual engagement, and scalable business process services.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:28:03.651Z"
+   }
+  ]
+ },
+ {
+  "search_id": "59a5ee97-7b82-45b9-afff-0667b7d8d055",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:13.719Z",
+  "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+  "name": "LeadMaker",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Manila",
+  "domain": "leadmaker.agency",
+  "phones": [
+   "+639999568369"
+  ],
+  "emails": [
+   "sales@leadmaker.agency",
+   "8369sales@leadmaker.agencycopyright"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+639",
+    "country": "ph"
+   },
+   {
+    "type": "city",
+    "value": "Manila",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-manila-for-insurance-companies",
+    "quote": "Hit Rate Solutions A specialized BPO with a proven track record in the final expense and Medicare sectors.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.314Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/",
+    "quote": "lingual Sales Call SupportOutgoing and incoming calls to support your sales process with clear and engaging English and Spanish.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.313Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "market",
+    "value": "bilingual",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/",
+    "quote": "See More Bilingual Sales Call Support Outgoing and incoming calls to support your sales process with clear and engaging English an",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.313Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-manila-for-insurance-companies",
+    "quote": "Manila",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.314Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/",
+    "quote": "LeadMaker - Digital Marketing and Lead Generation Service in Philippines",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.313Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-the-philippines-for-insurance-companies",
+    "quote": "Medicare InsuranceFinding new clients for health coverage plans.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.372Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-the-philippines-for-insurance-companies",
+    "quote": "Manila",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.372Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-manila-for-insurance-companies",
+    "quote": "Medicare InsuranceFinding new clients for health coverage plans.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.314Z"
+   }
+  ]
+ },
+ {
+  "search_id": "59a5ee97-7b82-45b9-afff-0667b7d8d055",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:13.719Z",
+  "center_id": "3ffb56d5-5dab-4cba-a120-cafca1004007",
+  "name": "AdminEdge",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Manila",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Manila",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "3ffb56d5-5dab-4cba-a120-cafca1004007",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "unknown",
+    "source": "job_board",
+    "source_url": "https://www.jobleads.com/ph/job/remote-home-health-scheduler-medicare-advantage--metro-manila--e53e2b7f9b3801093baa24f86c5b249eb",
+    "quote": "Remote Home Health Scheduler - Medicare Advantage |",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:21.081Z"
+   },
+   {
+    "center_id": "3ffb56d5-5dab-4cba-a120-cafca1004007",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.jobleads.com/ph/job/remote-home-health-scheduler-medicare-advantage--metro-manila--e53e2b7f9b3801093baa24f86c5b249eb",
+    "quote": "Manila",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:21.081Z"
+   },
+   {
+    "center_id": "3ffb56d5-5dab-4cba-a120-cafca1004007",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.jobleads.com/ph/job/remote-home-health-scheduler-medicare-advantage--metro-manila--e53e2b7f9b3801093baa24f86c5b249eb",
+    "quote": "AdminEdge is hiring Remote Home Health Scheduler - Medicare Advantage in Metro Manila.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:21.081Z"
+   },
+   {
+    "center_id": "3ffb56d5-5dab-4cba-a120-cafca1004007",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.jobleads.com/ph/job/remote-home-health-scheduler-medicare-advantage--metro-manila--e53e2b7f9b3801093baa24f86c5b249eb",
+    "quote": "Remote Home Health Scheduler - Medicare Advantage | Metro Manila",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:21.081Z"
+   }
+  ]
+ },
+ {
+  "search_id": "59a5ee97-7b82-45b9-afff-0667b7d8d055",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:13.719Z",
+  "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+  "name": "Hit Rate Solutions",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Bacolod",
+  "domain": "hitratesolutions.com",
+  "phones": [
+   "+18552313730",
+   "+18556410585"
+  ],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Bacolod",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "appointment_setting",
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/markets/philippines-call-center",
+    "quote": "Appointment Setting for Logan KlinkLogan Klink is an agent under American Income life insurance company which has clients from Canada and New Zealand but originated in New York.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   },
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/markets/philippines-call-center",
+    "quote": "Bacolod",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   },
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/",
+    "quote": "Outsourced Call Center Services from $7/hr | Hit Rate Solutions",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   },
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/markets/philippines-call-center",
+    "quote": "d valuable leads and provided their licensed insurance agents with a list of potential customers who were interested in Medicare options.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   },
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/markets/philippines-call-center",
+    "quote": "Lead Generations for Dynamic Insurance ServicesDynamic Insurance Services is a pioneer in the final expense sector and is located in Texas.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   }
+  ]
+ },
+ {
+  "search_id": "59a5ee97-7b82-45b9-afff-0667b7d8d055",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:13.719Z",
+  "center_id": "3489400d-f9af-483e-9cf4-432df563bf71",
+  "name": "Home Based Call Center",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": null,
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "ph",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 47,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "3489400d-f9af-483e-9cf4-432df563bf71",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "appointment_setting",
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/home-based-call-center-jobs/part-time",
+    "quote": "Medicare Appointment Setter at Virtual Champs Global ・ ₱10,000 – ₱15,000 per month Medicare experience ・ ₱250 – ₱300 per",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:21.111Z"
+   },
+   {
+    "center_id": "3489400d-f9af-483e-9cf4-432df563bf71",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/home-based-call-center-jobs/part-time",
+    "quote": "Home Based Call Center Part Time Jobs in Philippines - Aug 2026",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:21.111Z"
+   },
+   {
+    "center_id": "3489400d-f9af-483e-9cf4-432df563bf71",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/home-based-call-center-jobs/part-time",
+    "quote": "Home Based Call Center Part Time Jobs in Philippines - Aug 2026",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:21.111Z"
+   }
+  ]
+ },
+ {
+  "search_id": "59a5ee97-7b82-45b9-afff-0667b7d8d055",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:13.719Z",
+  "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+  "name": "Lead Heroes",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Manila",
+  "domain": "leadheroes.com",
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Manila",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 44,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": "Custom Calling Campaign - Final Expense & Medicare Telemarketers",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": "Custom Calling Campaign - Final Expense & Medicare Telemarketers",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": "Custom Calling Campaign - Final Expense life insurance live transfer leads and spend your time closing leads instead of chasing them.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": "Pre Set Appt SampleLive Transfer SampleSCRIPTSCRIPTBuy SPANISH SPEAKING CALLERS Spanish Speaking Callers100% CustomizableHire exclusive callers dedicated to your business!",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "compliance",
+    "value": "tcpa",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": " Enter Sales Data Upload your own sales data, or use our TCPA compliant data lists that are updated monthly, for free!",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "red_flag",
+    "value": "resold_transfers",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/",
+    "quote": "As an ESI Premier agent, you now get: ✅ 50% off every lead🔒 100% exclusive leads — never shared, never recycled, never resold📞 Prospects who expect an agent call — real conversations, not dialing wars📅 Consistent delivery options via CRM",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.093Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/",
+    "quote": "Lead Heroes - Insurance Leads & Marketing - Simplified",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.093Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": "Custom Calling Campaign - Final Expense & Medicare Telemarketers",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": "Custom Calling Campaign - Final Expense & Medicare Telemarketers",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": "Custom Calling Campaign - Final Expense life insurance live transfer leads and spend your time closing leads instead of chasing them.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": "Pre Set Appt SampleLive Transfer SampleSCRIPTSCRIPTBuy SPANISH SPEAKING CALLERS Spanish Speaking Callers100% CustomizableHire exclusive callers dedicated to your business!",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "compliance",
+    "value": "tcpa",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": " Enter Sales Data Upload your own sales data, or use our TCPA compliant data lists that are updated monthly, for free!",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/",
+    "quote": "Manila",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.093Z"
+   }
+  ]
+ },
+ {
+  "search_id": "59a5ee97-7b82-45b9-afff-0667b7d8d055",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:13.719Z",
+  "center_id": "e2d0ca89-d040-41ae-b626-5550f2e7ae20",
+  "name": "Magellan Solutions",
+  "entity_type": "call_center",
+  "country": null,
+  "city": null,
+  "domain": "magellan-solutions.com",
+  "phones": [
+   "+16502043191",
+   "+611800247724",
+   "+18003716224",
+   "+448082803175"
+  ],
+  "emails": [
+   "hello@www.magellan-solutions.com",
+   "hello@magellan-solutions.com"
+  ],
+  "country_signals": [],
+  "fit_score": 33,
+  "label": "low",
+  "evidence": [
+   {
+    "center_id": "e2d0ca89-d040-41ae-b626-5550f2e7ae20",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://www.magellan-solutions.com/blog/top-17-healthcare-call-center-companies-in-2021",
+    "quote": "SF certification PCI compliance 16 Ibex Global Solutions Payer/PBM Solutions Member Enrollment and Acquisition Licensed Medicare Agents/ibex Owned Agency Account Maintenance Customer Service Benefit, Eligibility & Claims Status Claims Manage",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.444Z"
+   },
+   {
+    "center_id": "e2d0ca89-d040-41ae-b626-5550f2e7ae20",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.magellan-solutions.com/blog/top-17-healthcare-call-center-companies-in-2021",
+    "quote": "Spanish-language coverage, for example, is staffed separately.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.444Z"
+   },
+   {
+    "center_id": "e2d0ca89-d040-41ae-b626-5550f2e7ae20",
+    "kind": "compliance",
+    "value": "consent",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.magellan-solutions.com/blog/top-17-healthcare-call-center-companies-in-2021",
+    "quote": "ricaAU / NZEuropeAPAC Service TypeInboundOutboundBPOGeneral InquiryPartnershipOthers By providing your information, you consent to Magellan Solutions collecting and using your details for the purpose of contacting you regarding your inquiry.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.444Z"
+   }
+  ]
+ },
+ {
+  "search_id": "83011388-b679-4ff6-8563-e16b01b52eee",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "aca",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:32.511Z",
+  "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+  "name": "Smart Brains BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "smartbrainsbpo.com",
+  "phones": [
+   "+923348164477"
+  ],
+  "emails": [
+   "8442428info@smartbrainsbpo.com"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Added 3 new services including Medicare support.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "campaign",
+    "value": "aca",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Image 11002 ### ACA Health Insurance Structured customer outreach and enrollment-process support for ACA campaigns.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Image 11305 ### Final Expense Respectful customer engagement and follow-through for final-expense insurance campaigns.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   },
+   {
+    "center_id": "3a259aae-2e42-47b0-8bed-c2a30f2e59bd",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://smartbrainsbpo.com/",
+    "quote": "Smart Brains BPO | Intelligence in Motion",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.421Z"
+   }
+  ]
+ },
+ {
+  "search_id": "83011388-b679-4ff6-8563-e16b01b52eee",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "aca",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:14:32.511Z",
+  "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+  "name": "Roots BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "roots-bpo.com",
+  "phones": [
+   "+92515120010"
+  ],
+  "emails": [
+   "info@rootsbpo.com"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+925",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "-Based ClientsSpecialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "aca",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/about-us/",
+    "quote": "d over a decade of industry experience, we specialize in campaigns for Final Expense, Medicare, Auto Insurance, and the Affordable Care Act (ACA).",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "-Based ClientsSpecialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Roots BPO – TeleMarketing",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:48.869Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Specialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Specialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "aca",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Specialized in Final Expense, Medicare, Auto Insurance & ACA campaigns with proven conversion strategies.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/services/",
+    "quote": "InsuranceFinal Expense, Medicare, and Auto Insurance campaigns with high-converting live transfers to licensed U.S. agents.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "campaign",
+    "value": "aca",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://roots-bpo.com/services/",
+    "quote": "Affordable Care Act enrollment campaigns helping Americans access the healthcare coverage they need.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Pakistan's premier Call Center & BPO company.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Office S-9, 2nd Floor, Save Mart Plaza, Haidri Chowk Saidpur Road, Rawalpindi",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   },
+   {
+    "center_id": "3d36176e-a5b5-4f62-9352-52901c5f44ec",
+    "kind": "entity",
+    "value": "enterprise_bpo",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://roots-bpo.com/",
+    "quote": "Pakistan's premier Call Center & BPO company.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:07:36.012Z"
+   }
+  ]
+ },
+ {
+  "search_id": "16898232-e0a5-4751-b75b-aed1dcd88738",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:22:34.263Z",
+  "center_id": "c383bd3d-0428-4a51-8b0c-91c57461f307",
+  "name": "CF Solutions Philippines Inc.",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Eastwood, Metro Manila",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "ph",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 56,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "c383bd3d-0428-4a51-8b0c-91c57461f307",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "appointment_setting",
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/appointment-setter-jobs/in-San-Antonio-Quezon-City-Metro-Manila",
+    "quote": "Insurance Appointment Setter – Final Expense.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:22:42.959Z"
+   },
+   {
+    "center_id": "c383bd3d-0428-4a51-8b0c-91c57461f307",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/appointment-setter-jobs/in-San-Antonio-Quezon-City-Metro-Manila",
+    "quote": "Eastwood, Metro Manila",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:22:42.959Z"
+   },
+   {
+    "center_id": "c383bd3d-0428-4a51-8b0c-91c57461f307",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/appointment-setter-jobs/in-San-Antonio-Quezon-City-Metro-Manila",
+    "quote": "CF Solutions Philippines Inc.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:22:42.959Z"
+   },
+   {
+    "center_id": "c383bd3d-0428-4a51-8b0c-91c57461f307",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/appointment-setter-jobs/in-San-Antonio-Quezon-City-Metro-Manila",
+    "quote": "Appointment Setter Jobs, Hiring in San Antonio Quezon City Metro ...",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:22:42.959Z"
+   }
+  ]
+ },
+ {
+  "search_id": "16898232-e0a5-4751-b75b-aed1dcd88738",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:22:34.263Z",
+  "center_id": "1caf69b1-c769-46c7-a160-700991479d8d",
+  "name": "Lewis Personnel Management",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Makati",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "ph",
+    "country": "ph"
+   },
+   {
+    "type": "city",
+    "value": "Makati",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 56,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "1caf69b1-c769-46c7-a160-700991479d8d",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "appointment_setting",
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/appointment-setter-jobs/in-Binan-City,-Laguna",
+    "quote": "Experienced Appointment Setter for Final Expense Life",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:15.009Z"
+   },
+   {
+    "center_id": "1caf69b1-c769-46c7-a160-700991479d8d",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/appointment-setter-jobs/in-Binan-City,-Laguna",
+    "quote": "Makati",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:15.009Z"
+   },
+   {
+    "center_id": "1caf69b1-c769-46c7-a160-700991479d8d",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/appointment-setter-jobs/in-Binan-City,-Laguna",
+    "quote": "at Lewis Personnel Management.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:15.009Z"
+   },
+   {
+    "center_id": "1caf69b1-c769-46c7-a160-700991479d8d",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://ph.jobstreet.com/appointment-setter-jobs/in-Binan-City,-Laguna",
+    "quote": "Appointment Setter Jobs, Hiring in Binan City Laguna - Oct 2026",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:15.009Z"
+   }
+  ]
+ },
+ {
+  "search_id": "16898232-e0a5-4751-b75b-aed1dcd88738",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:22:34.263Z",
+  "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+  "name": "Hit Rate Solutions",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Bacolod",
+  "domain": "hitratesolutions.com",
+  "phones": [
+   "+18552313730",
+   "+18556410585"
+  ],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Bacolod",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "appointment_setting",
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/markets/philippines-call-center",
+    "quote": "Appointment Setting for Logan KlinkLogan Klink is an agent under American Income life insurance company which has clients from Canada and New Zealand but originated in New York.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   },
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/markets/philippines-call-center",
+    "quote": "Bacolod",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   },
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/",
+    "quote": "Outsourced Call Center Services from $7/hr | Hit Rate Solutions",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   },
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/markets/philippines-call-center",
+    "quote": "d valuable leads and provided their licensed insurance agents with a list of potential customers who were interested in Medicare options.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   },
+   {
+    "center_id": "ec9b73eb-5840-4a8b-86c8-cd75b38f7b3e",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://hitratesolutions.com/markets/philippines-call-center",
+    "quote": "Lead Generations for Dynamic Insurance ServicesDynamic Insurance Services is a pioneer in the final expense sector and is located in Texas.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:30.257Z"
+   }
+  ]
+ },
+ {
+  "search_id": "16898232-e0a5-4751-b75b-aed1dcd88738",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:22:34.263Z",
+  "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+  "name": "LeadMaker",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Manila",
+  "domain": "leadmaker.agency",
+  "phones": [
+   "+639999568369"
+  ],
+  "emails": [
+   "sales@leadmaker.agency",
+   "8369sales@leadmaker.agencycopyright"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+639",
+    "country": "ph"
+   },
+   {
+    "type": "city",
+    "value": "Manila",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-manila-for-insurance-companies",
+    "quote": "Hit Rate Solutions A specialized BPO with a proven track record in the final expense and Medicare sectors.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.314Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/",
+    "quote": "lingual Sales Call SupportOutgoing and incoming calls to support your sales process with clear and engaging English and Spanish.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.313Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "market",
+    "value": "bilingual",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/",
+    "quote": "See More Bilingual Sales Call Support Outgoing and incoming calls to support your sales process with clear and engaging English an",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.313Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-manila-for-insurance-companies",
+    "quote": "Manila",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.314Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/",
+    "quote": "LeadMaker - Digital Marketing and Lead Generation Service in Philippines",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.313Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-the-philippines-for-insurance-companies",
+    "quote": "Medicare InsuranceFinding new clients for health coverage plans.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.372Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-the-philippines-for-insurance-companies",
+    "quote": "Manila",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.372Z"
+   },
+   {
+    "center_id": "4af55a79-f7f9-47d4-91d4-442b1a032933",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://www.leadmaker.agency/blog/20-best-call-centers-in-manila-for-insurance-companies",
+    "quote": "Medicare InsuranceFinding new clients for health coverage plans.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:29.314Z"
+   }
+  ]
+ },
+ {
+  "search_id": "16898232-e0a5-4751-b75b-aed1dcd88738",
+  "search_country": "ph",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:22:34.263Z",
+  "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+  "name": "Lead Heroes",
+  "entity_type": "call_center",
+  "country": "ph",
+  "city": "Manila",
+  "domain": "leadheroes.com",
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Manila",
+    "country": "ph"
+   },
+   {
+    "type": "ai",
+    "value": "Philippines",
+    "country": "ph"
+   }
+  ],
+  "fit_score": 44,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": "Custom Calling Campaign - Final Expense & Medicare Telemarketers",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": "Custom Calling Campaign - Final Expense & Medicare Telemarketers",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": "Custom Calling Campaign - Final Expense life insurance live transfer leads and spend your time closing leads instead of chasing them.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": "Pre Set Appt SampleLive Transfer SampleSCRIPTSCRIPTBuy SPANISH SPEAKING CALLERS Spanish Speaking Callers100% CustomizableHire exclusive callers dedicated to your business!",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "compliance",
+    "value": "tcpa",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign/",
+    "quote": " Enter Sales Data Upload your own sales data, or use our TCPA compliant data lists that are updated monthly, for free!",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.094Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "red_flag",
+    "value": "resold_transfers",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/",
+    "quote": "As an ESI Premier agent, you now get: ✅ 50% off every lead🔒 100% exclusive leads — never shared, never recycled, never resold📞 Prospects who expect an agent call — real conversations, not dialing wars📅 Consistent delivery options via CRM",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.093Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/",
+    "quote": "Lead Heroes - Insurance Leads & Marketing - Simplified",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.093Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": "Custom Calling Campaign - Final Expense & Medicare Telemarketers",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": "Custom Calling Campaign - Final Expense & Medicare Telemarketers",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": "Custom Calling Campaign - Final Expense life insurance live transfer leads and spend your time closing leads instead of chasing them.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": "Pre Set Appt SampleLive Transfer SampleSCRIPTSCRIPTBuy SPANISH SPEAKING CALLERS Spanish Speaking Callers100% CustomizableHire exclusive callers dedicated to your business!",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "compliance",
+    "value": "tcpa",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/custom-calling-campaign",
+    "quote": " Enter Sales Data Upload your own sales data, or use our TCPA compliant data lists that are updated monthly, for free!",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:14:32.439Z"
+   },
+   {
+    "center_id": "56b74c6d-d6d0-4cd7-b956-5640848e04e7",
+    "kind": "country",
+    "value": "ph",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://leadheroes.com/",
+    "quote": "Manila",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:32.093Z"
+   }
+  ]
+ },
+ {
+  "search_id": "68a0d44c-0376-4f2b-8b9a-5c9c717e167e",
+  "search_country": "in",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:23:32.568Z",
+  "center_id": "0f995de7-5389-4e5e-802f-880a108ec8c0",
+  "name": "Medicare Maniacs",
+  "entity_type": "call_center",
+  "country": null,
+  "city": null,
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [],
+  "fit_score": 39,
+  "label": "low",
+  "evidence": [
+   {
+    "center_id": "0f995de7-5389-4e5e-802f-880a108ec8c0",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://www.glassdoor.com/job-listing/remote-inbound-medicare-sales-medicare-maniacs-JV_KO0,29_KE30,46.htm?jl=1009793590913",
+    "quote": "Remote Inbound Medicare Sales",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:51.530Z"
+   },
+   {
+    "center_id": "0f995de7-5389-4e5e-802f-880a108ec8c0",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.glassdoor.com/job-listing/remote-inbound-medicare-sales-medicare-maniacs-JV_KO0,29_KE30,46.htm?jl=1009793590913",
+    "quote": "Remote Inbound Medicare Sales",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:51.530Z"
+   },
+   {
+    "center_id": "0f995de7-5389-4e5e-802f-880a108ec8c0",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.glassdoor.com/job-listing/remote-inbound-medicare-sales-medicare-maniacs-JV_KO0,29_KE30,46.htm?jl=1009793590913",
+    "quote": "Medicare Maniacs hiring Remote Inbound Medicare Sales Job in Remote | Glassdoor",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:23:51.530Z"
+   }
+  ]
+ },
+ {
+  "search_id": "68a0d44c-0376-4f2b-8b9a-5c9c717e167e",
+  "search_country": "in",
+  "market": "any",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T18:23:32.568Z",
+  "center_id": "ea11730d-b641-4a59-b035-c106e72c7c2f",
+  "name": "Ahs Vista",
+  "entity_type": "call_center",
+  "country": null,
+  "city": null,
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [],
+  "fit_score": 33,
+  "label": "low",
+  "evidence": [
+   {
+    "center_id": "ea11730d-b641-4a59-b035-c106e72c7c2f",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "unknown",
+    "source": "job_board",
+    "source_url": "https://www.ziprecruiter.com/c/AHS-Vista-LLC/Job/Medicare-Biller/-in-Waukegan,IL?jid=92ac63c0f20ac92e",
+    "quote": "Medicare Biller Job in Waukegan, IL at Ahs Vista (Hiring)",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:24:19.228Z"
+   },
+   {
+    "center_id": "ea11730d-b641-4a59-b035-c106e72c7c2f",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.ziprecruiter.com/c/AHS-Vista-LLC/Job/Medicare-Biller/-in-Waukegan,IL?jid=92ac63c0f20ac92e",
+    "quote": "Medicare Biller Job in Waukegan, IL at Ahs Vista (Hiring)",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:24:19.228Z"
+   },
+   {
+    "center_id": "ea11730d-b641-4a59-b035-c106e72c7c2f",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://www.ziprecruiter.com/c/AHS-Vista-LLC/Job/Medicare-Biller/-in-Waukegan,IL?jid=92ac63c0f20ac92e",
+    "quote": "Medicare Biller Job in Waukegan, IL at Ahs Vista (Hiring)",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:24:19.228Z"
+   }
+  ]
+ },
+ {
+  "search_id": "3e6fbb3f-2ab2-4c74-9ab2-f01896537967",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "life",
+  "depth": "quick",
+  "created_at": "2026-10-26T21:05:23.658Z",
+  "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+  "name": "Sales Zone BPO",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "saleszonebpo.com",
+  "phones": [],
+  "emails": [
+   "hr@saleszonebpo.com"
+  ],
+  "country_signals": [
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 71,
+  "label": "high",
+  "evidence": [
+   {
+    "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://saleszonebpo.com/",
+    "quote": "Sales Zone BPO is a professional telemarketing and BPO company specializing in Final Expense and Medical Alert campaigns.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.404Z"
+   },
+   {
+    "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "sales",
+    "source": "website",
+    "source_url": "https://saleszonebpo.com/",
+    "quote": "Final Expense and Life Insurance operations, supporting the customer journey from qualification and verification through pre-closed applica",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.404Z"
+   },
+   {
+    "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://saleszonebpo.com/",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.404Z"
+   },
+   {
+    "center_id": "4ae6a058-7015-46ed-8161-354a434f77b2",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://saleszonebpo.com/",
+    "quote": "Sales Zone BPO | Professional Telemarketing & BPO Services",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:06:51.404Z"
+   }
+  ]
+ },
+ {
+  "search_id": "3e6fbb3f-2ab2-4c74-9ab2-f01896537967",
+  "search_country": "pk",
+  "market": "any",
+  "campaign": "life",
+  "depth": "quick",
+  "created_at": "2026-10-26T21:05:23.658Z",
+  "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+  "name": "Prime BPO & Telecommunications",
+  "entity_type": "call_center",
+  "country": "pk",
+  "city": "Rawalpindi",
+  "domain": "primebpo.com",
+  "phones": [
+   "+92518484741",
+   "+923198322197",
+   "+923224233433",
+   "+92518743058",
+   "+61255512345",
+   "+92518733177",
+   "+923305401138"
+  ],
+  "emails": [
+   "hr@primebpo2.com",
+   "info@primebpo3.com",
+   "info@primebpo4.com",
+   "hr@primebpo5.com",
+   "hr@primebpo.com",
+   "hr@primebpo6.com"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+925",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+925",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+925",
+    "country": "pk"
+   },
+   {
+    "type": "phone",
+    "value": "+923",
+    "country": "pk"
+   },
+   {
+    "type": "city",
+    "value": "Rawalpindi",
+    "country": "pk"
+   },
+   {
+    "type": "ai",
+    "value": "Pakistan",
+    "country": "pk"
+   }
+  ],
+  "fit_score": 50,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "Explore inbound, outbound, B2B, and Medicare campaigns in USA & Pakistan.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   },
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "dule the meetings Medicare Campaign Call Center Specialised calls to educate or enroll the clients in Medicare programs Final Expense Campaign for Call Center Health clients to plan and purchase the insurance for end of life expenses Call Ce",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   },
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "customer_service",
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "Buisness Development Empower Growth, Drive Innovation, and Strengthen Your Enterprise FEATURED CASE STUDY M Life Insurance Complete Coverage with Life Insurance Policy Blogs Resources Announcements Gallery Event Defaulters Contac",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   },
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "country",
+    "value": "pk",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "Rawalpindi",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   },
+   {
+    "center_id": "452fd746-3d65-4a10-a899-5bc33cead841",
+    "kind": "compliance",
+    "value": "dnc",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://www.primebpo.com/blog/call-center-campaigns",
+    "quote": "for better performance Not every call ends in a sale scheduled for the follow-ups You should follow the local laws like DNC do not call lists Call Center Campaigns in Pakistan Pakistan has become the power of source call center campaigns bec",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.262Z"
+   }
+  ]
+ },
+ {
+  "search_id": "9be5100b-a7b6-44ab-9a0a-f21ce90d075f",
+  "search_country": "in",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T21:21:38.741Z",
+  "center_id": "7e90d186-57b5-4659-bd1c-3414cd752cd3",
+  "name": "FUTURE LINKERS",
+  "entity_type": "call_center",
+  "country": "in",
+  "city": "Mumbai",
+  "domain": "futurelinkersbpo.blogspot.com",
+  "phones": [
+   "+918123973865"
+  ],
+  "emails": [
+   "support@vacationhut.netskype",
+   "support@vacationhut.netreplydeleterepliesreplyunknownmarch"
+  ],
+  "country_signals": [
+   {
+    "type": "phone",
+    "value": "+918",
+    "country": "in"
+   },
+   {
+    "type": "city",
+    "value": "Mumbai",
+    "country": "in"
+   },
+   {
+    "type": "ai",
+    "value": "India",
+    "country": "in"
+   }
+  ],
+  "fit_score": 79,
+  "label": "high",
+  "evidence": [
+   {
+    "center_id": "7e90d186-57b5-4659-bd1c-3414cd752cd3",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://futurelinkersbpo.blogspot.com/2011/09/us-insurance-lead-generation-auto.html",
+    "quote": "I have a fully equip call center that caters the following campaigns:Auto Ins, Final Expense Ins, Health Ins, etc.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.344Z"
+   },
+   {
+    "center_id": "7e90d186-57b5-4659-bd1c-3414cd752cd3",
+    "kind": "campaign",
+    "value": "life",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://futurelinkersbpo.blogspot.com/2011/09/us-insurance-lead-generation-auto.html",
+    "quote": "we have experience in dialing Auto insurance and life insurance.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.344Z"
+   },
+   {
+    "center_id": "7e90d186-57b5-4659-bd1c-3414cd752cd3",
+    "kind": "market",
+    "value": "spanish",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://futurelinkersbpo.blogspot.com/",
+    "quote": "ume sample,nz architects,interior designers architects,architects in ahmedabad,job for architects,architects in gurgaon,spanish architects,interior architects london,singapore architects,intern architect,architect model,architects edinburgh,",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.344Z"
+   },
+   {
+    "center_id": "7e90d186-57b5-4659-bd1c-3414cd752cd3",
+    "kind": "country",
+    "value": "in",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://futurelinkersbpo.blogspot.com/2014/01/medicare-lead-generation-with-dialer.html",
+    "quote": "Mumbai",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.344Z"
+   },
+   {
+    "center_id": "7e90d186-57b5-4659-bd1c-3414cd752cd3",
+    "kind": "compliance",
+    "value": "dnc",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "http://futurelinkersbpo.blogspot.com/p/usacanada-projects.html",
+    "quote": "US DNC (Do Not Contact) (79.",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.344Z"
+   },
+   {
+    "center_id": "7e90d186-57b5-4659-bd1c-3414cd752cd3",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://futurelinkersbpo.blogspot.com/2014/01/medicare-lead-generation-with-dialer.html",
+    "quote": "FUTURE LINKERS",
+    "classifier": "rules-v1",
+    "posted_at": null,
+    "seen_at": "2026-10-26T18:07:17.344Z"
+   }
+  ]
+ },
+ {
+  "search_id": "9be5100b-a7b6-44ab-9a0a-f21ce90d075f",
+  "search_country": "in",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T21:21:38.741Z",
+  "center_id": "6441fbf0-a6f1-4bfe-a32c-ea868b6ccf59",
+  "name": "Proxima ventures",
+  "entity_type": "call_center",
+  "country": "in",
+  "city": "Lucknow, Uttar Pradesh",
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [
+   {
+    "type": "job_board",
+    "value": "in",
+    "country": "in"
+   },
+   {
+    "type": "ai",
+    "value": "India",
+    "country": "in"
+   }
+  ],
+  "fit_score": 76,
+  "label": "high",
+  "evidence": [
+   {
+    "center_id": "6441fbf0-a6f1-4bfe-a32c-ea868b6ccf59",
+    "kind": "hiring",
+    "value": "aca",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://in.indeed.com/q-only-night-shift-l-uttar-pradesh-jobs.html",
+    "quote": "Candidates with only ACA, Medicare, Final Expense, Life",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:25:49.097Z"
+   },
+   {
+    "center_id": "6441fbf0-a6f1-4bfe-a32c-ea868b6ccf59",
+    "kind": "hiring",
+    "value": "medicare",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://in.indeed.com/q-only-night-shift-l-uttar-pradesh-jobs.html",
+    "quote": "Candidates with only ACA, Medicare, Final Expense, Life",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:25:49.097Z"
+   },
+   {
+    "center_id": "6441fbf0-a6f1-4bfe-a32c-ea868b6ccf59",
+    "kind": "hiring",
+    "value": "final_expense",
+    "campaign_role": "sales",
+    "source": "job_board",
+    "source_url": "https://in.indeed.com/q-only-night-shift-l-uttar-pradesh-jobs.html",
+    "quote": "Candidates with only ACA, Medicare, Final Expense, Life",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:25:49.097Z"
+   },
+   {
+    "center_id": "6441fbf0-a6f1-4bfe-a32c-ea868b6ccf59",
+    "kind": "country",
+    "value": "in",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://in.indeed.com/q-only-night-shift-l-uttar-pradesh-jobs.html",
+    "quote": "Lucknow, Uttar Pradesh",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:25:49.097Z"
+   },
+   {
+    "center_id": "6441fbf0-a6f1-4bfe-a32c-ea868b6ccf59",
+    "kind": "us_hours",
+    "value": "us_hours",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://in.indeed.com/q-only-night-shift-l-uttar-pradesh-jobs.html",
+    "quote": "Only Night Shift",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:25:49.097Z"
+   },
+   {
+    "center_id": "6441fbf0-a6f1-4bfe-a32c-ea868b6ccf59",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://in.indeed.com/q-only-night-shift-l-uttar-pradesh-jobs.html",
+    "quote": "US BPO Lead Generation Executive – Only For SSDI Campaign. Proxima ventures.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:25:49.097Z"
+   },
+   {
+    "center_id": "6441fbf0-a6f1-4bfe-a32c-ea868b6ccf59",
+    "kind": "listing",
+    "value": "job_ad",
+    "campaign_role": null,
+    "source": "job_board",
+    "source_url": "https://in.indeed.com/q-only-night-shift-l-uttar-pradesh-jobs.html",
+    "quote": "100 Only Night Shift Job Vacancies in Uttar Pradesh - Indeed",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:25:49.097Z"
+   }
+  ]
+ },
+ {
+  "search_id": "9be5100b-a7b6-44ab-9a0a-f21ce90d075f",
+  "search_country": "in",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T21:21:38.741Z",
+  "center_id": "bea22238-de06-4cef-9456-052fea1cc9f8",
+  "name": "Popmix Media LLC",
+  "entity_type": "call_center",
+  "country": null,
+  "city": null,
+  "domain": "popmixcrm.com",
+  "phones": [],
+  "emails": [],
+  "country_signals": [],
+  "fit_score": 61,
+  "label": "low",
+  "evidence": [
+   {
+    "center_id": "bea22238-de06-4cef-9456-052fea1cc9f8",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://go.popmixcrm.com/ep-page-fe",
+    "quote": "Pay per Call Final Expense",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:24:48.219Z"
+   },
+   {
+    "center_id": "bea22238-de06-4cef-9456-052fea1cc9f8",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://go.popmixcrm.com/ep-page-fe",
+    "quote": "Pay Per Call Medicare",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:24:48.219Z"
+   },
+   {
+    "center_id": "bea22238-de06-4cef-9456-052fea1cc9f8",
+    "kind": "country",
+    "value": "United States",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://go.popmixcrm.com/ep-page-fe",
+    "quote": "Our USA based call center works from 9 am to 5:30 pm EST.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:24:48.219Z"
+   },
+   {
+    "center_id": "bea22238-de06-4cef-9456-052fea1cc9f8",
+    "kind": "compliance",
+    "value": "TCPA",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://go.popmixcrm.com/ep-page-fe",
+    "quote": "Telephone Consumer Protection Act",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:24:48.219Z"
+   },
+   {
+    "center_id": "bea22238-de06-4cef-9456-052fea1cc9f8",
+    "kind": "compliance",
+    "value": "TrustedForm",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://go.popmixcrm.com/ep-page-fe",
+    "quote": "TrustedForm provides unbiased independent documentation of consent",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:24:48.219Z"
+   },
+   {
+    "center_id": "bea22238-de06-4cef-9456-052fea1cc9f8",
+    "kind": "compliance",
+    "value": "Jornaya",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://go.popmixcrm.com/ep-page-fe",
+    "quote": "Jornaya, now Verisk Marketing Solutions and LeadID",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:24:48.219Z"
+   },
+   {
+    "center_id": "bea22238-de06-4cef-9456-052fea1cc9f8",
+    "kind": "us_hours",
+    "value": "us_hours",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://go.popmixcrm.com/ep-page-fe",
+    "quote": "Our USA based call center works from 9 am to 5:30 pm EST.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:24:48.219Z"
+   },
+   {
+    "center_id": "bea22238-de06-4cef-9456-052fea1cc9f8",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://go.popmixcrm.com/ep-page-fe",
+    "quote": "Our USA based call center works from 9 am to 5:30 pm EST.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:24:48.219Z"
+   }
+  ]
+ },
+ {
+  "search_id": "9be5100b-a7b6-44ab-9a0a-f21ce90d075f",
+  "search_country": "in",
+  "market": "any",
+  "campaign": "final_expense",
+  "depth": "quick",
+  "created_at": "2026-10-26T21:21:38.741Z",
+  "center_id": "3d9897de-939a-43f0-b66a-00fc6a74db9e",
+  "name": "Minali BPO",
+  "entity_type": "enterprise_bpo",
+  "country": null,
+  "city": null,
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [],
+  "fit_score": 14,
+  "label": "low",
+  "evidence": [
+   {
+    "center_id": "3d9897de-939a-43f0-b66a-00fc6a74db9e",
+    "kind": "entity",
+    "value": "enterprise_bpo",
+    "campaign_role": null,
+    "source": "social",
+    "source_url": "https://www.instagram.com/p/Dd4sV3RILzr",
+    "quote": "Minali BPO is opening outsourcing opportunities for established call centres across Pakistan, India, Malaysia and Bangladesh to work on UK & USA",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:22:38.758Z"
+   },
+   {
+    "center_id": "3d9897de-939a-43f0-b66a-00fc6a74db9e",
+    "kind": "listing",
+    "value": "social",
+    "campaign_role": null,
+    "source": "social",
+    "source_url": "https://www.instagram.com/p/Dd4sV3RILzr",
+    "quote": "WE ARE OUTSOURCING — FINAL EXPENSE CAMPAIGN ...",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:22:38.758Z"
+   },
+   {
+    "center_id": "3d9897de-939a-43f0-b66a-00fc6a74db9e",
+    "kind": "campaign",
+    "value": "final_expense",
+    "campaign_role": "unknown",
+    "source": "social",
+    "source_url": "https://www.instagram.com/p/Dd4sV3RILzr",
+    "quote": "final expense campaign",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:22:38.758Z"
+   }
+  ]
+ },
+ {
+  "search_id": "432ebf58-f0a4-42eb-9d98-0f6514e48888",
+  "search_country": "co",
+  "market": "spanish",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T21:25:50.125Z",
+  "center_id": "6b8dc5ab-0e79-45ec-9b8d-3d319c1fae9f",
+  "name": "Call Force Global",
+  "entity_type": "enterprise_bpo",
+  "country": "co",
+  "city": null,
+  "domain": "callforce.global",
+  "phones": [
+   "+18442879234"
+  ],
+  "emails": [
+   "info@callforce.global"
+  ],
+  "country_signals": [
+   {
+    "type": "ai",
+    "value": "Colombia",
+    "country": "co"
+   }
+  ],
+  "fit_score": 69,
+  "label": "medium",
+  "evidence": [
+   {
+    "center_id": "6b8dc5ab-0e79-45ec-9b8d-3d319c1fae9f",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "unknown",
+    "source": "website",
+    "source_url": "https://callforce.global/services/colombia",
+    "quote": "Medicare Insurance",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:31:04.033Z"
+   },
+   {
+    "center_id": "6b8dc5ab-0e79-45ec-9b8d-3d319c1fae9f",
+    "kind": "market",
+    "value": "bilingual",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://callforce.global/services/colombia",
+    "quote": "Bilingual English and Spanish call center and BPO teams in Colombia",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:31:04.033Z"
+   },
+   {
+    "center_id": "6b8dc5ab-0e79-45ec-9b8d-3d319c1fae9f",
+    "kind": "country",
+    "value": "co",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://callforce.global/services/colombia",
+    "quote": "Colombia Call Center Outsourcing",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:31:04.033Z"
+   },
+   {
+    "center_id": "6b8dc5ab-0e79-45ec-9b8d-3d319c1fae9f",
+    "kind": "compliance",
+    "value": "HIPAA",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://callforce.global/services/colombia",
+    "quote": "HIPAA-bound healthcare takes 10 business days because the BAA and HIPAA setup come first.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:31:04.033Z"
+   },
+   {
+    "center_id": "6b8dc5ab-0e79-45ec-9b8d-3d319c1fae9f",
+    "kind": "us_hours",
+    "value": "us_hours",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://callforce.global/services/colombia",
+    "quote": "US Eastern and Central hours",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:31:04.033Z"
+   },
+   {
+    "center_id": "6b8dc5ab-0e79-45ec-9b8d-3d319c1fae9f",
+    "kind": "entity",
+    "value": "enterprise_bpo",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://callforce.global/services/colombia",
+    "quote": "Call Force Global staffs remote bilingual agents at $13 to $19 per agent hour, all-in, with a bilingual seat priced the same as an English-only one, no setup fee, and go-live 7 business days after a completed kickoff.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:31:04.033Z"
+   }
+  ]
+ },
+ {
+  "search_id": "432ebf58-f0a4-42eb-9d98-0f6514e48888",
+  "search_country": "co",
+  "market": "spanish",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T21:25:50.125Z",
+  "center_id": "6b02f3eb-f394-47ba-8e13-9f1f8b61ba39",
+  "name": "Connect One Health",
+  "entity_type": "call_center",
+  "country": null,
+  "city": null,
+  "domain": "connectonehealth.com",
+  "phones": [],
+  "emails": [],
+  "country_signals": [],
+  "fit_score": 50,
+  "label": "low",
+  "evidence": [
+   {
+    "center_id": "6b02f3eb-f394-47ba-8e13-9f1f8b61ba39",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "live_transfer",
+    "source": "website",
+    "source_url": "https://connectonehealth.com/dedicated-services-division/carrier-services/",
+    "quote": "staff and operate a 40-seat call center to answer inbound calls from beneficiaries and enroll them in the Carrier’s Medicare Advantage plans.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:30:03.194Z"
+   },
+   {
+    "center_id": "6b02f3eb-f394-47ba-8e13-9f1f8b61ba39",
+    "kind": "compliance",
+    "value": "disclaimer",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://connectonehealth.com/dedicated-services-division/carrier-services/",
+    "quote": "Neither Connect One Health, LLC nor its agents are affiliated, connected with or endorsed by the U.S. Government or the Federal Medicare Program.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:30:03.194Z"
+   },
+   {
+    "center_id": "6b02f3eb-f394-47ba-8e13-9f1f8b61ba39",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "website",
+    "source_url": "https://connectonehealth.com/dedicated-services-division/carrier-services/",
+    "quote": "Business Process Outsource Services for Carriers",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:30:03.194Z"
+   }
+  ]
+ },
+ {
+  "search_id": "432ebf58-f0a4-42eb-9d98-0f6514e48888",
+  "search_country": "co",
+  "market": "spanish",
+  "campaign": "medicare",
+  "depth": "quick",
+  "created_at": "2026-10-26T21:25:50.125Z",
+  "center_id": "3f6cbc7c-2839-4608-b28a-109cae584835",
+  "name": "Avila Medicare Solutions",
+  "entity_type": "call_center",
+  "country": null,
+  "city": null,
+  "domain": null,
+  "phones": [],
+  "emails": [],
+  "country_signals": [],
+  "fit_score": 13,
+  "label": "low",
+  "evidence": [
+   {
+    "center_id": "3f6cbc7c-2839-4608-b28a-109cae584835",
+    "kind": "campaign",
+    "value": "medicare",
+    "campaign_role": "unknown",
+    "source": "social",
+    "source_url": "https://www.facebook.com/TheTonyMerwin/posts/-from-barranquilla-to-becoming-a-powerhouse-in-medicare-advocacy-meet-grace-avil/2536001220093761",
+    "quote": "help you find the Medicare benefits you deserve.",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:26:49.463Z"
+   },
+   {
+    "center_id": "3f6cbc7c-2839-4608-b28a-109cae584835",
+    "kind": "entity",
+    "value": "call_center",
+    "campaign_role": null,
+    "source": "social",
+    "source_url": "https://www.facebook.com/TheTonyMerwin/posts/-from-barranquilla-to-becoming-a-powerhouse-in-medicare-advocacy-meet-grace-avil/2536001220093761",
+    "quote": "Avila Medicare Solutions founder Grace ...",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:26:49.463Z"
+   },
+   {
+    "center_id": "3f6cbc7c-2839-4608-b28a-109cae584835",
+    "kind": "listing",
+    "value": "social",
+    "campaign_role": null,
+    "source": "social",
+    "source_url": "https://www.facebook.com/TheTonyMerwin/posts/-from-barranquilla-to-becoming-a-powerhouse-in-medicare-advocacy-meet-grace-avil/2536001220093761",
+    "quote": "Avila Medicare Solutions founder Grace ...",
+    "classifier": "openai-compatible:groq.com:openai/gpt-oss-120b",
+    "posted_at": null,
+    "seen_at": "2026-10-26T21:26:49.463Z"
+   }
+  ]
+ }
+]

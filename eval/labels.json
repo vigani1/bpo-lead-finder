@@ -1,0 +1,405 @@
+{
+  "about": "Hand labels for search results: is this center a real fit for the search (in the country, runs the campaign)? fit = evidence clearly shows it; partial = plausible but the evidence is weak or ties the campaign to the center only loosely; not_fit = wrong company, wrong country or not an insurance campaign. Labelled from the stored evidence quotes on 2026-10-26. 'tuning' labels were used while changing the scoring; 'held_out' labels come from four later searches the scoring was not tuned on.",
+  "labels": [
+    {
+      "name": "Reliant BPO",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Job ad: hiring an FE closer for its US insurance sales campaign",
+      "set": "tuning"
+    },
+    {
+      "name": "Falco Connect BPO",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "partial",
+      "why": "Named on an FE closer job listing page; the quote doesn't tie FE to this employer",
+      "set": "tuning"
+    },
+    {
+      "name": "JSons Communications",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Own website: FE live transfers and closers, DNC-scrubbed",
+      "set": "tuning"
+    },
+    {
+      "name": "Eden Technologies",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Job ad: Verifier & Self Closer, Final Expense, Rawalpindi",
+      "set": "tuning"
+    },
+    {
+      "name": "Touchstone Communications",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "partial",
+      "why": "Only 'view all Touchstone jobs' on an FE listing page",
+      "set": "tuning"
+    },
+    {
+      "name": "Sybrid Pvt Ltd",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "partial",
+      "why": "Only 'view all Sybrid jobs' on an FE listing page; large general BPO",
+      "set": "tuning"
+    },
+    {
+      "name": "Sales Zone BPO",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Own website: specializing in Final Expense campaigns",
+      "set": "tuning"
+    },
+    {
+      "name": "Smart Brains BPO",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Own website: final-expense insurance campaigns",
+      "set": "tuning"
+    },
+    {
+      "name": "BoostHive",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Job ad on a Pakistani board: FE closer",
+      "set": "tuning"
+    },
+    {
+      "name": "Workaholics",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Own website: FE live transfers, TCPA/DNC",
+      "set": "tuning"
+    },
+    {
+      "name": "Nymblix Pvt Ltd",
+      "country": "pk",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Job ad: looking for FE closers",
+      "set": "tuning"
+    },
+    {
+      "name": "Futures BPO",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Facebook post and job ad: Medicare closers, Rawalpindi",
+      "set": "tuning"
+    },
+    {
+      "name": "Strive BPO",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Job ads: Medicare sales agents, night shift",
+      "set": "tuning"
+    },
+    {
+      "name": "bluecrossbpo",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Own website: Medicare lead generation and qualification",
+      "set": "tuning"
+    },
+    {
+      "name": "Concept BPO",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Job ad: Medicare self closers",
+      "set": "tuning"
+    },
+    {
+      "name": "Mars BPO",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Own website lists Medicare and ACA campaigns",
+      "set": "tuning"
+    },
+    {
+      "name": "Smart Brains BPO",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Own website: Medicare support service",
+      "set": "tuning"
+    },
+    {
+      "name": "Prime BPO & Telecommunications",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "partial",
+      "why": "Only a general blog post about call-center campaigns",
+      "set": "tuning"
+    },
+    {
+      "name": "Roots BPO",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Own website: specialized in FE, Medicare and ACA campaigns",
+      "set": "tuning"
+    },
+    {
+      "name": "Workaholics",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Own website: Medicare lead generation",
+      "set": "tuning"
+    },
+    {
+      "name": "Horizons BPO",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Job ad: self closers for our Medicare campaign",
+      "set": "tuning"
+    },
+    {
+      "name": "Axxon BPO",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Own website: Medicare campaign case studies",
+      "set": "tuning"
+    },
+    {
+      "name": "Aironexus Solutions",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Job ad: call-center agents for a USA Medicare campaign (seen on LinkedIn)",
+      "set": "tuning"
+    },
+    {
+      "name": "The Dorsum",
+      "country": "pk",
+      "campaign": "medicare",
+      "label": "partial",
+      "why": "Lists FE and Medicare campaigns, but also DME campaigns (high risk)",
+      "set": "tuning"
+    },
+    {
+      "name": "Loop Contact Solutions",
+      "country": "ph",
+      "campaign": "medicare",
+      "label": "partial",
+      "why": "Insurance BPO (claims, policyholder support) that knows Medicare rules; no Medicare sales campaign",
+      "set": "tuning"
+    },
+    {
+      "name": "Fusion CX",
+      "country": "ph",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Service page: 'Our Medicare call center delivers HIPAA-compliant enrollment support…' (relabelled after a later search added this page; first label was partial, from an industries menu only)",
+      "set": "tuning"
+    },
+    {
+      "name": "LeadMaker",
+      "country": "ph",
+      "campaign": "medicare",
+      "label": "not_fit",
+      "why": "Marketing agency; the Medicare quote is from its blog list of other call centers",
+      "set": "tuning"
+    },
+    {
+      "name": "AdminEdge",
+      "country": "ph",
+      "campaign": "medicare",
+      "label": "not_fit",
+      "why": "Home health scheduler job: healthcare admin, not an insurance campaign",
+      "set": "tuning"
+    },
+    {
+      "name": "Hit Rate Solutions",
+      "country": "ph",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Own website: Medicare lead generation case study for licensed agents",
+      "set": "tuning"
+    },
+    {
+      "name": "Home Based Call Center",
+      "country": "ph",
+      "campaign": "medicare",
+      "label": "not_fit",
+      "why": "Not a company: a job-board page title (the employer was Virtual Champs Global)",
+      "set": "tuning"
+    },
+    {
+      "name": "Lead Heroes",
+      "country": "ph",
+      "campaign": "medicare",
+      "label": "fit",
+      "why": "Own website: Medicare and FE telemarketers (its 'never resold' was misread as a red flag)",
+      "set": "tuning"
+    },
+    {
+      "name": "Magellan Solutions",
+      "country": "ph",
+      "campaign": "medicare",
+      "label": "not_fit",
+      "why": "The Medicare quote is from its blog list of other companies",
+      "set": "tuning"
+    },
+    {
+      "name": "Smart Brains BPO",
+      "country": "pk",
+      "campaign": "aca",
+      "label": "fit",
+      "why": "Own website: ACA health insurance campaigns",
+      "set": "tuning"
+    },
+    {
+      "name": "Roots BPO",
+      "country": "pk",
+      "campaign": "aca",
+      "label": "fit",
+      "why": "Own website: specializes in ACA campaigns",
+      "set": "tuning"
+    },
+    {
+      "name": "Lewis Personnel Management",
+      "country": "ph",
+      "campaign": "final_expense",
+      "label": "partial",
+      "why": "FE appointment-setter job, but the employer looks like a staffing agency",
+      "set": "tuning"
+    },
+    {
+      "name": "CF Solutions Philippines Inc.",
+      "country": "ph",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Job ad: insurance appointment setter, final expense",
+      "set": "tuning"
+    },
+    {
+      "name": "LeadMaker",
+      "country": "ph",
+      "campaign": "final_expense",
+      "label": "not_fit",
+      "why": "The FE quote is from its blog list about Hit Rate Solutions",
+      "set": "tuning"
+    },
+    {
+      "name": "Hit Rate Solutions",
+      "country": "ph",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Own website: FE lead generation case study",
+      "set": "tuning"
+    },
+    {
+      "name": "Lead Heroes",
+      "country": "ph",
+      "campaign": "final_expense",
+      "label": "fit",
+      "why": "Own website: FE telemarketers and live transfers",
+      "set": "tuning"
+    },
+    {
+      "name": "Medicare Maniacs",
+      "country": "in",
+      "campaign": "medicare",
+      "label": "not_fit",
+      "why": "US remote job on Glassdoor; nothing ties it to India",
+      "set": "tuning"
+    },
+    {
+      "name": "Ahs Vista",
+      "country": "in",
+      "campaign": "medicare",
+      "label": "not_fit",
+      "why": "Medicare biller job in Illinois: billing, and in the US",
+      "set": "tuning"
+    },
+    {
+      "name": "Sales Zone BPO",
+      "country": "pk",
+      "campaign": "life",
+      "label": "fit",
+      "why": "Own website: Final Expense and Life Insurance operations",
+      "set": "held_out"
+    },
+    {
+      "name": "Prime BPO & Telecommunications",
+      "country": "pk",
+      "campaign": "life",
+      "label": "partial",
+      "why": "Only a general blog post about call-center campaigns",
+      "set": "held_out"
+    },
+    {
+      "name": "FUTURE LINKERS",
+      "country": "in",
+      "campaign": "final_expense",
+      "label": "partial",
+      "why": "Blog posts from 2011-2014 offering FE dialing; may no longer be active",
+      "set": "held_out"
+    },
+    {
+      "name": "Proxima ventures",
+      "country": "in",
+      "campaign": "final_expense",
+      "label": "partial",
+      "why": "Job ad for an SSDI campaign that wants agents with ACA/Medicare/FE experience",
+      "set": "held_out"
+    },
+    {
+      "name": "Popmix Media LLC",
+      "country": "in",
+      "campaign": "final_expense",
+      "label": "not_fit",
+      "why": "US-based pay-per-call company, not in India",
+      "set": "held_out"
+    },
+    {
+      "name": "Minali BPO",
+      "country": "in",
+      "campaign": "final_expense",
+      "label": "not_fit",
+      "why": "A buyer looking for call centres to outsource FE to, not a center running it",
+      "set": "held_out"
+    },
+    {
+      "name": "Call Force Global",
+      "country": "co",
+      "campaign": "medicare",
+      "label": "partial",
+      "why": "Bilingual Colombian BPO; Medicare only as an industry they list",
+      "set": "held_out"
+    },
+    {
+      "name": "Connect One Health",
+      "country": "co",
+      "campaign": "medicare",
+      "label": "not_fit",
+      "why": "US carrier-services call center; nothing ties it to Colombia",
+      "set": "held_out"
+    },
+    {
+      "name": "Avila Medicare Solutions",
+      "country": "co",
+      "campaign": "medicare",
+      "label": "not_fit",
+      "why": "US Medicare agency whose founder is from Barranquilla",
+      "set": "held_out"
+    }
+  ]
+}
