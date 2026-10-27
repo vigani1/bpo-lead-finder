@@ -51,6 +51,12 @@ export default function ScoringPage() {
         <h2 className="text-lg font-medium">Proof of the campaign</h2>
         <p className="text-sm text-muted-foreground">Only the strongest piece counts, so a center needs a job ad or its own website, not both.</p>
         <table className="w-full text-sm">
+          <thead className="sr-only">
+            <tr>
+              <th scope="col">Proof</th>
+              <th scope="col">Points</th>
+            </tr>
+          </thead>
           <tbody className="divide-y">
             {PROOF.map((s) => (
               <tr key={s.key} className="align-top">
@@ -68,6 +74,12 @@ export default function ScoringPage() {
       <section className="space-y-3">
         <h2 className="text-lg font-medium">Other signals</h2>
         <table className="w-full text-sm">
+          <thead className="sr-only">
+            <tr>
+              <th scope="col">Signal or penalty</th>
+              <th scope="col">Points</th>
+            </tr>
+          </thead>
           <tbody className="divide-y">
             {SIGNALS.map((s) => (
               <tr key={s.key} className="align-top">

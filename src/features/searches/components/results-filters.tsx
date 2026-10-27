@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Toggle } from "@/components/ui/toggle";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { EVIDENCE_AGE_OPTIONS } from "@/config/scoring";
 import type { ResultsQueryInput } from "@/features/searches/schemas";
 
@@ -28,15 +29,14 @@ export function ResultsFilters({ query, onChange, shown, total, busy }: Props) {
   }, [text, query.q, onChange]);
 
   const flag = (key: "campaignConfirmed" | "hasContact" | "hasWebsite", label: string, help: string) => (
-    <Toggle
-      variant="outline"
-      size="sm"
-      pressed={query[key] === "true"}
-      onPressedChange={(pressed) => onChange({ [key]: pressed ? "true" : undefined })}
-      title={help}
-    >
-      {label}
-    </Toggle>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Toggle variant="outline" size="sm" pressed={query[key] === "true"} onPressedChange={(pressed) => onChange({ [key]: pressed ? "true" : undefined })}>
+          {label}
+        </Toggle>
+      </TooltipTrigger>
+      <TooltipContent>{help}</TooltipContent>
+    </Tooltip>
   );
 
   return (
@@ -86,7 +86,16 @@ export function ResultsFilters({ query, onChange, shown, total, busy }: Props) {
       <div className="flex items-center justify-between gap-3">
         <div className="relative w-full max-w-xs">
           <SearchIcon className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground" />
-          <Input value={text} onChange={(e) => setText(e.target.value)} placeholder="Filter by name, city or website" className="h-8 pl-8" aria-label="Filter results" />
+          <Input
+            type="search"
+            name="q"
+            autoComplete="off"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Filter by name, city or website…"
+            className="h-8 pl-8"
+            aria-label="Filter results"
+          />
         </div>
         <p className="shrink-0 text-sm text-muted-foreground tabular-nums" aria-live="polite">
           {busy ? "Updating…" : shown === total ? `${total} centers` : `${shown} of ${total} centers`}

@@ -17,9 +17,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" suppressHydrationWarning className={`${sans.variable} ${evidence.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <a
+          href="#main"
+          className="sr-only rounded-md bg-background px-3 py-2 text-sm font-medium focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50"
+        >
+          Skip to content
+        </a>
         <Providers>
           <SiteHeader />
-          <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 sm:px-6">{children}</main>
+          <main id="main" className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 sm:px-6">
+            {children}
+          </main>
         </Providers>
       </body>
     </html>

@@ -9,5 +9,5 @@ const STYLES: Record<SearchStatus, string> = {
 };
 
 export function StatusDot({ status }: { status: SearchStatus }) {
-  return <span aria-label={status} className={cn("inline-block size-2 shrink-0 rounded-full", STYLES[status])} />;
+  return <span aria-hidden className={cn("inline-block size-2 shrink-0 rounded-full", STYLES[status])} />;
 }

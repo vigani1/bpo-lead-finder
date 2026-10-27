@@ -20,7 +20,7 @@ export function SearchProgressBar({ search }: { search: SearchSummary }) {
   const { counts, stage } = search.progress;
   const current = ORDER.indexOf(stage);
   return (
-    <div className="rounded-lg border bg-card p-4" aria-live="polite">
+    <div className="rounded-lg border bg-card p-4">
       <ol className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
         {STEPS.map((step) => {
           const index = ORDER.indexOf(step.stage);
@@ -40,7 +40,7 @@ export function SearchProgressBar({ search }: { search: SearchSummary }) {
           );
         })}
       </ol>
-      <p className="mt-3 text-sm text-muted-foreground tabular-nums">
+      <p className="mt-3 text-sm text-muted-foreground tabular-nums" aria-live="polite">
         {counts.queries} searches, {counts.hits} results, {counts.fetchedPages} pages read, {counts.classified} checked, {counts.matched} centers so far.
       </p>
     </div>
