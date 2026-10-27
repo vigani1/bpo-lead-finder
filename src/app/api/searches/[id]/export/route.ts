@@ -4,10 +4,17 @@ import { parseParams, parseQuery, route } from "@/lib/api/handler";
 import { idParamSchema, resultsQuerySchema } from "@/features/searches/schemas";
 import { getSearchView } from "@/features/searches/server/search-view";
 
+/** Cells a spreadsheet would run as a formula. */
+const FORMULA_START = /^[=@\t\r]/;
+/** Phone numbers (or a list of them) start with "+" too, but hold nothing a formula could call. */
+const PHONE_LIKE = /^[+-][\d\s().;+-]*$/;
+
 function csvCell(value: unknown): string {
   const text = Array.isArray(value) ? value.join("; ") : value == null ? "" : String(value);
-  // Quote everything; neutralise spreadsheet formulas in scraped text.
-  const safe = /^[=+\-@]/.test(text) ? `'${text}` : text;
+  // Quote everything; neutralise spreadsheet formulas in scraped text ("-2+3+cmd|…" included),
+  // but leave phone numbers like +923001234567 readable.
+  const formula = FORMULA_START.test(text) || (/^[+-]/.test(text) && !PHONE_LIKE.test(text));
+  const safe = formula ? `'${text}` : text;
   return `"${safe.replace(/"/g, '""')}"`;
 }
 
