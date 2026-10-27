@@ -95,7 +95,10 @@ export const centers = pgTable(
     socialLinks: jsonb("social_links").$type<SocialLink[]>().notNull().default([]),
     summary: text("summary"),
     firstSeenAt: timestamp("first_seen_at", { withTimezone: true }).notNull().defaultNow(),
+    /** When anything last read this center: a search or a re-check. */
     lastCheckedAt: timestamp("last_checked_at", { withTimezone: true }).notNull().defaultNow(),
+    /** When someone last pressed "Re-check now"; limits how often that can run. */
+    recheckedAt: timestamp("rechecked_at", { withTimezone: true }),
   },
   (t) => [
     uniqueIndex("centers_domain_idx").on(t.domain),

@@ -1,5 +1,5 @@
 import "server-only";
-import { and, desc, eq, inArray } from "drizzle-orm";
+import { and, desc, eq, inArray, isNull, lt, or, sql } from "drizzle-orm";
 import { CAMPAIGN_IDS, type CampaignId } from "@/config/campaigns";
 import { classifyCached } from "@/lib/ai";
 import { AppError, notFound } from "@/lib/api/errors";
@@ -33,15 +33,25 @@ export async function recheckCenter(centerId: string): Promise<RecheckResult> {
   const db = await getDb();
   const [center] = await db.select().from(centers).where(eq(centers.id, centerId)).limit(1);
   if (!center) throw notFound("Center");
-  const minutesSince = (Date.now() - center.lastCheckedAt.getTime()) / 60_000;
-  if (minutesSince < MIN_MINUTES_BETWEEN_CHECKS) {
-    throw new AppError("RATE_LIMITED", `This center was checked ${Math.max(1, Math.round(minutesSince))} min ago. Try again in a few minutes.`, {
-      retryAfterSeconds: Math.ceil((MIN_MINUTES_BETWEEN_CHECKS - minutesSince) * 60),
+
+  // Claim the slot first, in one statement, so double clicks and failed runs still wait the full
+  // interval. Only manual re-checks count: a search that just read this center doesn't block one.
+  const claimed = await db
+    .update(centers)
+    .set({ recheckedAt: sql`now()`, lastCheckedAt: sql`now()` })
+    .where(
+      and(
+        eq(centers.id, centerId),
+        or(isNull(centers.recheckedAt), lt(centers.recheckedAt, sql`now() - ${MIN_MINUTES_BETWEEN_CHECKS} * interval '1 minute'`)),
+      ),
+    )
+    .returning({ id: centers.id });
+  if (claimed.length === 0) {
+    const minutesSince = center.recheckedAt ? (Date.now() - center.recheckedAt.getTime()) / 60_000 : 0;
+    throw new AppError("RATE_LIMITED", `This center was re-checked ${Math.max(1, Math.round(minutesSince))} min ago. Try again in a few minutes.`, {
+      retryAfterSeconds: Math.max(60, Math.ceil((MIN_MINUTES_BETWEEN_CHECKS - minutesSince) * 60)),
     });
   }
-
-  // Claim the slot first, so double clicks and failed runs still wait the full interval.
-  await db.update(centers).set({ lastCheckedAt: new Date() }).where(eq(centers.id, centerId));
 
   const before = (await db.select({ id: evidence.id }).from(evidence).where(eq(evidence.centerId, centerId))).length;
   // The campaign this center was most recently found for.
