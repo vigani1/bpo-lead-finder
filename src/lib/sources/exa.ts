@@ -25,7 +25,7 @@ export const exaSource: SearchSource = {
   label: "Exa",
   async search(query) {
     try {
-      const response = await getClient().search(query.text, {
+      const response = await getClient().search(query.exaText ?? query.text, {
         type: "auto",
         ...(query.family === "company_profile" ? { category: "company" as const } : {}),
         contents: { highlights: true },

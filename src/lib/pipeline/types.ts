@@ -21,6 +21,8 @@ export interface DiscoveryQuery {
   family: QueryFamily;
   includeDomains?: string[];
   excludeDomains?: string[];
+  /** Exa's wording, when it should differ from `text` (each index answers best to its own style). */
+  exaText?: string;
   /** Country boost for the search API (e.g. "pakistan"). */
   countryBoost?: string;
   maxResults: number;

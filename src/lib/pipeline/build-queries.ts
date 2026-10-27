@@ -43,7 +43,9 @@ export function buildQueries(filters: SearchFilters): DiscoveryQuery[] {
       ...base,
       ...boost,
       family: "company",
-      text: join(enTerm, "call center", city || place, "BPO campaigns", marketTerm),
+      // Measured: Tavily finds twice as many campaign sites with the short form, Exa more with "BPO campaigns".
+      text: join(enTerm, "call center", city || place, marketTerm),
+      exaText: join(enTerm, "call center", city || place, "BPO campaigns", marketTerm),
       excludeDomains: companyExclusions,
     });
     byFamily.hiring.push({

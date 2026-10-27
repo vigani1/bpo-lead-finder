@@ -190,9 +190,10 @@ Caveats: 48 labels by one person is a small sample (±10 points or so), and the 
 thin because those markets have little public data. The Fit / Not a fit buttons collect more labels.
 
 **With the AI model** (`pnpm eval:live`, 2026-10-27): re-running the 9 labelled searches with
-DeepSeek V4.1 Flash, every labelled center graded High (9 of 9) or Medium (6 of 6) was a real fit,
-and a real fit outranked a wrong one 94% of the time (19 labelled centers came back). Earlier runs:
-High 11 of 12 (first AI run), 14 of 15 (after the quote and campaign-buyer fixes). Two runs of the
+DeepSeek V4.1 Flash, every labelled center graded High was a real fit (12 of 12), Medium 3 of 4
+(the other was a partial fit), and a real fit outranked a wrong one 94% of the time (20 labelled
+centers came back). Earlier runs: High 11 of 12 (first AI run), 14 of 15 (after the quote and
+campaign-buyer fixes), 9 of 9 (after the discovery fixes). Two runs of the
 same searches share only about half their centers: each quick search samples ~60 results, so the
 pool is bigger than any one run shows (two runs together found about 89 different centers). In the
 app, later searches start with the centers earlier ones found, so the list grows with use. The run
