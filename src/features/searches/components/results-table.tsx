@@ -171,7 +171,7 @@ export function ResultsTable({ rows, searchId, campaign, running, totalResults, 
             ? "Results appear here as soon as each one is checked."
             : totalResults > 0
               ? "Loosen the evidence age or confidence filters to see more."
-              : "Public data is thin for some countries and campaigns. The ruled-out list below shows what was found and why it didn't count."}
+              : "Public data is thin for some countries and campaigns. The ruled-out list below shows what was found and why it didn’t count."}
         </p>
       </div>
     );

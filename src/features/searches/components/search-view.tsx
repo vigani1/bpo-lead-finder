@@ -41,7 +41,7 @@ export function SearchView({ id }: { id: string }) {
   if (!data) {
     return (
       <Alert variant="destructive" className="mt-10">
-        <AlertTitle>Couldn&apos;t load this search</AlertTitle>
+        <AlertTitle>Couldn’t load this search</AlertTitle>
         <AlertDescription>{friendlyErrorMessage(error)}</AlertDescription>
       </Alert>
     );
@@ -100,7 +100,7 @@ export function SearchView({ id }: { id: string }) {
 
       {search.progress.sourceErrors.length > 0 && search.status !== "failed" && (
         <Alert>
-          <AlertTitle>Some lookups didn&apos;t work</AlertTitle>
+          <AlertTitle>Some lookups didn’t work</AlertTitle>
           <AlertDescription>
             <ul className="list-disc pl-4">
               {[...new Set(search.progress.sourceErrors.map((e) => e.message))].slice(0, 4).map((message) => (

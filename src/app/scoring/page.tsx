@@ -41,7 +41,7 @@ export default function ScoringPage() {
         <p className="max-w-2xl leading-relaxed text-band-muted">
           The AI only reads pages and pulls out facts, each with a word-for-word quote. Plain code then checks every quote is
           really on the page and adds up the points below. The score is the share of applicable points a center earns, so a
-          search for “any country” isn&apos;t marked down for location.
+          search for “any country” isn’t marked down for location.
         </p>
       </PageBand>
 

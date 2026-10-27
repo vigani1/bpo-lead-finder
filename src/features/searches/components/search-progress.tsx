@@ -2,7 +2,7 @@ import { CheckIcon, LoaderCircleIcon } from "lucide-react";
 import { SOURCE_POLICIES, type SourceId } from "@/config/sources";
 import type { SearchSummary } from "@/features/searches/types";
 import { estimateCostUsd } from "@/lib/costs";
-import { formatDuration } from "@/lib/format";
+import { formatDuration, formatUsd } from "@/lib/format";
 import { SEARCH_STAGES } from "@/lib/pipeline/stages";
 import { cn } from "@/lib/utils";
 
@@ -68,7 +68,7 @@ export function SearchStats({ search }: { search: SearchSummary }) {
       )}
       <p>
         Time: search {formatDuration(timingsMs.searching)}, websites {formatDuration(timingsMs.fetching)}, checking{" "}
-        {formatDuration(timingsMs.classifying)}. Estimated cost ${cost.toFixed(3)} ({costs.aiCalls} AI calls).
+        {formatDuration(timingsMs.classifying)}. Estimated cost {formatUsd(cost)} ({costs.aiCalls} AI calls).
       </p>
     </footer>
   );

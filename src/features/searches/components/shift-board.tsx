@@ -91,11 +91,11 @@ function OtherCountryTile({
 /** When the chosen country's floor takes US calls, in its own local time. */
 function shiftSentence(selected: CountryOption | undefined, now: Date, linesOpen: boolean): string {
   if (!selected?.timeZone || selected.id === "any") {
-    return `It's ${formatClock(US_CALL_HOURS.timeZone, now)} in New York and US calling hours are ${linesOpen ? "open" : "closed"}. Pick a country to see its shift.`;
+    return `It’s ${formatClock(US_CALL_HOURS.timeZone, now)} in New York and US calling hours are ${linesOpen ? "open" : "closed"}. Pick a country to see its shift.`;
   }
   const callWindow = usCallWindowIn(selected.timeZone, now);
   const place = selected.city ?? selected.label;
-  return `US calls go out ${US_CALL_HOURS_LABEL} Eastern. In ${place} that's ${callWindow.start} to ${callWindow.end}, so the floor works ${callWindow.nightShift ? "nights" : "days"}.`;
+  return `US calls go out ${US_CALL_HOURS_LABEL} Eastern. In ${place} that’s ${callWindow.start} to ${callWindow.end}, so the floor works ${callWindow.nightShift ? "nights" : "days"}.`;
 }
 
 /**

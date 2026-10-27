@@ -52,9 +52,17 @@ export function relativeTime(iso: string, now: Date = new Date()): string {
   return "just now";
 }
 
+/** "850 ms", "1.5 s", with a non-breaking space so the unit never wraps onto its own line. */
 export function formatDuration(ms: number | undefined): string {
-  if (!ms) return "0 s";
-  return ms < 1000 ? `${ms} ms` : `${(ms / 1000).toFixed(1)} s`;
+  if (!ms) return "0\u00a0s";
+  return ms < 1000 ? `${ms}\u00a0ms` : `${(ms / 1000).toFixed(1)}\u00a0s`;
+}
+
+const USD = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 3 });
+
+/** "$0.042" */
+export function formatUsd(amount: number): string {
+  return USD.format(amount);
 }
 
 /** Looks up a label for a value read from the database (typed as string); unknown values show as-is. */
