@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { connection } from "next/server";
 import { Suspense } from "react";
 import { ContactList } from "@/features/centers/components/contact-list";
+import { RecheckButton } from "@/features/centers/components/recheck-button";
 import { EvidenceList } from "@/features/centers/components/evidence-list";
 import { ScoreBreakdown } from "@/features/centers/components/score-breakdown";
 import { PageBand } from "@/components/page-band";
@@ -93,6 +94,9 @@ async function CenterDetails({ params, searchParams }: Pick<PageProps<"/centers/
             <p>
               First seen {relativeTime(center.firstSeenAt, now)}, last checked {relativeTime(center.lastCheckedAt, now)}.
             </p>
+            <div className="pt-2">
+              <RecheckButton centerId={center.id} hasWebsite={!!center.websiteUrl} />
+            </div>
           </section>
         </aside>
       </div>

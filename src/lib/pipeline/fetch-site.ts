@@ -31,8 +31,8 @@ function defaultCountryForDomain(domain: string): CountryCode | undefined {
 }
 
 /** One page: from the cache (7 days, failures 6 hours), else robots check + safe fetch + extraction. */
-async function getPage(db: Db, url: string, defaultCountry?: CountryCode): Promise<PageResult> {
-  const [cached] = await db.select().from(pageCache).where(eq(pageCache.url, url)).limit(1);
+async function getPage(db: Db, url: string, defaultCountry?: CountryCode, skipCache = false): Promise<PageResult> {
+  const [cached] = skipCache ? [] : await db.select().from(pageCache).where(eq(pageCache.url, url)).limit(1);
   const maxAgeMs = cached?.status === "ok" || cached?.status === "js_only" ? LIMITS.fetch.pageCacheDays * 86_400_000 : LIMITS.fetch.failedPageCacheHours * 3_600_000;
   const fresh = cached && Date.now() - cached.fetchedAt.getTime() < maxAgeMs;
   if (cached && fresh) {
@@ -92,6 +92,8 @@ export interface FetchSiteOptions {
   pagesPerSite: number;
   /** Renders a JavaScript-only page (e.g. Tavily Extract). Optional. */
   render?: (url: string) => Promise<{ text: string; credits: number } | null>;
+  /** Ignore the page cache (used by "Re-check now"). */
+  fresh?: boolean;
 }
 
 /**
@@ -110,7 +112,7 @@ export async function fetchSite(db: Db, candidate: SiteCandidate, options: Fetch
   const results: PageResult[] = [];
   // One page at a time on purpose: polite to small sites, and later links come from earlier pages.
   while (queue.length > 0 && results.length < pagesPerSite) {
-    const result = await getPage(db, queue.shift()!, defaultCountry);
+    const result = await getPage(db, queue.shift()!, defaultCountry, options.fresh);
     results.push(result);
     for (const link of result.page?.interestingLinks ?? []) {
       if (!queued.has(link)) {

@@ -1,4 +1,5 @@
 import "server-only";
+import { SOURCE_POLICIES } from "@/config/sources";
 import { env } from "@/lib/env";
 import { exaSource } from "./exa";
 import { fixtureSource } from "./fixture";
@@ -13,6 +14,13 @@ import type { SearchSource } from "./types";
 export function getSearchSources(): SearchSource[] {
   if (env().SEARCH_PROVIDER === "fixture") return [fixtureSource];
   return [tavilySource, ...(env().EXA_API_KEY ? [exaSource] : [])];
+}
+
+/** A source whose results may be stored as evidence (used by "Re-check now"). */
+export function getStorableSearchSource(): SearchSource {
+  const storable = getSearchSources().find((s) => SOURCE_POLICIES[s.id].storage === "storable");
+  if (!storable) throw new Error("No storable search source is configured.");
+  return storable;
 }
 
 export function describeSources(): string {
