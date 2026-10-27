@@ -13,6 +13,7 @@ import { coverageFor } from "@/features/meta/coverage";
 import type { FilterOptions } from "@/features/meta/filter-options";
 import { useStartSearch, useUsage } from "@/features/searches/hooks";
 import { cn } from "@/lib/utils";
+import { PageBand } from "@/components/page-band";
 
 /** A label above its control; `labelId` names the control for screen readers. */
 function Field({ label, labelId, htmlFor, children, className }: { label: string; labelId: string; htmlFor?: string; children: ReactNode; className?: string }) {
@@ -98,7 +99,7 @@ const COVERAGE_TONE: Record<string, string> = {
   none: "bg-destructive",
 };
 
-/** The home page search panel. `intro` is the headline shown above it. */
+/** The home page hero and search panel. `intro` is the headline shown above the panel. */
 export function SearchForm({ options, intro }: { options: FilterOptions; intro: ReactNode }) {
   const [campaign, setCampaign] = useState<CampaignId>("final_expense");
   const [country, setCountry] = useState<CountryFilter>("pk");
@@ -110,10 +111,10 @@ export function SearchForm({ options, intro }: { options: FilterOptions; intro: 
   const id = useId();
 
   return (
-    <form action={() => start.mutate({ campaign, country, market, depth })} className="space-y-10 pt-12 sm:pt-16">
-      {intro}
+    <form action={() => start.mutate({ campaign, country, market, depth })}>
+      <PageBand className="pt-12 pb-32 sm:pt-16">{intro}</PageBand>
 
-      <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+      <div className="relative -mt-20 overflow-hidden rounded-xl border bg-card shadow-xl shadow-foreground/10">
         <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[16rem_minmax(0,1fr)_16rem]">
           <Field label="Where the call floor is" labelId={`${id}-country-label`} htmlFor={`${id}-country`}>
             <FieldSelect id={`${id}-country`} value={country} onChange={setCountry} options={options.countries} />

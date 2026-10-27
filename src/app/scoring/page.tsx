@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageBand } from "@/components/page-band";
 import { CONFIDENCE_THRESHOLDS, PENALTY_POINTS, RECENCY, SIGNAL_POINTS } from "@/config/scoring";
 
 export const metadata: Metadata = { title: "How scoring works" };
@@ -34,15 +35,15 @@ const PENALTIES: { key: keyof typeof PENALTY_POINTS; label: string }[] = [
 
 export default function ScoringPage() {
   return (
-    <article className="space-y-10 pt-12">
-      <header className="space-y-4">
-        <h1 className="text-5xl font-bold sm:text-6xl">How scoring works</h1>
-        <p className="max-w-2xl leading-relaxed text-muted-foreground">
+    <article className="space-y-10">
+      <PageBand className="space-y-4 pt-12 pb-12">
+        <h1 className="display text-5xl sm:text-6xl">How scoring works</h1>
+        <p className="max-w-2xl leading-relaxed text-band-muted">
           The AI only reads pages and pulls out facts, each with a word-for-word quote. Plain code then checks every quote is
           really on the page and adds up the points below. The score is the share of applicable points a center earns, so a
           search for “any country” isn&apos;t marked down for location.
         </p>
-      </header>
+      </PageBand>
 
       <div className="max-w-3xl space-y-10">
 

@@ -7,6 +7,15 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-evidence);
+  --font-heading: var(--font-sans);
+  --color-band: var(--band);
+  --color-band-foreground: var(--band-foreground);
+  --color-band-muted: var(--band-muted);
+  --color-lamp: var(--lamp);
+  --color-band-line: var(--band-line);
+  --shadow-lamp: 0 0 8px var(--lamp);
   --color-highlight: var(--highlight);
   --color-confidence-high: var(--confidence-high);
   --color-confidence-medium: var(--confidence-medium);
@@ -50,80 +59,97 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
+  /*
+   * Day shift / night shift: offshore floors take US calls while their own city
+   * sleeps. A band frames the top of each page: pale daylight in light mode,
+   * night navy in dark mode. A green lamp means "US lines open"; marker yellow
+   * is kept for evidence highlights only.
+   */
+  --background: #f1f4f3;
+  --foreground: #15212d;
+  --card: #ffffff;
+  --card-foreground: #15212d;
+  --popover: #ffffff;
+  --popover-foreground: #15212d;
+  --primary: #0e2238;
+  --primary-foreground: #f1f4f3;
+  --secondary: #e4e9ec;
+  --secondary-foreground: #15212d;
+  --muted: #e1e7eb;
+  --muted-foreground: #586676;
+  --accent: #e4e9ec;
+  --accent-foreground: #15212d;
+  --destructive: #b4232c;
+  --border: #bcc7d0;
+  --input: #aebbc6;
+  --ring: #3d6a99;
+  --band: #d5e3ec;
+  --band-foreground: #0e2238;
+  --band-muted: #48607a;
+  --lamp: #12a26a;
+  /* Outlines drawn on the band (clock tiles, buttons). */
+  --band-line: rgb(14 34 56 / 0.28);
   --highlight: #f4d03f;
   --confidence-high: #18784f;
   --confidence-medium: #a5620c;
   --confidence-low: #7a8694;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --chart-1: #18784f;
+  --chart-2: #a5620c;
+  --chart-3: #7a8694;
+  --chart-4: #586676;
+  --chart-5: #0e2238;
+  --radius: 0.625rem;
+  --sidebar: #f1f4f3;
+  --sidebar-foreground: #15212d;
+  --sidebar-primary: #0e2238;
+  --sidebar-primary-foreground: #f1f4f3;
+  --sidebar-accent: #e4e9ec;
+  --sidebar-accent-foreground: #15212d;
+  --sidebar-border: #bcc7d0;
+  --sidebar-ring: #3d6a99;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #121a23;
+  --foreground: #e6ebf0;
+  --card: #18222d;
+  --card-foreground: #e6ebf0;
+  --popover: #18222d;
+  --popover-foreground: #e6ebf0;
+  --primary: #e6ebf0;
+  --primary-foreground: #121a23;
+  --secondary: #223040;
+  --secondary-foreground: #e6ebf0;
+  --muted: #223040;
+  --muted-foreground: #95a3b3;
+  --accent: #223040;
+  --accent-foreground: #e6ebf0;
+  --destructive: #e5484d;
+  --border: #283646;
+  --input: #324355;
+  --ring: #7fa7d1;
+  --band: #13294a;
+  --band-foreground: #e9eff5;
+  --band-muted: #9db1c7;
+  --lamp: #3ddc97;
+  --band-line: rgb(233 239 245 / 0.18);
   --highlight: #d9b43a;
   --confidence-high: #3fbf8a;
   --confidence-medium: #dba23e;
   --confidence-low: #8a96a4;
+  --chart-1: #3fbf8a;
+  --chart-2: #dba23e;
+  --chart-3: #8a96a4;
+  --chart-4: #95a3b3;
+  --chart-5: #e6ebf0;
+  --sidebar: #18222d;
+  --sidebar-foreground: #e6ebf0;
+  --sidebar-primary: #e6ebf0;
+  --sidebar-primary-foreground: #121a23;
+  --sidebar-accent: #223040;
+  --sidebar-accent-foreground: #e6ebf0;
+  --sidebar-border: #283646;
+  --sidebar-ring: #7fa7d1;
 }
 
 @layer base {
@@ -131,15 +157,26 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply overflow-x-clip bg-background text-foreground;
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
   html {
     @apply font-sans;
   }
 }
 @layer components {
-  /* Evidence excerpt: the words that made it count are marked like a highlighter. */
+  /* Headlines: Archivo squeezed to its condensed width, like a departures board. */
+  .display {
+    font-weight: 750;
+    font-stretch: 72%;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+  }
+  /* Evidence excerpt: the one place the serif and the highlighter appear. */
   .evidence-quote {
+    font-family: var(--font-serif);
     font-size: 0.95rem;
     line-height: 1.6;
   }
@@ -149,5 +186,12 @@
     border-radius: 2px;
     padding: 0 0.1em;
     box-decoration-break: clone;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

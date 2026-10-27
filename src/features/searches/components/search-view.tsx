@@ -7,6 +7,7 @@ import { useCallback, useMemo } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { DEPTH_PRESETS } from "@/config/limits";
+import { PageBand } from "@/components/page-band";
 import { coverageFor } from "@/features/meta/coverage";
 import { toSearchParams, useSearchView, useStartSearch } from "@/features/searches/hooks";
 import { pickResultsQueryInput, type ResultsQueryInput } from "@/features/searches/schemas";
@@ -16,6 +17,10 @@ import { ResultsFilters } from "./results-filters";
 import { ResultsTable } from "./results-table";
 import { RuledOutPanel } from "./ruled-out-panel";
 import { SearchProgressBar, SearchStats } from "./search-progress";
+
+/** Outline buttons drawn on the page band. */
+const ON_BAND =
+  "border-band-line bg-transparent text-band-foreground hover:bg-band-foreground/10 hover:text-band-foreground dark:border-band-line dark:bg-transparent dark:hover:bg-band-foreground/10";
 
 export function SearchView({ id }: { id: string }) {
   const router = useRouter();
@@ -48,15 +53,15 @@ export function SearchView({ id }: { id: string }) {
   const exportHref = `/api/searches/${id}/export?${toSearchParams(query)}`;
 
   return (
-    <div className="space-y-8 pt-8">
-      <div className="space-y-5">
-        <Link href="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+    <div className="space-y-8">
+      <PageBand className="space-y-5 pt-8 pb-10">
+        <Link href="/" className="inline-flex items-center gap-1 text-sm text-band-muted hover:text-band-foreground">
           <ArrowLeftIcon className="size-4" /> New search
         </Link>
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="space-y-3">
-            <h1 className="text-4xl font-bold text-balance sm:text-5xl">{describeSearch(search)}</h1>
-            <p className="text-sm text-muted-foreground">
+            <h1 className="display text-4xl text-balance sm:text-6xl">{describeSearch(search)}</h1>
+            <p className="text-sm text-band-muted">
               {DEPTH_PRESETS[search.depth].label} search started {relativeTime(search.createdAt)}.{" "}
               {coverage.coverage && coverage.coverage !== "strong" && coverage.hint}
             </p>
@@ -64,19 +69,20 @@ export function SearchView({ id }: { id: string }) {
           <div className="flex gap-2">
             <Button
               variant="outline"
+              className={ON_BAND}
               disabled={running || refresh.isPending}
               onClick={() => refresh.mutate({ campaign: search.campaign, country: search.country, market: search.market, depth: search.depth, refresh: true })}
             >
               <RefreshCwIcon className={refresh.isPending ? "animate-spin" : undefined} /> Search again live
             </Button>
-            <Button variant="outline" asChild>
+            <Button variant="outline" className={ON_BAND} asChild>
               <a href={exportHref} download>
                 <DownloadIcon /> Export CSV
               </a>
             </Button>
           </div>
         </div>
-      </div>
+      </PageBand>
 
       {running && <SearchProgressBar search={search} />}
 

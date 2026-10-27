@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import { ContactList } from "@/features/centers/components/contact-list";
 import { EvidenceList } from "@/features/centers/components/evidence-list";
 import { ScoreBreakdown } from "@/features/centers/components/score-breakdown";
+import { PageBand } from "@/components/page-band";
 import { Skeleton } from "@/components/ui/skeleton";
 import { AppError } from "@/lib/api/errors";
 import { ENTITY_LABELS, type EntityType } from "@/lib/ai/schema";
@@ -50,24 +51,24 @@ async function CenterDetails({ params, searchParams }: Pick<PageProps<"/centers/
   const countrySignalKinds = [...new Set(center.countrySignals.filter((s) => s.country === center.country).map((s) => labelFor(SIGNAL_TYPE_LABELS, s.type)))];
 
   return (
-    <div className="space-y-10 pt-8">
-      <div className="space-y-5">
+    <div className="space-y-10">
+      <PageBand className="space-y-5 pt-8 pb-10">
         <Link
           href={scoring ? `/searches/${scoring.searchId}` : "/"}
-          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+          className="inline-flex items-center gap-1 text-sm text-band-muted hover:text-band-foreground"
         >
           <ArrowLeftIcon className="size-4" /> {scoring ? `Back to ${lowerFirst(describeSearch(scoring))}` : "New search"}
         </Link>
         <div className="space-y-3">
-          <h1 className="text-4xl font-bold text-balance sm:text-5xl">{center.name}</h1>
-          <p className="text-muted-foreground">
+          <h1 className="display text-4xl text-balance sm:text-6xl">{center.name}</h1>
+          <p className="text-band-muted">
             {ENTITY_LABELS[center.entityType as EntityType] ?? center.entityType}
             {(center.city || center.country) && ` in ${formatLocation(center.city, center.country)}`}
             {center.country && !center.countryConfirmed && " (likely)"}
           </p>
           {center.summary && <p className="max-w-2xl leading-relaxed">{center.summary}</p>}
         </div>
-      </div>
+      </PageBand>
 
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div className="space-y-10">
