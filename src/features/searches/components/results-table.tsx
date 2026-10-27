@@ -133,7 +133,13 @@ function makeColumns(searchId: string, campaign: CampaignId, query: ResultsQuery
       cell: ({ row }) => (
         <div className="space-y-0.5 text-sm">
           <div>{row.original.sourceTypes.map((s) => labelFor(SOURCE_LABELS, s)).join(", ")}</div>
-          <div className="text-muted-foreground">Seen {relativeTime(row.original.lastSeenAt)}</div>
+          <div className="text-muted-foreground">
+            {/* Relative to the reader's clock, which differs from the server's render by design. */}
+            Seen{" "}
+            <time dateTime={row.original.lastSeenAt} suppressHydrationWarning>
+              {relativeTime(row.original.lastSeenAt)}
+            </time>
+          </div>
         </div>
       ),
     }),

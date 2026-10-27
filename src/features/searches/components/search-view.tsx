@@ -62,7 +62,12 @@ export function SearchView({ id }: { id: string }) {
           <div className="space-y-3">
             <h1 className="display text-4xl text-balance sm:text-6xl">{describeSearch(search)}</h1>
             <p className="text-sm text-band-muted">
-              {DEPTH_PRESETS[search.depth].label} search started {relativeTime(search.createdAt)}.{" "}
+              {DEPTH_PRESETS[search.depth].label} search started{" "}
+              {/* Relative to the reader's clock, which differs from the server's render by design. */}
+              <time dateTime={search.createdAt} suppressHydrationWarning>
+                {relativeTime(search.createdAt)}
+              </time>
+              .{" "}
               {coverage.coverage && coverage.coverage !== "strong" && coverage.hint}
             </p>
           </div>
