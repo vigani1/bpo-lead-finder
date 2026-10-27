@@ -1,0 +1,357 @@
+{
+  "$comment": "Sample discovery results for offline mode (SEARCH_PROVIDER=fixture). Reconstructed from the feasibility check on 2026-10-26: URLs, company names, cities and quoted phrases are real; snippet wording is condensed from the recorded search results. Posting dates are unknown, so publishedAt is null. Personal data left out.",
+  "hits": [
+    {
+      "url": "https://www.mustakbil.com/jobs/job/1433829",
+      "title": "Customer Service Representative - Voxinity Solutions - Karachi",
+      "snippet": "Voxinity Solutions is a USA based call center we are running multiple campaigns like Medicare, ACA & Final Expense. Candidates need 3 to 6 months of experience in a Final Expense or ACA campaign. Night shift 7:00 PM to 3:00 AM, Monday to Friday. Karachi.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "medicare",
+        "aca",
+        "final_expense"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://www.rozee.pk/prime-bpo-fe-closer-bds-jobs-1876065",
+      "title": "Prime BPO - FE Closer (BDS) - Rawalpindi",
+      "snippet": "Prime BPO is hiring a Senior Closer (BDS) for its sales team. The ideal candidate will have at least one year of proven success in closing final expense insurance deals. Night shift. Prime BPO & Telecommunications is a business process outsourcing company founded in 2015. Rawalpindi.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense",
+        "life"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://www.rozee.pk/prime-bpo-fe-closer-bds-jobs-1875069",
+      "title": "Prime BPO - FE Closer (BDS) - Rawalpindi",
+      "snippet": "Prime BPO is hiring a Senior Closer (BDS) for its sales team. The ideal candidate will have at least one year of proven success in closing final expense insurance deals. Night shift. Rawalpindi.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://www.mustakbil.com/jobs/job/1433185",
+      "title": "Sales Agent - Guardian BPO - Islamabad",
+      "snippet": "Guardian BPO is hiring for its outbound sales team on Final Expense and Medicare campaigns. Experience: 2 Years. Night shift. Islamabad.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense",
+        "medicare"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://www.mustakbil.com/jobs/job/1433956",
+      "title": "Sales Representative - Cass Group Solutions - Karachi",
+      "snippet": "Cass Group Solutions is hiring professionals to join its Final Expense Team in Karachi. Outbound sales, night shift.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://app.qureos.com/jobs/csr-bpo-1779226176936",
+      "title": "CSR - Mars BPO - Karachi",
+      "snippet": "Mars BPO Karachi is hiring for multiple sales positions on Home Improvement, HVAC, and Medicare campaigns, with outbound calls to U.S. clients. Shift 6:00 PM - 4:00 AM. Karachi.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "medicare",
+        "aca"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://iwork4sindh.com/job/insurance-sales-representative-1775028900-69cccaa4169e1",
+      "title": "Insurance Sales Representative - Fabsam - Karachi",
+      "snippet": "Fabsam is hiring Insurance Sales Representatives for outbound calls to US-based seniors regarding Final Expense insurance programs. Karachi.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense",
+        "life"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://www.kareemiya.com/campaigns/final-expense",
+      "title": "Final Expense Campaign | Kareemiya Technologies & BPO",
+      "snippet": "Kareemiya Technologies & BPO runs final expense campaigns with warm transfers to the client's closers. Two operational centres since 2010, 80+ seats on final expense. Medicare, life and auto campaigns. Delivery centre in Rawalpindi.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense",
+        "medicare",
+        "life"
+      ],
+      "families": [
+        "company"
+      ]
+    },
+    {
+      "url": "https://roots-bpo.com/",
+      "title": "Roots BPO - Live Transfers and Lead Generation",
+      "snippet": "Roots BPO offers live transfers and lead generation for Final Expense, Medicare, ACA and Auto campaigns. Rawalpindi.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense",
+        "medicare",
+        "aca"
+      ],
+      "families": [
+        "company"
+      ]
+    },
+    {
+      "url": "https://primebpo3.com/service/final-expense",
+      "title": "Final Expense | Prime BPO III",
+      "snippet": "Prime BPO III runs Medicare, Final Expense, Auto and Home campaigns. 1st Floor Hamza Plaza, Commercial Market, Rawalpindi.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense",
+        "medicare"
+      ],
+      "families": [
+        "company"
+      ]
+    },
+    {
+      "url": "https://www.callshubsolutions.net/campaigns/final-expense",
+      "title": "Final Expense | Calls Hub Solutions",
+      "snippet": "Calls Hub Solutions, a US-facing contact centre with 200+ employees since 2017. Campaigns: Medicare, Final Expense, Inbound, MVA, Debt Settlement.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense",
+        "medicare"
+      ],
+      "families": [
+        "company"
+      ]
+    },
+    {
+      "url": "https://everest-sol.com/",
+      "title": "Everest Solutions & Services",
+      "snippet": "Everest Solutions & Services: Medicare, ACA, Final Expense, and insurance verification. Bahria Town Phase 4, Rawalpindi.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "medicare",
+        "aca",
+        "final_expense"
+      ],
+      "families": [
+        "company"
+      ]
+    },
+    {
+      "url": "https://marsbpo.co/",
+      "title": "Mars BPO",
+      "snippet": "Mars BPO: Medicare, ACA, Insurance, Energy, Home Services and MVA campaigns. Head office Gulberg Greens, Islamabad, with Rawalpindi branches.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "medicare",
+        "aca"
+      ],
+      "families": [
+        "company"
+      ]
+    },
+    {
+      "url": "https://br.fiverr.com/markjames531/mva-medicare-and-final-expense-live-transfer",
+      "title": "I will mva, medicare and final expense live transfer",
+      "snippet": "I will provide MVA, Medicare and Final Expense live transfers where the customer is already on the line.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "medicare",
+        "final_expense"
+      ],
+      "families": [
+        "vendor"
+      ]
+    },
+    {
+      "url": "https://pk.linkedin.com/company/wepaytechnologies",
+      "title": "WePay Technologies - BPO and Call Center",
+      "snippet": "WePay Technologies is a call center in Rawalpindi doing lead generation for Final Expense - Medicare - SSDI - Debt Settlement - Auto Insurance.",
+      "publishedAt": null,
+      "countries": [
+        "pk"
+      ],
+      "campaigns": [
+        "final_expense",
+        "medicare"
+      ],
+      "families": [
+        "social"
+      ]
+    },
+    {
+      "url": "https://ph.jobstreet.com/job/94716749",
+      "title": "Medicare Sales Specialist | WFH | Night Shift - Emapta",
+      "snippet": "Emapta is hiring a Medicare Sales Specialist (WFH, night shift) to connect US consumers with licensed agents for Original Medicare, Medicare Advantage, Medicare Supplement and Part D.",
+      "publishedAt": null,
+      "countries": [
+        "ph"
+      ],
+      "campaigns": [
+        "medicare"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://www.freelancer.co.id/projects/telephone-handling/lead-generation/",
+      "title": "Lead generation - Anova BPO, Iloilo City",
+      "snippet": "Anova (BPO) in Iloilo City specializes in live transfer and callback leads for Final Expense and Medicare Supplements. 7 call center locations.",
+      "publishedAt": null,
+      "countries": [
+        "ph"
+      ],
+      "campaigns": [
+        "final_expense",
+        "medicare"
+      ],
+      "families": [
+        "vendor"
+      ]
+    },
+    {
+      "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-asesor-telefonico-en-barranquilla-ventas-de-seguros-clientes-ee-uu-en-barranquilla-D7E2C285E905C96361373E686DCF3405",
+      "title": "Asesor telefónico - ventas de seguros clientes EE. UU. - CM INSURANCE ADVISORS - Barranquilla",
+      "snippet": "CM INSURANCE ADVISORS busca asesor telefónico. Experiencia en ventas de seguros (Salud Obamacare, Vida o Suplementarios). Clientes EE. UU. Campañas en español. Barranquilla.",
+      "publishedAt": null,
+      "countries": [
+        "co"
+      ],
+      "campaigns": [
+        "aca",
+        "life"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-asistente-administrativo-bilingue-hombre-en-armenia-A0A06F63BC8C941661373E686DCF3405",
+      "title": "Asistente administrativo bilingüe - INSURANCE MAIN SERVICES S.A.S. - Armenia",
+      "snippet": "INSURANCE MAIN SERVICES S.A.S. Agencia de Seguros en Estados Unidos y Colombia. Especialistas en seguros de salud para hispanos y angloparlantes en EE. UU., incluyendo Medicare, Obamacare. Bilingüe. Armenia, Quindío.",
+      "publishedAt": null,
+      "countries": [
+        "co"
+      ],
+      "campaigns": [
+        "aca",
+        "medicare"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-asesor-comercial-seguros-mercado-usa-lunes-a-viernes-bonificaciones-en-bogota-dc-77B2F07EE8C52AA861373E686DCF3405",
+      "title": "Asesor comercial seguros mercado USA - Bento | Beneficio Total - Bogotá",
+      "snippet": "Bento | Beneficio Total, contact center: campaña enfocada en la venta de seguros exequiales para el mercado de Estados Unidos. Español. Bogotá, Toberín.",
+      "publishedAt": null,
+      "countries": [
+        "co"
+      ],
+      "campaigns": [
+        "final_expense"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-asesor-comercial-venta-de-seguros-clientes-estadounidenses-en-medellin-B015CAEC9075372A61373E686DCF3405",
+      "title": "Asesor comercial venta de seguros clientes estadounidenses - BPO Global Services S.A.S - Medellín",
+      "snippet": "BPO Global Services S.A.S: ventas de seguros. Mínimo 6 meses de experiencia en ventas de seguros en Estados Unidos, en campañas de español o bilingües. Seguros de vida. Medellín, La Aguacatala.",
+      "publishedAt": null,
+      "countries": [
+        "co"
+      ],
+      "campaigns": [
+        "life",
+        "aca"
+      ],
+      "families": [
+        "hiring"
+      ]
+    },
+    {
+      "url": "https://www.confiebpo.com/",
+      "title": "Confie BPO - Nearshore BPO Partner for Insurance",
+      "snippet": "Confie BPO, nearshore BPO partner for insurance: Medicare, ACA Open Enrollment, P&C. Bicultural, not just bilingual. Tijuana.",
+      "publishedAt": null,
+      "countries": [
+        "mx"
+      ],
+      "campaigns": [
+        "medicare",
+        "aca"
+      ],
+      "families": [
+        "company"
+      ]
+    }
+  ]
+}
