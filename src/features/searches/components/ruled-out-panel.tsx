@@ -6,9 +6,6 @@ import type { RuledOutGroup } from "@/features/searches/types";
 import { labelFor, RULED_OUT_LABELS } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
-/** "Forums, news and SEO pages" → "forums, news and SEO pages": only the first letter, so acronyms stay. */
-const lowerFirst = (text: string) => text.charAt(0).toLowerCase() + text.slice(1);
-
 /** What was found but didn't count, and why. Turns a thin result into an explained one. */
 export function RuledOutPanel({ groups }: { groups: RuledOutGroup[] }) {
   const [open, setOpen] = useState(false);
@@ -32,8 +29,8 @@ export function RuledOutPanel({ groups }: { groups: RuledOutGroup[] }) {
               {" "}
               {groups
                 .slice(0, 3)
-                .map((g) => `${g.count} ${lowerFirst(labelFor(RULED_OUT_LABELS, g.reason))}`)
-                .join(", ")}
+                .map((g) => `${labelFor(RULED_OUT_LABELS, g.reason)} (${g.count})`)
+                .join("; ")}
             </span>
           </span>
           <ChevronRightIcon className={cn("size-4 shrink-0 transition-transform", open && "rotate-90")} />
