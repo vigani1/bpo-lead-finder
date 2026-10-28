@@ -2,7 +2,7 @@ import { ExternalLinkIcon, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import type { CenterView } from "@/features/centers/types";
 
 /** The center's published business contacts: phones, role emails, website and social pages. */
-export function ContactList({ center }: { center: CenterView["center"] }) {
+export function ContactList({ center, hasJobAds }: { center: CenterView["center"]; hasJobAds: boolean }) {
   const hasContact = center.phones.length + center.emails.length + center.socialLinks.length > 0 || !!center.websiteUrl;
 
   return (
@@ -44,7 +44,11 @@ export function ContactList({ center }: { center: CenterView["center"] }) {
             </a>
           </li>
         ))}
-        {hasContact ? null : <li className="text-muted-foreground">No published business contact yet. The job ads in the evidence are the way in.</li>}
+        {hasContact ? null : (
+          <li className="text-muted-foreground">
+            No published business contact yet.{hasJobAds && " The job ads in the evidence are the way in."}
+          </li>
+        )}
       </ul>
     </section>
   );

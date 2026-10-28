@@ -86,7 +86,7 @@ async function CenterDetails({ params, searchParams }: Pick<PageProps<"/centers/
         <aside className="space-y-8">
           {scoring && <ScoreBreakdown scoring={scoring} />}
 
-          <ContactList center={center} />
+          <ContactList center={center} hasJobAds={evidence.some((e) => e.source === "job_board")} />
 
           <section className="space-y-1 text-sm text-muted-foreground">
             <p>
