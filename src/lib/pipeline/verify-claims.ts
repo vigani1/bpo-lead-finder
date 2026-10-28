@@ -2,8 +2,9 @@ import { CAMPAIGNS, type CampaignId, type CampaignRole } from "@/config/campaign
 import { MARKETS, type MarketId } from "@/config/markets";
 import type { Classification } from "@/lib/ai/schema";
 import { matchCampaign } from "@/lib/campaign-match";
-import { campaignQuoteVerdict, redFlagQuoteVerdict } from "@/lib/claim-checks";
+import { campaignQuoteVerdict, countryQuoteVerdict, redFlagQuoteVerdict } from "@/lib/claim-checks";
 import { findPhrase, foldAccents, normalizeForMatch, sentenceAround } from "@/lib/text";
+import { countryIdFromName } from "./country";
 import type { Doc } from "./types";
 
 export interface VerifiedClaim {
@@ -127,7 +128,9 @@ export function verifyClaims(doc: Doc, classification: Classification): Verifica
     if (m.market === "english") continue;
     keep({ kind: "market", value: m.market, quote: m.quote }, () => (supportsMarket(m.market, m.quote) ? "ok" : "keyword_missing"));
   }
-  for (const s of classification.countrySignals) keep({ kind: "country", value: s.country, quote: s.quote });
+  for (const s of classification.countrySignals) {
+    keep({ kind: "country", value: s.country, quote: s.quote }, () => countryQuoteVerdict(countryIdFromName(s.country), s.quote));
+  }
   for (const s of classification.complianceSignals) keep({ kind: "compliance", value: s.value, quote: s.quote });
   for (const s of classification.redFlags) keep({ kind: "red_flag", value: s.value, quote: s.quote }, () => redFlagQuoteVerdict(s.value, s.quote));
   if (classification.usHours) keep({ kind: "us_hours", value: "us_hours", quote: classification.usHours.quote });

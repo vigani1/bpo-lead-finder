@@ -52,6 +52,7 @@ What guards against overfitting: 9 of the labels come from later searches that w
 | Rule | Why | Where | Effect |
 |---|---|---|---|
 | US and Canadian (+1) phone numbers never count as a location | Offshore centers show virtual US numbers so American clients can call them. | `src/lib/pipeline/country.ts` | Placed by their other signals instead |
+| A US mention counts as a location only if the quote reads like a place (address, state, "located/based in", office, "US-based call center") | Offshore centers name the US as their market: the AI placed Moji Tech (found in a Pakistan search) in the US from "night shift (U.S. hours)"; of 18 saved US quotes, only 2 were addresses ("Houston, TX 77056"). | `src/lib/claim-checks.ts` | The other 16 ("for US agencies", "our USA campaign", "Serving US, UK, EU clients") are dropped as location evidence |
 | Signal weights: phone 3, job board 2, city 2, domain ending 2, text mention 1 | A phone prefix is hardest to fake; a passing mention is the weakest. | `src/lib/pipeline/country.ts` | The strongest total wins |
 | "Confirmed" needs two different kinds of signal | One signal alone (e.g. a city name in a job ad) was sometimes wrong. | `src/lib/pipeline/country.ts`, `src/lib/scoring/score.ts` | Confirmed 15 points, likely 7 |
 | Generic domain endings (.io, .ai, .tv, .me…) say nothing | Companies anywhere buy these endings. | `src/lib/all-countries.ts` | No domain signal (.co is not on the list: it still counts for Colombia, a deliberate exception) |

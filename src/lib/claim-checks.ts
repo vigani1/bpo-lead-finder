@@ -51,6 +51,35 @@ export function campaignQuoteVerdict(campaign: CampaignId, quote: string, inJobA
 }
 
 /**
+ * Offshore centers name the US all the time because it is their market: "night shift (U.S.
+ * hours)", "for US agencies", "our USA campaign", "Serving US, UK, EU clients". None of that says
+ * where the center is, so a US location needs a quote that reads like a place: an address
+ * ("Houston, TX 77056"), a state ("Tampa, Florida"), "located/based in", an office, or a
+ * "US-based call center". The same idea as +1 numbers never counting as a location.
+ */
+const US_STATES = [
+  "alabama", "alaska", "arizona", "arkansas", "california", "colorado", "connecticut", "delaware", "florida", "georgia",
+  "hawaii", "idaho", "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana", "maine", "maryland",
+  "massachusetts", "michigan", "minnesota", "mississippi", "missouri", "montana", "nebraska", "nevada", "new hampshire",
+  "new jersey", "new mexico", "new york", "north carolina", "north dakota", "ohio", "oklahoma", "oregon", "pennsylvania",
+  "rhode island", "south carolina", "south dakota", "tennessee", "texas", "utah", "vermont", "virginia", "washington",
+  "west virginia", "wisconsin", "wyoming", "district of columbia",
+];
+const STATE_CODES = "AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC";
+/** "Houston, TX" or "TX 77056"; upper case only, so "us, uk, eu, ca" isn't read as California. */
+const US_ADDRESS = new RegExp(String.raw`\b[A-Z][a-z]+,\s*(?:${STATE_CODES})\b|\b(?:${STATE_CODES})\s+\d{5}\b`);
+const PLACED =
+  /\b(?:located|based|headquartered|registered|incorporated)\s+(?:in|at|out of)\b|\b(?:offices?|hq|headquarters|address)\b|\bu\.?\s?s\.?(?:a\.?)?-based\s+(?:call cent(?:er|re)|contact cent(?:er|re)|company|bpo|agency|firm|team)\b/;
+
+/** Does this quote really place the center in the country? Only US mentions are checked (see above). */
+export function countryQuoteVerdict(countryId: string | undefined, quote: string): QuoteVerdict {
+  if (countryId !== "us") return "ok";
+  const folded = foldAccents(quote);
+  const placed = US_ADDRESS.test(quote) || PLACED.test(folded) || US_STATES.some((state) => findPhrase(folded, state) !== -1);
+  return placed ? "ok" : "keyword_missing";
+}
+
+/**
  * A red flag counts only if it's one of our categories, one of its keywords appears, and it isn't
  * negated ("100% exclusive, never resold"). Categories the AI makes up ("age requirement") don't count.
  */
