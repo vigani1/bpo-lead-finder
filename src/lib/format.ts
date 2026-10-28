@@ -84,6 +84,42 @@ export const RULED_OUT_LABELS: Record<RuledOutReason, string> = {
   transient_source: "Link-only pages from a discovery-only source",
 };
 
+/** One short line per ruled-out reason: why pages like these don't count. */
+export const RULED_OUT_HINTS: Record<RuledOutReason, string> = {
+  personal_profile: "Pages about one person; nothing from them is kept",
+  not_a_company_source: "Forums, news, SEO pages and platforms whose terms rule them out",
+  blocked: "The company asked to be left out",
+  no_campaign_mention: "The page doesn’t mention the campaign you searched for",
+  not_a_center: "A job board, agency, lead buyer or similar, not a call center",
+  employer_not_named: "A job ad that doesn’t say who is hiring",
+  wrong_country: "The center is in another country",
+  campaign_not_evidenced: "No quote on the page proves the campaign",
+  site_unreachable: "The website was down or blocks automated reading",
+  site_limit: "Not read: this search depth reads a limited number of websites",
+  transient_source: "Found by a source that only allows following its links",
+};
+
+/** Kinds the pipeline stores as a ruled-out page's detail (page, platform or site state); other details are already words. */
+const RULED_OUT_DETAIL_LABELS: Record<string, string> = {
+  job_ad: "Job ad",
+  job_board: "Job board",
+  social: "Social page",
+  listing: "Directory listing",
+  directory: "Directory",
+  vendor_listing: "Freelance gig",
+  vendor_marketplace: "Freelance marketplace",
+  content: "Article or forum",
+  blocked: "Site blocks automated reading",
+  dead: "Site down",
+};
+
+/** "job_ad via exa" → "Job ad via exa"; already-written details are kept. */
+export function ruledOutDetail(detail: string): string {
+  const [kind, ...rest] = detail.split(" via ");
+  const label = RULED_OUT_DETAIL_LABELS[kind!];
+  return label ? [label, ...rest].join(" via ") : detail;
+}
+
 export const SOURCE_LABELS: Record<EvidenceSource, string> = {
   website: "Own website",
   job_board: "Job ad",

@@ -1,6 +1,7 @@
 import "server-only";
 import { eq } from "drizzle-orm";
 import { BLOCKED_COMPANY_NAMES } from "@/config/blocked-domains";
+import { CAMPAIGNS, type CampaignId } from "@/config/campaigns";
 import { countryInSentence } from "@/config/countries";
 import { HIDDEN_EMPLOYER_PATTERNS } from "@/config/signals";
 import { isPlaceholderName } from "@/lib/ai/rules/company-name";
@@ -80,12 +81,12 @@ export async function persistDoc(ctx: RunContext, doc: Doc, classification: Clas
 
     // Evidence is kept either way; the center just isn't a result for this search.
     if (!(await upsertResult(ctx, centerId, false))) {
-      const campaigns = [...new Set(campaignClaims.map((c) => c.value))].join(", ");
+      const campaigns = [...new Set(campaignClaims.map((c) => campaignLabel(c.value)))].join(", ");
       const elsewhere = ctx.filters.country !== "any" && center?.country && center.country !== ctx.filters.country;
       await addRuledOut(ctx, [
         elsewhere
           ? { url: doc.url, name, reason: "wrong_country", detail: `Located in ${countryInSentence(center?.country)}` }
-          : { url: doc.url, name, reason: "campaign_not_evidenced", detail: `Evidence for ${campaigns}, not ${ctx.filters.campaign}` },
+          : { url: doc.url, name, reason: "campaign_not_evidenced", detail: `Evidence for ${campaigns}, not ${campaignLabel(ctx.filters.campaign)}` },
       ]);
     }
     if (doc.kind === "job_ad" && !center?.domain && !ctx.employersWithoutSite.some((e) => e.centerId === centerId)) {
@@ -95,4 +96,9 @@ export async function persistDoc(ctx: RunContext, doc: Doc, classification: Clas
   // The queue only orders writes: a failed write fails this document (the caller reports it), not every later one.
   ctx.writeQueue = task.catch(() => undefined);
   await task;
+}
+
+/** "final_expense" → "Final expense", for the ruled-out list. */
+function campaignLabel(id: string): string {
+  return CAMPAIGNS[id as CampaignId]?.label ?? id;
 }
