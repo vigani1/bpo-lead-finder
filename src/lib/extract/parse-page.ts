@@ -17,6 +17,8 @@ export interface JsonLdOrganization {
 }
 
 export interface ExtractedPage {
+  /** Address the page was read from, after redirects (missing in older cache entries). */
+  url?: string;
   title: string;
   text: string;
   siteName?: string;
@@ -147,6 +149,7 @@ export function extractPage(html: string, pageUrl: string, defaultCountry?: Coun
   ).slice(0, 10);
 
   return {
+    url: pageUrl,
     title,
     text,
     siteName,

@@ -16,7 +16,7 @@ Claude (Claude Code) wrote most of the code and the commit messages; every step 
 ## Where AI was wrong
 
 - The first hosted-database client used Neon's serverless driver and ran migrations over the pooled URL every time the app started. Neon's own guidance for Vercel is node-postgres with `attachDatabasePool`, and migrations over the direct URL at deploy time; switched once the Neon project was set up.
-- It checked robots.txt only for the first address of a page: when a site redirected elsewhere, the new address was fetched without asking its robots.txt. Every redirect hop is now checked.
+- It checked robots.txt only for the first address of a page: when a site redirected elsewhere, the new address was fetched without asking its robots.txt, and its "no AI input" signal was read from the first site only. Every redirect hop is now checked, and every site the text came from must allow AI input.
 - A private address written in IPv6 form (such as `::ffff:127.0.0.1`) passed the first internal-address guard. The guard now uses Node's `BlockList`, which also matches IPv4 addresses in their IPv6 forms.
 - It parsed Groq's rate-limit hint "try again in 7m12s" as 12 seconds. The pattern now reads the minutes too.
 - It read "experience in final expense" in job ads as the employer running final-expense campaigns, and telling it not to in the prompt didn't stop it. The rule became code: an experience requirement in a job ad isn't campaign proof.

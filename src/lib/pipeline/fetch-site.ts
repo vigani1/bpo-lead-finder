@@ -162,7 +162,9 @@ export async function fetchSite(db: Db, candidate: Pick<SiteCandidate, "url" | "
     if (!socialLinks.some((s) => s.url === link.url)) socialLinks.push(link);
   }
   const home = readable.find((r) => r.url === homepage)?.page ?? all[0]!;
-  const aiInputAllowed = await allowsAiInput(homepage);
+  // Every site the text came from must allow AI input, including sites a page redirected to.
+  const origins = unique([homepage, ...readable.map((r) => r.page!.url ?? r.url)].map((u) => new URL(u).origin));
+  const aiInputAllowed = (await Promise.all(origins.map(allowsAiInput))).every(Boolean);
 
   return {
     websiteStatus,
