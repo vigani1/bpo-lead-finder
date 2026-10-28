@@ -44,13 +44,15 @@ async function getPage(db: Db, url: string, defaultCountry?: CountryCode, skipCa
     result = { url, status: "robots" };
   } else {
     try {
-      const response = await safeFetch(url);
+      // Every redirect hop is checked against robots.txt too, not just the first address.
+      const response = await safeFetch(url, { canFollow: isAllowedByRobots });
       const page = extractPage(response.body, response.url, defaultCountry);
       const visible = page.text.length - page.title.length;
       result = { url, status: PARKED.test(response.url) || PARKED.test(page.text) ? "error" : visible < LIMITS.fetch.minTextChars ? "js_only" : "ok", page };
     } catch (error) {
+      const refused = error instanceof FetchBlockedError && error.reason === "robots";
       const blocked = error instanceof FetchBlockedError && (error.status === 401 || error.status === 403 || error.status === 429);
-      result = { url, status: blocked ? "blocked" : "error" };
+      result = { url, status: refused ? "robots" : blocked ? "blocked" : "error" };
     }
   }
 

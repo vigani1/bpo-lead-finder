@@ -6,7 +6,7 @@ import { env } from "@/lib/env";
 
 export class FetchBlockedError extends Error {
   constructor(
-    readonly reason: "invalid_url" | "private_address" | "too_many_redirects" | "too_large" | "not_html" | "http_error" | "timeout",
+    readonly reason: "invalid_url" | "private_address" | "too_many_redirects" | "too_large" | "not_html" | "http_error" | "timeout" | "robots",
     message: string,
     readonly status?: number,
   ) {
@@ -85,10 +85,12 @@ export interface SafeResponse {
 /**
  * Fetches a public web page: SSRF-checked on every redirect hop, with a
  * timeout, a size cap and an identifying User-Agent.
+ * `canFollow` is asked before each redirect is followed (the page fetch passes
+ * the robots.txt check, so a redirect to another site obeys that site's rules).
  */
 export async function safeFetch(
   input: string,
-  options: { accept?: "html" | "text"; timeoutMs?: number } = {},
+  options: { accept?: "html" | "text"; timeoutMs?: number; canFollow?: (url: string) => Promise<boolean> } = {},
 ): Promise<SafeResponse> {
   let current: URL;
   try {
@@ -118,6 +120,9 @@ export async function safeFetch(
       const location = response.headers.get("location");
       if (!location) throw new FetchBlockedError("http_error", "Redirect without location", response.status);
       current = new URL(location, current);
+      if (options.canFollow && !(await options.canFollow(current.toString()))) {
+        throw new FetchBlockedError("robots", `robots.txt disallows ${current.toString()}`);
+      }
       continue;
     }
 
