@@ -6,9 +6,17 @@ Claude (Claude Code) wrote most of the code and the commit messages; every step 
 
 ## Where AI helped
 
+- Research before any code: a cited report on sources, platform terms, directories and how others dedupe and score leads, then real test searches for each country and campaign. That showed early that job ads are the main evidence, that most job boards forbid automated access, and that coverage differs a lot by country.
+- Reading the terms of more than 20 search APIs and other sources, with the clause, free tier, price and date for each (`docs/sources.md`). That is how Tavily was chosen over Brave, and why Exa is used for discovery only.
+- Writing the code and the commit history, step by step, in the order the app was built, with a review of every batch of commits before it was pushed.
+- Reading pages: the AI recognises employers and campaigns that the keyword rules miss when the wording isn't one they know. Moving from Groq's free tier to DeepSeek V4.1 Flash took a quick search from 5–8 minutes to under a minute.
+- Measuring instead of guessing: the accuracy check against hand labels (`pnpm eval:scores`, `pnpm eval:live`) turned "looks right" into numbers, and showed which changes helped (High: 1 result before the scoring rules, 21 of 22 real fits after).
+- An independent bug review before hand-in found nine bugs, among them: a failed database write skipped the rest of a search, a search cut off on Vercel could be reused, double clicks could run two re-checks, phone numbers broke in the CSV export, and personal data could reach the ruled-out titles.
+
 ## Where AI was wrong
 
 - The first hosted-database client used Neon's serverless driver and ran migrations over the pooled URL every time the app started. Neon's own guidance for Vercel is node-postgres with `attachDatabasePool`, and migrations over the direct URL at deploy time; switched once the Neon project was set up.
+- It checked robots.txt only for the first address of a page: when a site redirected elsewhere, the new address was fetched without asking its robots.txt. Every redirect hop is now checked.
 - A private address written in IPv6 form (such as `::ffff:127.0.0.1`) passed the first internal-address guard. The guard now uses Node's `BlockList`, which also matches IPv4 addresses in their IPv6 forms.
 - It parsed Groq's rate-limit hint "try again in 7m12s" as 12 seconds. The pattern now reads the minutes too.
 - It read "experience in final expense" in job ads as the employer running final-expense campaigns, and telling it not to in the prompt didn't stop it. The rule became code: an experience requirement in a job ad isn't campaign proof.
