@@ -2,8 +2,10 @@
 
 import { createColumnHelper, tableFeatures, useTable } from "@tanstack/react-table";
 import { GlobeIcon, MailIcon, PhoneIcon, TriangleAlertIcon } from "lucide-react";
+import type { Route } from "next";
 import Link from "next/link";
-import { useMemo } from "react";
+import { useRouter } from "next/navigation";
+import { useMemo, type MouseEvent } from "react";
 import { ConfidenceBadge } from "@/components/confidence-badge";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -63,7 +65,7 @@ function Contacts({ row }: { row: ResultRow }) {
       {items.map(({ icon: Icon, label, href, extra }) => (
         <li key={href} className="flex items-center gap-1.5">
           <Icon className="size-3.5 shrink-0 text-muted-foreground" />
-          <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="truncate hover:underline tabular-nums">
+          <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="relative z-10 truncate hover:underline tabular-nums">
             {label}
           </a>
           {extra > 0 && <span className="text-muted-foreground">+{extra}</span>}
@@ -114,8 +116,14 @@ function makeColumns(searchId: string, campaign: CampaignId, query: ResultsQuery
                 </span>
               )}
             </TooltipTrigger>
-            <TooltipContent className="max-w-64">
+            <TooltipContent className="max-w-64 flex-col items-start gap-1">
+              {r.labelReason && <p className="font-medium">{r.labelReason}</p>}
               <ul className="list-disc space-y-0.5 pl-3">
+                {r.penalties.map((penalty) => (
+                  <li key={penalty} className="text-destructive">
+                    {penalty}
+                  </li>
+                ))}
                 {r.topReasons.map((reason) => (
                   <li key={reason}>{reason}</li>
                 ))}
@@ -159,6 +167,15 @@ export function ResultsTable({ rows, searchId, campaign, running, totalResults, 
   // Columns must be stable between renders (TanStack Table v9 rebuilds its models when they change).
   const columns = useMemo(() => makeColumns(searchId, campaign, query), [searchId, campaign, query]);
   const table = useTable({ features, columns, data: rows });
+  const router = useRouter();
+
+  /** The whole row opens the center; links and buttons inside it (phone, email, website, score) keep their own action. */
+  function openCenter(event: MouseEvent, row: ResultRow) {
+    if ((event.target as HTMLElement).closest("a, button") || window.getSelection()?.toString()) return;
+    const href = centerHref(row, searchId, query);
+    if (event.metaKey || event.ctrlKey) window.open(href, "_blank");
+    else router.push(href as Route);
+  }
 
   if (rows.length === 0) {
     return (
@@ -194,7 +211,7 @@ export function ResultsTable({ rows, searchId, campaign, running, totalResults, 
           </TableHeader>
           <TableBody>
             {table.getRowModel().rows.map((row) => (
-              <TableRow key={row.id} className={cn(row.original.label === "low" && "opacity-80")}>
+              <TableRow key={row.id} onClick={(e) => openCenter(e, row.original)} className={cn("cursor-pointer", row.original.label === "low" && "opacity-80")}>
                 {row.getAllCells().map((cell) => (
                   <TableCell key={cell.id} className="py-3 align-top whitespace-normal">
                     <table.FlexRender cell={cell} />
@@ -209,10 +226,11 @@ export function ResultsTable({ rows, searchId, campaign, running, totalResults, 
       {/* Small screens: one stacked card per center. */}
       <ul className="space-y-3 md:hidden">
         {rows.map((r) => (
-          <li key={r.centerId} className="space-y-2 rounded-lg border bg-card p-4">
+          // The name link stretches over the whole card; the contact links sit above it.
+          <li key={r.centerId} className="relative space-y-2 rounded-lg border bg-card p-4 hover:bg-muted/50">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <Link href={centerHref(r, searchId, query)} className="font-medium hover:underline">
+                <Link href={centerHref(r, searchId, query)} className="font-medium after:absolute after:inset-0 hover:underline">
                   {r.name}
                 </Link>
                 <div className="text-sm text-muted-foreground">

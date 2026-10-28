@@ -39,7 +39,7 @@ export const GET = route<RouteContext<"/api/searches/[id]/export">>(async (reque
       r.sourceTypes,
       r.lastSeenAt.slice(0, 10),
       r.redFlags,
-      r.topReasons,
+      [...(r.labelReason ? [r.labelReason] : []), ...r.topReasons],
     ]
       .map(csvCell)
       .join(","),

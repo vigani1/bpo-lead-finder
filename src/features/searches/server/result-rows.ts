@@ -29,6 +29,8 @@ export function toResultRow(center: Center, items: Evidence[], fromEarlierSearch
     score: scored.score,
     label: scored.label,
     topReasons: scored.lines.filter((l) => l.points > 0).sort((a, b) => b.points - a.points).slice(0, 3).map((l) => l.label),
+    labelReason: scored.labelReason,
+    penalties: scored.lines.filter((l) => l.points < 0).map((l) => l.label),
     phones: center.phones,
     emails: center.emails,
     websiteUrl: center.websiteUrl,
@@ -59,5 +61,8 @@ export function matchesQuery(row: ResultRow, query: ResultsQuery): boolean {
 export function compareRows(sort: ResultsQuery["sort"]): (a: ResultRow, b: ResultRow) => number {
   if (sort === "recent") return (a, b) => b.lastSeenAt.localeCompare(a.lastSeenAt);
   if (sort === "sources") return (a, b) => b.sourceTypes.length - a.sourceTypes.length || b.score - a.score;
-  return (a, b) => b.score - a.score || a.name.localeCompare(b.name);
+  // Label first: a Low held down by its location must not sit above a Medium with a lower score.
+  return (a, b) => LABEL_RANK[b.label] - LABEL_RANK[a.label] || b.score - a.score || a.name.localeCompare(b.name);
 }
+
+const LABEL_RANK: Record<ResultRow["label"], number> = { high: 2, medium: 1, low: 0 };

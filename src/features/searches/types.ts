@@ -33,6 +33,10 @@ export interface ResultRow {
   score: number;
   label: ConfidenceLabel;
   topReasons: string[];
+  /** Why the label is lower than the score alone would give (e.g. not shown to be in the country). */
+  labelReason: string | null;
+  /** Points taken off, e.g. red flags. */
+  penalties: string[];
   phones: string[];
   emails: string[];
   websiteUrl: string | null;

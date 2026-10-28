@@ -36,6 +36,8 @@ export interface ScoreLine {
   /** Points available for this signal (0 for penalties). */
   max: number;
   evidenceIds: string[];
+  /** Adds points when found but isn't counted in the points possible. */
+  bonus?: boolean;
 }
 
 export type ConfidenceLabel = "high" | "medium" | "low";
@@ -47,6 +49,11 @@ export interface ScoreResult {
   lines: ScoreLine[];
   independentSourceTypes: number;
   redFlags: string[];
+  /** Why the label is lower than the score alone would give, if it is. */
+  labelReason: string | null;
+  /** Points earned minus penalties, and points possible (bonuses left out): score = earned ÷ possible. */
+  earned: number;
+  possible: number;
 }
 
 export interface ScoreOptions {
@@ -133,7 +140,7 @@ export function scoreCenter(center: ScoredCenter, allEvidence: ScoredEvidence[],
   const add = (signal: string, label: string, max: number, supporting: ScoredEvidence[], core = true) => {
     const weight = supporting.length ? Math.max(...supporting.map((e) => recencyWeight(ageDays(e, options.now)))) : 0;
     if (core) applicable += max;
-    lines.push({ signal, label, points: Math.round(max * weight), max, evidenceIds: supporting.map((e) => e.id) });
+    lines.push({ signal, label, points: Math.round(max * weight), max, evidenceIds: supporting.map((e) => e.id), ...(core ? {} : { bonus: true }) });
   };
 
   // Campaign proof: only the strongest piece counts (a job ad OR the website, not both required).
@@ -243,8 +250,13 @@ export function scoreCenter(center: ScoredCenter, allEvidence: ScoredEvidence[],
       : score >= CONFIDENCE_THRESHOLDS.medium.minScore
         ? "medium"
         : "low";
+  const labelReason = locationUnknown
+    ? "Low: not shown to be in the requested country"
+    : score >= CONFIDENCE_THRESHOLDS.high.minScore && !directProof
+      ? "Not High: no job ad or own website names them for this campaign"
+      : null;
 
-  return { score, label, lines, independentSourceTypes: sourceTypes.size, redFlags: redFlags.map((f) => f.value) };
+  return { score, label, lines, independentSourceTypes: sourceTypes.size, redFlags: redFlags.map((f) => f.value), labelReason, earned, possible: applicable };
 }
 
 /** Proof from a job ad or the company's own website, not just a mention elsewhere ("Campaign confirmed"). */
