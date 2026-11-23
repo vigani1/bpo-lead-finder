@@ -2,6 +2,8 @@
 
 An evidence-backed search tool for finding offshore and nearshore call centers that work on US insurance campaigns. Pick a country and a campaign, then review ranked leads with source quotes, public business contacts, and a breakdown of how each result scored.
 
+[Open the live demo](https://bpo-lead-finder.vercel.app) · [Run locally](#run-locally)
+
 ![Demo of a final expense search in Pakistan, from search setup to ranked leads and source evidence](docs/demo.gif)
 
 Try **Pakistan → Final expense → Quick** to follow the walkthrough with sample search results.
