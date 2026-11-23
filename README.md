@@ -2,6 +2,8 @@
 
 An evidence-backed search tool for finding offshore and nearshore call centers that work on US insurance campaigns. Pick a country and a campaign, then review ranked leads with source quotes, public business contacts, and a breakdown of how each result scored.
 
+**Tech stack** · Next.js, React, TypeScript, Tailwind CSS, TanStack Query and Table, Drizzle ORM, and PostgreSQL.
+
 [Open the live demo](https://bpo-lead-finder.vercel.app) · [Run locally](#run-locally)
 
 ![Demo of a Medicare search in the Philippines, from search setup to the results table and source evidence](docs/demo.gif)
@@ -45,7 +47,7 @@ See the [source access policy](docs/adr/0002-sources-and-platform-terms.md) and 
 2. **Read.** Fetch allowed company pages and use search snippets for sources such as job boards. Strip personal contact details from job and social snippets before classification.
 3. **Verify and rank.** Check extracted claims, merge duplicates, and rank companies by evidence strength, recency, and fit. Review the evidence, filter the table, or export it to CSV.
 
-Built with Next.js, React, TanStack Query and Table, Tailwind CSS, Drizzle, and PostgreSQL. Searches run in the background and the results page polls for progress.
+Searches run in the background and the results page polls for progress.
 
 ## Configuration
 
