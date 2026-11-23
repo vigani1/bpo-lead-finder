@@ -9,10 +9,9 @@ What the prototype doesn't do yet, and what I'd build next. Grouped by how soon 
 - **DeepSeek's accuracy is measured on a small overlap.** Re-running the 9 labelled searches (`pnpm eval:live`, 2026-10-27): of the 20 hand-labelled centers it found again, all 12 graded High and 3 of 4 graded Medium were real fits, and a real fit outranked a wrong one 94% of the time. Each search samples the public results, so two runs share only about half their centers; about 30 new centers still need hand labels.
 - **One search shows a sample, not the whole market.** Two runs of the same 9 searches found about 89 different centers between them, 60 each. Saved searches that re-run on a schedule and merge their results would build the full list.
 - **Untuned countries are thinner.** The six tuned countries have cities, local job-ad words and tested coverage. The other 237 work from phone prefix, domain ending and country name only.
-- **US centers are an open question.** The US is selectable, but `+1` numbers never count as a location (offshore centers use virtual US numbers), so US centers are placed by text and domain only. Waiting on the company's answer.
+- **US centers are an open question.** The US is selectable, but `+1` numbers never count as a location (offshore centers use virtual US numbers), so US centers are placed by text and domain only.
 - **Removal requests need a code change.** Blocked companies are a config list (`src/config/blocked-domains.ts`), and it only stops new results; centers already saved stay until deleted by hand.
 - **Rate limit trusts the IP header.** The per-visitor limit reads `x-forwarded-for`, which a client can fake unless a platform like Vercel sets it. The daily cap still applies to everyone.
-- **No limit on access-code guesses.** It's a shared demo code, not user accounts.
 - **DNS can change between the address check and the fetch.** Accepted for a prototype.
 - **Confidence is a reading aid, not a measured probability.** Labels were checked against 48 hand-labelled results (High: 21 of 22 were real fits), but the sample is small and most were read by keyword rules, not the AI.
 

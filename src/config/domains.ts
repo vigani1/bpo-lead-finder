@@ -135,7 +135,7 @@ export const DOMAIN_RULES: DomainRule[] = [
 export const EXCLUDED_SEARCH_DOMAINS = DOMAIN_RULES.filter((r) => r.access === "skip").map((r) => r.domain);
 
 export const JOB_BOARD_DOMAINS = DOMAIN_RULES.filter((r) => r.kind === "job_board" && r.access !== "skip").map((r) => r.domain);
-/** Social platforms we search (the brief names Facebook and Instagram); others are only linked when found. */
+/** Social platforms we search; others are only linked when found. */
 export const SOCIAL_DOMAINS = ["facebook.com", "instagram.com"];
 export const VENDOR_DOMAINS = DOMAIN_RULES.filter((r) => r.kind === "vendor_marketplace" && r.access !== "skip").map((r) => r.domain);
 

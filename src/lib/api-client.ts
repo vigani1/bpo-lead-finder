@@ -46,8 +46,6 @@ export function friendlyErrorMessage(error: unknown): string {
       return error.message;
     case "NOT_FOUND":
       return "That item doesn't exist (anymore).";
-    case "UNAUTHORIZED":
-      return "Enter the access code to use the app.";
     case "UPSTREAM_ERROR":
       return error.message || "A data source is unavailable right now.";
     default:

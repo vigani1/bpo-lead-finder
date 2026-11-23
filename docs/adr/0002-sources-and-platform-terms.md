@@ -5,7 +5,7 @@ Most of the evidence about offshore call centers sits on platforms that forbid a
 - **Tavily** is the main search API. Its terms allow use for internal business purposes and don't restrict storing results, so its titles and snippets are stored as evidence.
 - **Exa** is a second, independent index, used only to discover company websites. Its terms (4.2a) forbid copying information obtained through the service except temporary caching, so nothing from Exa is stored: a site it finds is kept only once our own fetch has read it.
 - **Job boards** mostly forbid automated access in their terms: the search snippet and a link are used, and the page is never fetched.
-- **Facebook and Instagram** (named in the brief) are used the same way, as a snippet and a link. Personal profiles and posts are dropped.
+- **Facebook and Instagram** are used the same way, as a snippet and a link. Personal profiles and posts are dropped.
 - **LinkedIn** is a link at most. Its User Agreement (§8.2) also covers information obtained through third parties such as search tools, so not even its snippets are used.
 - **Company websites** are fetched and read, with robots.txt respected and a User-Agent that says who we are. A site whose robots.txt Content Signal says `ai-input=no` is read by the keyword rules, never sent to the AI.
 
