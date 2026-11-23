@@ -4,9 +4,9 @@ An evidence-backed search tool for finding offshore and nearshore call centers t
 
 [Open the live demo](https://bpo-lead-finder.vercel.app) · [Run locally](#run-locally)
 
-![Demo of a final expense search in Pakistan, from search setup to ranked leads and source evidence](docs/demo.gif)
+![Demo of a Medicare search in the Philippines, from search setup to the results table and source evidence](docs/demo.gif)
 
-Try **Pakistan → Final expense → Quick** to follow the walkthrough with sample search results.
+Try **Philippines → Medicare → Quick** to follow the walkthrough with sample search results.
 
 ## Run locally
 
@@ -29,6 +29,15 @@ The optional LLM classifier reads extracted website text and search snippets. It
 Application code validates the response schema, checks that each quote appears in the source, and applies rules that test whether the quote supports the claim. For example, a job listing asking for final-expense *experience* is weak evidence that the employer runs a final-expense campaign. Separate code merges company records and computes confidence from the accepted evidence. The lead page shows both the quotes and the score breakdown so a reviewer can trace the result.
 
 Model calls are cached by document hash, classifier, and prompt version. A keyword classifier runs when no model is configured, when a model call fails, or when a source disallows AI input. See the [classifier design](docs/adr/0005-ai-extracts-code-decides.md) and [scoring rules](docs/rules.md).
+
+## How the app respects source sites
+
+- **Company websites.** The crawler identifies itself in its User-Agent and checks `robots.txt` before fetching pages, including at each redirect. It limits how many pages it reads per site and caches fetched pages to reduce repeat traffic.
+- **AI opt-outs.** When a company website declares `Content-Signal: ai-input=no` in `robots.txt`, its text stays out of the language model. The app checks it locally with keyword rules.
+- **Job boards and social platforms.** For supported sources, the app uses a search snippet and a link. LinkedIn text is excluded. Exa results are used only to discover company websites, and saved evidence comes from sources configured for storage.
+- **Business contacts.** The app strips phone numbers and personal-looking emails from job and social snippets before classification. For company email addresses, it keeps role-based inboxes such as `sales@` or `info@`.
+
+See the [source access policy](docs/adr/0002-sources-and-platform-terms.md) and [data handling rules](docs/adr/0003-what-we-store.md).
 
 ## How it works
 
